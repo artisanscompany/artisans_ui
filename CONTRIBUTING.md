@@ -28,6 +28,15 @@ Thank you for contributing to the ArtisansUi component library! This guide will 
 - Understanding of Tailwind CSS
 - Git access to gitgar.com
 
+### Design Inspiration
+
+We use [RailsBlocks](https://railsblocks.com/) as our primary source of design patterns and component styling. When creating new components:
+
+1. Browse RailsBlocks for similar components
+2. Adapt their Tailwind CSS patterns to ViewComponent structure
+3. Ensure dark mode support using RailsBlocks neutral color palette
+4. Maintain consistency with existing components
+
 ### Setup
 
 ```bash

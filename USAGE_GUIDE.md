@@ -2,6 +2,8 @@
 
 Complete guide for using the ArtisansUi component library across all Artisans applications.
 
+**Design Philosophy:** Components are built using [RailsBlocks](https://railsblocks.com/) design patterns with Tailwind CSS and ViewComponent architecture.
+
 ---
 
 ## Table of Contents

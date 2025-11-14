@@ -2,6 +2,22 @@
 
 module ArtisansUi
   module Ui
+    # Card component with flexible layout supporting header, body, and footer slots.
+    # Inspired by RailsBlocks card patterns with dark mode support.
+    #
+    # @example Basic card with body
+    #   <%= render ArtisansUi::Ui::CardComponent.new do |card| %>
+    #     <% card.with_body do %>
+    #       <p>Content here</p>
+    #     <% end %>
+    #   <% end %>
+    #
+    # @example Card with all sections
+    #   <%= render ArtisansUi::Ui::CardComponent.new do |card| %>
+    #     <% card.with_header { "Title" } %>
+    #     <% card.with_body { "Body content" } %>
+    #     <% card.with_footer { "Footer actions" } %>
+    #   <% end %>
     class CardComponent < ApplicationViewComponent
       renders_one :header
       renders_one :body

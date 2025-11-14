@@ -11,9 +11,10 @@ A shared ViewComponent library for Artisans applications. This gem provides reus
 ## Features
 
 - Built with [ViewComponent](https://viewcomponent.org/) for performance and testability
-- Tailwind CSS styling for modern, responsive design
+- [RailsBlocks](https://railsblocks.com/)-inspired Tailwind CSS styling for modern, responsive design
 - Comprehensive test coverage with RSpec
 - Easy to extend and customize
+- Dark mode support across all components
 
 ## Quick Start
 
@@ -263,6 +264,7 @@ bundle exec rspec spec/components/artisans_ui/ui/button_component_spec.rb
 
 ### External Links
 - [ViewComponent Documentation](https://viewcomponent.org/)
+- [RailsBlocks](https://railsblocks.com/) - Component design inspiration and patterns
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Rails Guides](https://guides.rubyonrails.org/)
 

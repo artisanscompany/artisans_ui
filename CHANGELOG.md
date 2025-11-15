@@ -8,6 +8,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- EmojiPicker components (3 variants) - RailsBlocks exact implementation
+  - BasicComponent: Simple emoji picker with button trigger and hidden input
+  - AutoSubmitComponent: Demonstrates auto-submit enabled vs disabled behavior
+  - InsertModeComponent: Insert emoji at cursor position in textarea
+- Stimulus emoji_picker controller with Emoji Mart integration
+- Keyboard navigation (Escape closes picker, Backspace/Delete clears emoji)
+- Outside click detection (automatically closes picker)
+- Form integration with optional auto-submit
+- Insert mode for cursor position insertion
+- Theme switching support (light/dark mode)
+- Comprehensive RSpec tests for all EmojiPicker variants (37 examples total, 100% passing)
+- Full dark mode support with theme observer
+- **Note**: Requires external dependencies (Emoji Mart library)
+- DatePicker components (10 variants) - RailsBlocks exact implementation
+  - BasicComponent: Simple date picker with optional today/clear buttons
+  - WithInitialDateComponent: Pre-populated with specific date
+  - RangeComponent: Select date range with start and end dates
+  - WithTimeComponent: Date and time selection with timepicker
+  - MinMaxDatesComponent: Constrained date selection with min/max boundaries
+  - DisabledDatesComponent: Specific dates disabled from selection
+  - WeekPickerComponent: Week selection mode (outputs YYYY-Wnn format)
+  - MonthYearPickerComponent: Month or year only selection
+  - TimeOnlyComponent: Time picker without date
+  - InlineCalendarComponent: Always-visible calendar (no popup)
+- Stimulus date_picker controller (400+ lines) with AirDatepicker integration
+- Floating UI positioning for intelligent calendar placement
+- Week number calculations (ISO 8601 standard)
+- Date parsing utilities (YYYY-MM-DD and YYYY-MM-DD HH:MM formats)
+- Comprehensive RSpec tests for all DatePicker variants (23 examples total, 100% passing)
+- Full dark mode support with AirDatepicker theming
+- Keyboard navigation (Delete/Backspace to clear)
+- **Note**: Requires external dependencies (AirDatepicker, Floating UI)
 - Dock components (2 variants) - RailsBlocks exact implementation
   - TopPlacementComponent: Desktop dock menu at top with tooltips below icons
   - BottomPlacementComponent: Desktop dock menu at bottom with tooltips above icons

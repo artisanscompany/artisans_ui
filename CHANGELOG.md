@@ -8,6 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- ColorPicker components (6 variants) - RailsBlocks exact implementation
+  - BasicComponent: Native HTML5 color input with minimal styling
+  - WithSwatchesComponent: HTML5 color input with datalist predefined colors and visual swatch buttons
+  - EnhancedComponent: Shoelace color picker with format display and modern interface
+  - WithOpacityComponent: Shoelace picker with alpha channel support, HEX/RGBA display, and transparency preview
+  - FormatVariationsComponent: Shoelace pickers demonstrating HEX, RGB, HSL, and HSV format outputs
+  - WithPaletteComponent: Shoelace picker with custom brand palette (neutrals + accents) and swatch grid
+- Shoelace web component integration for advanced color picker features
+- Comprehensive RSpec tests for all ColorPicker variants (97 examples total, 100% passing)
+- Full dark mode support across all color picker components
+- Checkerboard background pattern for transparency visualization
+- JavaScript color format conversion (HEX ↔ RGBA)
+- Interactive swatch selection with visual feedback
 - Clipboard components (7 variants) - RailsBlocks exact implementation
   - BasicComponent: Simple copy button with text
   - WithIconStatesComponent: Copy/copied icon states with visual feedback

@@ -98,6 +98,86 @@ bundle install
 <% end %>
 ```
 
+### AnimatedNumber Component
+
+```erb
+<%# Basic counter %>
+<%= render ArtisansUi::AnimatedNumber::BasicComponent.new(
+  start_value: 0,
+  end_value: 1250,
+  duration: 2000,
+  label: "Users registered"
+) %>
+
+<%# Currency formatter %>
+<%= render ArtisansUi::AnimatedNumber::CurrencyComponent.new(
+  start_value: 50,
+  end_value: 850.99,
+  duration: 2500,
+  suffix: " / month",
+  label: "Monthly revenue"
+) %>
+
+<%# Compact notation %>
+<%= render ArtisansUi::AnimatedNumber::CompactComponent.new(
+  start_value: 0,
+  end_value: 125600,
+  duration: 2000,
+  label: "Total downloads"
+) %>
+
+<%# Percentage with prefix/suffix %>
+<%= render ArtisansUi::AnimatedNumber::PercentageComponent.new(
+  start_value: 0,
+  end_value: 147.5,
+  duration: 2800,
+  prefix: "+",
+  suffix: "%",
+  label: "Year-over-year growth"
+) %>
+
+<%# Continuous animation %>
+<%= render ArtisansUi::AnimatedNumber::ContinuousComponent.new(
+  start_value: 0,
+  end_value: 100,
+  duration: 1500,
+  continuous: true,
+  label: "Continuous Animation"
+) %>
+
+<%# Custom easing %>
+<%= render ArtisansUi::AnimatedNumber::CustomEasingComponent.new(
+  start_value: 0,
+  end_value: 1000,
+  duration: 2000,
+  spin_easing: "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+  transform_easing: "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+  label: "Bounce",
+  description: "Overshoots & settles"
+) %>
+
+<%# Trigger on load %>
+<%= render ArtisansUi::AnimatedNumber::TriggerOnScrollComponent.new(
+  start_value: 0,
+  end_value: 100000,
+  duration: 3500,
+  trigger: "load",
+  suffix: "+",
+  label: "Lines of code"
+) %>
+
+<%# Countdown timer %>
+<%= render ArtisansUi::AnimatedNumber::CountdownComponent.new(
+  start_value: 10,
+  end_value: 0,
+  duration: 500,
+  trend: -1,
+  suffix: "s",
+  update_interval: 1000,
+  label: "Countdown timer"
+) %>
+```
+
 ### Card Component
 
 ```erb
@@ -208,9 +288,35 @@ bundle config unset local.artisans_ui
 
 ## Available Components
 
+### Accordion Components
+
+- **11 Accordion Variants** (`ArtisansUi::Accordion::*`)
+  - Chevron icon, Plus/minus icon, Multiple items open, Left arrow icon
+  - Styled variants, Nesting support, Disabled items, Open by default
+  - Zero dependency options
+
+### Alert Components
+
+- **5 Alert Variants** (`ArtisansUi::Alert::*`)
+  - Success, Error, Info/Neutral alerts
+  - Minimal alert variants with custom icons
+  - Dark mode support
+
+### AnimatedNumber Components
+
+- **8 AnimatedNumber Variants** (`ArtisansUi::AnimatedNumber::*`)
+  - Basic counter, Currency formatter, Compact notation (1K, 1M)
+  - Percentage with prefix/suffix, Continuous vs Discrete animation
+  - Custom easing functions, Trigger on scroll/load, Countdown timer
+  - Powered by number-flow library
+
+### Button Component
+
 - **Button Component** (`ArtisansUi::Ui::ButtonComponent`)
   - Variants: `primary`, `secondary`, `danger`, `outline`
   - Supports all standard HTML button attributes
+
+### Card Component
 
 - **Card Component** (`ArtisansUi::Ui::CardComponent`)
   - Flexible layout with header, body, and footer slots

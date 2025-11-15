@@ -48,18 +48,15 @@ None currently.
    - [x] Minimal alert - success/error/info types (MinimalComponent)
    - [x] Blue minimal alert with sparkle icon (BlueMinimalComponent)
 
-3. **AnimatedNumber** (11 components)
-   - [ ] Basic counter
-   - [ ] Currency formatter
-   - [ ] Percentage
-   - [ ] Duration control
-   - [ ] Custom easing
-   - [ ] Trigger on scroll
-   - [ ] Countdown
-   - [ ] With prefix/suffix
-   - [ ] Decimal places
-   - [ ] Grouped digits
-   - [ ] Custom formatting
+3. **AnimatedNumber** (8 components) - ✅ COMPLETE
+   - [x] Basic counter (BasicComponent)
+   - [x] Currency formatter (CurrencyComponent)
+   - [x] Compact notation (CompactComponent)
+   - [x] Percentage with prefix/suffix (PercentageComponent)
+   - [x] Continuous vs discrete animation (ContinuousComponent)
+   - [x] Custom easing functions (CustomEasingComponent)
+   - [x] Trigger on scroll/load (TriggerOnScrollComponent)
+   - [x] Countdown timer (CountdownComponent)
 
 4. **Autogrow** (3 components) - ✅ COMPLETE
    - [x] Basic autogrow (BasicComponent)

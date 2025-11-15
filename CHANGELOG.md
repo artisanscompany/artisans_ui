@@ -8,6 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- AnimatedNumber components (8 variants) - RailsBlocks exact implementation
+  - BasicComponent: Simple counter animation
+  - CurrencyComponent: Currency formatting with suffix support
+  - CompactComponent: Compact notation (1K, 1M, etc.)
+  - PercentageComponent: Decimal formatting with prefix/suffix
+  - ContinuousComponent: Continuous vs discrete animation modes
+  - CustomEasingComponent: Multiple easing functions (linear, bounce, spring, etc.)
+  - TriggerOnScrollComponent: Viewport and load trigger options
+  - CountdownComponent: Real-time countdown timer
+- Stimulus controller for animated-number with number-flow library
+- Comprehensive RSpec tests for all AnimatedNumber variants
 - Card component with header, body, and footer slots
 - RailsBlocks-inspired styling with dark mode support
 

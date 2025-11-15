@@ -8,6 +8,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Toast component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
+  - Stimulus toast controller with Sonner-like stacking animations
+  - Global window.toast() function for easy toast triggering
+  - 6 toast types (default, success, error, info, warning, danger, loading)
+  - 6 screen positions (top-left, top-center, top-right, bottom-left, bottom-center, bottom-right)
+  - 2 layout modes: stacked (default) with hover-to-expand, or fully expanded
+  - Action buttons support (primary and secondary actions with onClick handlers)
+  - Custom HTML support for fully customizable toasts
+  - Auto-dismiss with configurable duration (default: 4s)
+  - Toast limit enforcement (default: 3 visible toasts, oldest auto-removed)
+  - Height tracking and smooth animations (inspired by Sonner)
+  - Overflow handling (toasts beyond limit slide out gracefully)
+  - Position persistence across page navigations
+  - Flash message integration (notice/alert/toast hash)
+  - Turbo Stream support for server-triggered toasts
+  - Mouse enter/leave expansion in stacked mode
+  - Turbo cache cleanup (prevents stale toasts)
+  - Full dark mode support with proper color schemes
+  - **Implementation**: Use ERB templates and global toast() function as shown in RailsBlocks examples
 - Testimonial components (5 variants) - RailsBlocks exact implementation
   - BasicComponent: Simple testimonial with quote, author name, and title
   - CardComponent: Enhanced testimonial card with customer avatar shown first

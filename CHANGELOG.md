@@ -8,6 +8,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Password components (5 variants) - RailsBlocks exact implementation
+  - BasicComponent: Simple password input with show/hide toggle
+  - WithStrengthIndicatorComponent: Password with strength meter (weak/fair/good/strong)
+  - WithConfirmationComponent: Password and confirm password fields with matching validation
+  - WithRequirementsComponent: Password with interactive requirements checklist
+  - WithStrengthAndRequirementsComponent: Combined strength indicator and requirements checklist
+- Stimulus password controller for password visibility, strength checking, and confirmation matching
+- Real-time password strength calculation (length, lowercase, uppercase, number/special character)
+- Dynamic strength bar with color-coded feedback (red/yellow/lime/green)
+- Requirements checklist with live validation and visual feedback
+- Password confirmation with debounced matching (300ms delay)
+- Smart input border states (success/error classes)
+- Show/hide toggle with eye/eye-off icons
+- Comprehensive RSpec tests for all Password variants (75 examples total, 100% passing)
+- Full dark mode support with proper color schemes
 - Marquee components (3 variants) - RailsBlocks exact implementation
   - BasicComponent: Smooth scrolling marquee with pause on hover
   - MultiRowComponent: Multiple rows with different directions and speeds

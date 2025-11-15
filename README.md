@@ -218,40 +218,89 @@ bundle install
 ### Card Component
 
 ```erb
-<%# Basic card with just body %>
-<%= render ArtisansUi::Ui::CardComponent.new do |card| %>
+<%# Basic card %>
+<%= render ArtisansUi::Card::BasicComponent.new do %>
+  <h3 class="text-lg font-medium leading-6 text-neutral-900 dark:text-white">Basic Card</h3>
+  <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">Simple card with shadow and rounded corners</p>
+<% end %>
+
+<%# Card with header %>
+<%= render ArtisansUi::Card::WithHeaderComponent.new do |card| %>
+  <% card.with_header do %>
+    <h3 class="text-lg leading-6 font-medium text-neutral-900 dark:text-white">Card with Header</h3>
+    <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">Separated by divider</p>
+  <% end %>
   <% card.with_body do %>
-    <p class="text-neutral-700 dark:text-neutral-300">
-      Card content goes here
-    </p>
+    <p class="text-neutral-700 dark:text-neutral-300">Main content goes here</p>
   <% end %>
 <% end %>
 
-<%# Card with header and body %>
-<%= render ArtisansUi::Ui::CardComponent.new do |card| %>
-  <% card.with_header do %>
-    <h3 class="text-lg leading-6 font-medium text-neutral-900 dark:text-white">Card Title</h3>
-    <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">Description</p>
-  <% end %>
+<%# Card with footer %>
+<%= render ArtisansUi::Card::WithFooterComponent.new do |card| %>
   <% card.with_body do %>
-    <p class="text-neutral-700 dark:text-neutral-300">Body content</p>
-  <% end %>
-<% end %>
-
-<%# Card with all sections %>
-<%= render ArtisansUi::Ui::CardComponent.new do |card| %>
-  <% card.with_header do %>
-    <h3 class="text-lg font-medium text-neutral-900 dark:text-white">Complete Card</h3>
-  <% end %>
-  <% card.with_body do %>
-    <p class="text-neutral-700 dark:text-neutral-300">Main content</p>
+    <h3 class="text-lg font-medium text-neutral-900 dark:text-white">Card with Footer</h3>
+    <p class="mt-2 text-neutral-700 dark:text-neutral-300">Footer section for actions</p>
   <% end %>
   <% card.with_footer do %>
-    <%= render ArtisansUi::Ui::ButtonComponent.new(variant: :primary) do %>
-      Action
-    <% end %>
+    <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-400">View details</a>
   <% end %>
 <% end %>
+
+<%# Complete card (header + body + footer) %>
+<%= render ArtisansUi::Card::CompleteComponent.new do |card| %>
+  <% card.with_header do %>
+    <h3 class="text-lg leading-6 font-medium text-neutral-900 dark:text-white">Complete Card</h3>
+    <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">All three sections</p>
+  <% end %>
+  <% card.with_body do %>
+    <p class="text-neutral-700 dark:text-neutral-300">Main content area</p>
+  <% end %>
+  <% card.with_footer do %>
+    <div class="flex justify-between">
+      <button class="...">Cancel</button>
+      <button class="...">Save</button>
+    </div>
+  <% end %>
+<% end %>
+
+<%# Edge-to-edge on mobile %>
+<%= render ArtisansUi::Card::EdgeToEdgeComponent.new do |card| %>
+  <% card.with_body do %>
+    <h3 class="text-lg font-medium text-neutral-900 dark:text-white">Edge-to-Edge</h3>
+    <p class="mt-2 text-neutral-700 dark:text-neutral-300">Full width on mobile, standard on desktop</p>
+  <% end %>
+<% end %>
+
+<%# Well card %>
+<%= render ArtisansUi::Card::WellComponent.new do %>
+  <h3 class="text-lg font-medium text-neutral-900 dark:text-white">Well Card</h3>
+  <p class="mt-2 text-neutral-700 dark:text-neutral-300">Subtle container with no shadow</p>
+<% end %>
+
+<%# Card with image %>
+<%= render ArtisansUi::Card::WithImageComponent.new(
+  image_url: "https://images.unsplash.com/...",
+  image_alt: "Article image",
+  badge_text: "Article",
+  badge_color: "blue",
+  meta_text: "5 min read",
+  title: "Card with Featured Image",
+  description: "Perfect for blog posts and articles",
+  author_name: "John Doe",
+  author_image: "https://images.unsplash.com/...",
+  author_date: "September 16, 2025"
+) %>
+
+<%# Stats card %>
+<%= render ArtisansUi::Card::StatsComponent.new(
+  label: "Total Revenue",
+  value: "$71,897",
+  trend: "up",
+  trend_value: "12.5%",
+  trend_label: "from last month",
+  progress_label: "Progress to goal",
+  progress_value: 72
+) %>
 ```
 
 ## Local Development Workflow
@@ -361,12 +410,17 @@ bundle config unset local.artisans_ui
   - Variants: `primary`, `secondary`, `danger`, `outline`
   - Supports all standard HTML button attributes
 
-### Card Component
+### Card Components
 
-- **Card Component** (`ArtisansUi::Ui::CardComponent`)
-  - Flexible layout with header, body, and footer slots
-  - RailsBlocks-inspired styling with dark mode support
-  - Customizable with HTML attributes
+- **8 Card Variants** (`ArtisansUi::Card::*`)
+  - Basic card with shadow and rounded corners
+  - Card with header (separated by divider)
+  - Card with footer (actions and links)
+  - Complete card (header + body + footer)
+  - Edge-to-edge responsive (full width on mobile)
+  - Well card (subtle container, no shadow)
+  - Card with image (featured image + metadata + author)
+  - Stats card (metrics, trends, progress indicators)
 
 More components coming soon!
 

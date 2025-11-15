@@ -316,14 +316,14 @@ None currently.
 ## Progress Summary
 
 **Total Categories:** 39
-**Completed Categories:** 10 (8 fully complete: Accordion, Alert, AnimatedNumber, Autogrow, Badge, Banner, Breadcrumb, Card; 1 partial: Button)
-**Remaining Categories:** 29
+**Completed Categories:** 9 (Accordion, Alert, AnimatedNumber, Autogrow, Badge, Banner, Breadcrumb, Card; 1 partial: Button 7/14)
+**Remaining Categories:** 30
 
 **Total Individual Components:** 200+
-**Completed Components:** 50 (11 Accordion + 5 Alert + 8 AnimatedNumber + 3 Autogrow + 6 Badge + 4 Banner + 4 Breadcrumb + 1 Button (legacy) + 8 Card)
-**Remaining Components:** 150+
+**Completed Components:** 57 (11 Accordion + 5 Alert + 8 AnimatedNumber + 3 Autogrow + 6 Badge + 4 Banner + 4 Breadcrumb + 7 Button + 1 Button (legacy) + 8 Card)
+**Remaining Components:** 143+
 
-**Completion:** ~25%
+**Completion:** ~28%
 
 ---
 

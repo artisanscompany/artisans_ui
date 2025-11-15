@@ -8,17 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- TreeView component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
-  - Stimulus tree_view controller for hierarchical file/folder structures
+- TreeView component (1 variant) - RailsBlocks exact implementation
+  - BasicComponent: Hierarchical file/folder tree with nested folders and files
+  - Stimulus tree_view controller for interactive behavior
   - Keyboard navigation with Arrow Up/Down keys and Enter/Space to toggle
   - Smooth height animations for expanding/collapsing folders
   - Automatic icon switching (closed/open folder icons)
   - ARIA attributes for accessibility (aria-expanded, aria-controls, role)
   - Hidden state management (prevents hidden items from keyboard navigation)
   - Configurable animations (can be disabled for instant toggling)
-  - **Implementation**: Use ERB templates directly as shown in RailsBlocks examples
-- TwoFactor component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
-  - Stimulus two_factor controller for 6-digit verification code input
+  - Supports renders_many pattern for nested folder/file structure
+- TwoFactor component (1 variant) - RailsBlocks exact implementation
+  - BasicComponent: 6-digit verification code input with auto-navigation
+  - Stimulus two_factor controller for interactive behavior
   - Automatic focus navigation between input fields
   - Paste support (auto-fills all 6 digits from clipboard)
   - Backspace and arrow key navigation
@@ -26,7 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Optional auto-submit when all digits entered
   - Mobile-optimized (inputmode="numeric" for numeric keyboard)
   - Autocomplete support (autocomplete="one-time-code" for first field)
-  - **Implementation**: Use ERB templates directly as shown in RailsBlocks examples
+  - Customizable title, subtitle, submit text, and form URL/method
 - Toast component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
   - Stimulus toast controller with Sonner-like stacking animations
   - Global window.toast() function for easy toast triggering

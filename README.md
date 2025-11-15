@@ -178,6 +178,43 @@ bundle install
 ) %>
 ```
 
+### Breadcrumb Component
+
+```erb
+<%# Basic breadcrumb %>
+<%= render ArtisansUi::Breadcrumb::BasicComponent.new(items: [
+  { label: "Home", href: "/" },
+  { label: "Products", href: "/products" },
+  { label: "Electronics", href: "/products/electronics" },
+  { label: "Headphones" }
+]) %>
+
+<%# Breadcrumb with icons %>
+<%= render ArtisansUi::Breadcrumb::WithIconsComponent.new(items: [
+  { label: "Home", href: "/", home_icon: true },
+  { label: "Dashboard", href: "/dashboard" },
+  { label: "Projects", href: "/projects" },
+  { label: "Project Alpha" }
+]) %>
+
+<%# Breadcrumb with background %>
+<%= render ArtisansUi::Breadcrumb::WithBackgroundComponent.new(items: [
+  { label: "Home", href: "/" },
+  { label: "Documentation", href: "/docs" },
+  { label: "Components", href: "/docs/components" },
+  { label: "Breadcrumb" }
+]) %>
+
+<%# Breadcrumb with truncation %>
+<%= render ArtisansUi::Breadcrumb::WithTruncationComponent.new(items: [
+  { label: "Home", href: "/" },
+  { label: "...", collapsed: true },
+  { label: "Category", href: "/category" },
+  { label: "Subcategory", href: "/category/subcategory" },
+  { label: "Very Long Product Name That Might Need Truncation" }
+]) %>
+```
+
 ### Card Component
 
 ```erb
@@ -309,6 +346,14 @@ bundle config unset local.artisans_ui
   - Percentage with prefix/suffix, Continuous vs Discrete animation
   - Custom easing functions, Trigger on scroll/load, Countdown timer
   - Powered by number-flow library
+
+### Breadcrumb Components
+
+- **4 Breadcrumb Variants** (`ArtisansUi::Breadcrumb::*`)
+  - Basic breadcrumb with slash separators
+  - With icons (home icon + chevron separators)
+  - With background styling
+  - With truncation for long paths
 
 ### Button Component
 

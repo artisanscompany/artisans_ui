@@ -30,8 +30,8 @@ module ArtisansUi
           **@html_options
         ) do
           tag.div(class: "grid grid-cols-[auto_1fr] gap-2 items-start") do
-            content = [
-              # Row 1: Icon
+            safe_join([
+              # Column 1: Icon
               tag.div(class: "flex items-center h-full") do
                 tag.svg(
                   xmlns: "http://www.w3.org/2000/svg",
@@ -54,17 +54,17 @@ module ArtisansUi
                   end
                 end
               end,
-              # Row 1: Title
-              tag.h3(class: "text-sm font-medium text-green-800 dark:text-green-200") { @title }
-            ]
-
-            # Row 2: Only if description exists
-            if @description
-              content << tag.div # Empty spacer in first column
-              content << tag.div(class: "text-sm text-green-700 dark:text-green-300") { @description }
-            end
-
-            safe_join(content)
+              # Column 2: Title and Description container
+              tag.div do
+                content = [
+                  tag.h3(class: "text-sm font-medium text-green-800 dark:text-green-200") { @title }
+                ]
+                if @description
+                  content << tag.div(class: "text-sm text-green-700 dark:text-green-300") { @description }
+                end
+                safe_join(content)
+              end
+            ])
           end
         end
       end

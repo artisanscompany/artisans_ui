@@ -29,39 +29,37 @@ module ArtisansUi
           class: "rounded-xl border border-red-200 bg-red-50 p-4 dark:border-red-800 dark:bg-red-900/20",
           **@html_options
         ) do
-          tag.div(class: "grid grid-cols-[auto_1fr] gap-2 items-start") do
+          tag.div(class: "flex gap-2 items-start") do
             safe_join([
-              # Column 1: Icon
-              tag.div(class: "flex items-center h-full") do
-                tag.svg(
-                  xmlns: "http://www.w3.org/2000/svg",
-                  width: "18",
-                  height: "18",
-                  viewBox: "0 0 18 18",
-                  class: "text-red-500 dark:text-red-400"
+              # Icon
+              tag.svg(
+                xmlns: "http://www.w3.org/2000/svg",
+                width: "18",
+                height: "18",
+                viewBox: "0 0 18 18",
+                class: "text-red-500 dark:text-red-400 shrink-0"
+              ) do
+                tag.g(
+                  fill: "none",
+                  "stroke-linecap": "round",
+                  "stroke-linejoin": "round",
+                  "stroke-width": "1.5",
+                  stroke: "currentColor"
                 ) do
-                  tag.g(
-                    fill: "none",
-                    "stroke-linecap": "round",
-                    "stroke-linejoin": "round",
-                    "stroke-width": "1.5",
-                    stroke: "currentColor"
-                  ) do
-                    safe_join([
-                      tag.path(d: "M9 16.25C13.0041 16.25 16.25 13.004 16.25 9C16.25 4.996 13.0041 1.75 9 1.75C4.9959 1.75 1.75 4.996 1.75 9C1.75 13.004 4.9959 16.25 9 16.25Z"),
-                      tag.path(d: "M9 5.431V9.5"),
-                      tag.path(d: "M9 13.417C8.448 13.417 8 12.968 8 12.417C8 11.866 8.448 11.417 9 11.417C9.552 11.417 10 11.866 10 12.417C10 12.968 9.552 13.417 9 13.417Z", fill: "currentColor", "data-stroke": "none", stroke: "none")
-                    ])
-                  end
+                  safe_join([
+                    tag.path(d: "M9 16.25C13.0041 16.25 16.25 13.004 16.25 9C16.25 4.996 13.0041 1.75 9 1.75C4.9959 1.75 1.75 4.996 1.75 9C1.75 13.004 4.9959 16.25 9 16.25Z"),
+                    tag.path(d: "M9 5.431V9.5"),
+                    tag.path(d: "M9 13.417C8.448 13.417 8 12.968 8 12.417C8 11.866 8.448 11.417 9 11.417C9.552 11.417 10 11.866 10 12.417C10 12.968 9.552 13.417 9 13.417Z", fill: "currentColor", "data-stroke": "none", stroke: "none")
+                  ])
                 end
               end,
-              # Column 2: Title and Description container
-              tag.div do
+              # Title and Description container
+              tag.div(class: "flex-1") do
                 content = [
                   tag.h3(class: "text-sm font-medium text-red-800 dark:text-red-200") { @title }
                 ]
                 if @description
-                  content << tag.div(class: "text-sm text-red-700 dark:text-red-300") { @description }
+                  content << tag.div(class: "text-sm text-red-700 dark:text-red-300 mt-1") { @description }
                 end
                 safe_join(content)
               end

@@ -9,6 +9,7 @@ import AutogrowController from "./autogrow_controller"
 import BannerController from "./banner_controller"
 import CarouselController from "./carousel_controller"
 import ClipboardController from "./clipboard_controller"
+import ConditionalRadioController from "./conditional_radio_controller"
 import ConfirmationController from "./confirmation_controller"
 import DockController from "./dock_controller"
 import DropdownController from "./dropdown_controller"
@@ -19,6 +20,7 @@ import ModalController from "./modal_controller"
 import NavbarController from "./navbar_controller"
 import OsDetectController from "./os_detect_controller"
 import PasswordController from "./password_controller"
+import PopoverController from "./popover_controller"
 import SelectController from "./select_controller"
 import TooltipController from "./tooltip_controller"
 
@@ -29,6 +31,7 @@ application.register("artisans-ui--autogrow", AutogrowController)
 application.register("artisans-ui--banner", BannerController)
 application.register("artisans-ui--carousel", CarouselController)
 application.register("artisans-ui--clipboard", ClipboardController)
+application.register("artisans-ui--conditional-radio", ConditionalRadioController)
 application.register("artisans-ui--confirmation", ConfirmationController)
 application.register("artisans-ui--dock", DockController)
 application.register("artisans-ui--dropdown", DropdownController)
@@ -39,7 +42,8 @@ application.register("artisans-ui--modal", ModalController)
 application.register("artisans-ui--navbar", NavbarController)
 application.register("artisans-ui--os-detect", OsDetectController)
 application.register("artisans-ui--password", PasswordController)
+application.register("artisans-ui--popover", PopoverController)
 application.register("artisans-ui--select", SelectController)
 application.register("artisans-ui--tooltip", TooltipController)
 
-export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, CarouselController, ClipboardController, ConfirmationController, DockController, DropdownController, EmojiPickerController, HotkeyController, LightboxController, ModalController, NavbarController, OsDetectController, PasswordController, SelectController, TooltipController }
+export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, CarouselController, ClipboardController, ConfirmationController, DockController, DropdownController, EmojiPickerController, HotkeyController, LightboxController, ModalController, NavbarController, OsDetectController, PasswordController, PopoverController, SelectController, TooltipController }

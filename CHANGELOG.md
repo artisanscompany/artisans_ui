@@ -8,6 +8,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Popover component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
+  - Stimulus popover controller with Floating UI integration (500+ lines)
+  - Intelligent positioning with 12 placement options (top, bottom, left, right + start/end variants)
+  - Multiple trigger modes (hover, focus, click, or combined)
+  - Interactive mode for forms and clickable content
+  - Configurable arrow with automatic positioning and dark mode support
+  - Multiple animation types (fade, origin/scale, combined, or none)
+  - Delay support for show/hide timing
+  - Click-outside to close functionality
+  - Close buttons within popover content (data-popover-close-button)
+  - IntersectionObserver integration (auto-hide when trigger scrolls out of view)
+  - Dialog/modal aware (appends to closest dialog[open] or body)
+  - Focus management for interactive popovers (checkboxes, form elements)
+  - Configurable max width with responsive behavior
+  - Full dark mode support with gradient arrow styling
+  - **Note**: Requires Floating UI library (external dependency)
+  - **Implementation**: Use ERB templates directly as shown in RailsBlocks examples
 - Password components (5 variants) - RailsBlocks exact implementation
   - BasicComponent: Simple password input with show/hide toggle
   - WithStrengthIndicatorComponent: Password with strength meter (weak/fair/good/strong)

@@ -30,61 +30,43 @@ module ArtisansUi
           **@html_options
         ) do
           tag.div(class: "grid grid-cols-[auto_1fr] gap-2 items-start") do
-            safe_join([
-              render_icon,
-              render_title,
-              render_spacer,
-              render_description
-            ].compact)
-          end
-        end
-      end
+            content = [
+              # Row 1: Icon
+              tag.div(class: "flex items-center h-full") do
+                tag.svg(
+                  xmlns: "http://www.w3.org/2000/svg",
+                  width: "18",
+                  height: "18",
+                  viewBox: "0 0 18 18",
+                  class: "text-green-500 dark:text-green-400"
+                ) do
+                  tag.g(
+                    fill: "none",
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round",
+                    "stroke-width": "1.5",
+                    stroke: "currentColor"
+                  ) do
+                    safe_join([
+                      tag.circle(cx: "9", cy: "9", r: "7.25"),
+                      tag.polyline(points: "5.75 9.25 8 11.75 12.25 6.25")
+                    ])
+                  end
+                end
+              end,
+              # Row 1: Title
+              tag.h3(class: "text-sm font-medium text-green-800 dark:text-green-200") { @title }
+            ]
 
-      private
-
-      def render_icon
-        tag.div(class: "flex items-center h-full") do
-          tag.svg(
-            xmlns: "http://www.w3.org/2000/svg",
-            width: "18",
-            height: "18",
-            viewBox: "0 0 18 18",
-            class: "text-green-500 dark:text-green-400"
-          ) do
-            tag.g(
-              fill: "none",
-              "stroke-linecap": "round",
-              "stroke-linejoin": "round",
-              "stroke-width": "1.5",
-              stroke: "currentColor"
-            ) do
-              safe_join([
-                tag.circle(cx: "9", cy: "9", r: "7.25"),
-                tag.polyline(points: "5.75 9.25 8 11.75 12.25 6.25")
-              ])
+            # Row 2: Only if description exists
+            if @description
+              content << tag.div # Empty spacer in first column
+              content << tag.div(class: "text-sm text-green-700 dark:text-green-300") { @description }
             end
+
+            safe_join(content)
           end
         end
-      end
-
-      def render_title
-        tag.h3(
-          class: "text-sm font-medium text-green-800 dark:text-green-200"
-        ) { @title }
-      end
-
-      def render_spacer
-        return unless @description
-
-        tag.div
-      end
-
-      def render_description
-        return unless @description
-
-        tag.div(
-          class: "text-sm text-green-700 dark:text-green-300"
-        ) { @description }
       end
     end
   end

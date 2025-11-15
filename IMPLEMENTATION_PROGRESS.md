@@ -33,6 +33,9 @@
 - **Form** (2 variants) - ✅ ALL 2 VARIANTS COMPLETE
 - **KbdHotkey** (3 variants) - ✅ ALL 3 VARIANTS COMPLETE
 - **Lightbox** (1 controller) - ✅ COMPLETE (ERB-only, no ViewComponents)
+- **LoadingIndicator** (3 variants) - ✅ ALL 3 VARIANTS COMPLETE
+- **Marquee** (3 variants) - ✅ ALL 3 VARIANTS COMPLETE
+- **Navbar** (1 controller) - ✅ COMPLETE (ERB-only, no ViewComponents)
 
 ---
 
@@ -219,14 +222,17 @@ None currently.
     - [x] Bouncing dots (DotsLoaderComponent)
     - **Note**: Pure CSS/SVG animations, no JavaScript required
 
-24. **Marquee** (3 components)
-    - [ ] Basic marquee
-    - [ ] Vertical marquee
-    - [ ] Pause on hover
+24. **Marquee** (3 components) - ✅ COMPLETE
+    - [x] Basic marquee (BasicComponent)
+    - [x] Multi-row marquee (MultiRowComponent)
+    - [x] Slow on hover (SlowOnHoverComponent)
+    - **Note**: Includes Stimulus marquee controller for infinite scrolling animation
 
-25. **Navbar** (2 components)
-    - [ ] Horizontal navbar
-    - [ ] With dropdown
+25. **Navbar** (1 component) - ✅ COMPLETE
+    - [x] Navbar controller with dropdown menus
+    - Supports: responsive design, mobile hamburger menu, hover/click interactions, smooth transitions, keyboard navigation
+    - **Note**: ERB-only implementation (no ViewComponents due to complexity)
+    - **Note**: Includes navbar_controller with 1000+ lines for smooth animations and transitions
 
 26. **Password** (5 components)
     - [ ] Basic password input
@@ -334,14 +340,14 @@ None currently.
 ## Progress Summary
 
 **Total Categories:** 39
-**Completed Categories:** 19 (Accordion, Alert, AnimatedNumber, Autogrow, Badge, Banner, Breadcrumb, Card, Carousel, Checkbox, Clipboard, ColorPicker, Combobox, Confirmation, DatePicker, Dock, EmojiPicker, Form, KbdHotkey; 1 partial: Button 6/14)
-**Remaining Categories:** 20
+**Completed Categories:** 22 (Accordion, Alert, AnimatedNumber, Autogrow, Badge, Banner, Breadcrumb, Card, Carousel, Checkbox, Clipboard, ColorPicker, Combobox, Confirmation, DatePicker, Dock, EmojiPicker, Form, KbdHotkey, Lightbox, LoadingIndicator, Marquee, Navbar; 1 partial: Button 6/14)
+**Remaining Categories:** 17
 
 **Total Individual Components:** 200+
-**Completed Components:** 113 (11 Accordion + 5 Alert + 8 AnimatedNumber + 3 Autogrow + 6 Badge + 4 Banner + 4 Breadcrumb + 6 Button + 8 Card + 6 Carousel + 4 Checkbox + 7 Clipboard + 6 ColorPicker + 10 Combobox + 5 Confirmation + 10 DatePicker + 2 Dock + 3 EmojiPicker + 2 Form + 3 KbdHotkey)
-**Remaining Components:** 87+
+**Completed Components:** 120 (11 Accordion + 5 Alert + 8 AnimatedNumber + 3 Autogrow + 6 Badge + 4 Banner + 4 Breadcrumb + 6 Button + 8 Card + 6 Carousel + 4 Checkbox + 7 Clipboard + 6 ColorPicker + 10 Combobox + 5 Confirmation + 10 DatePicker + 2 Dock + 3 EmojiPicker + 2 Form + 3 KbdHotkey + 1 Lightbox + 3 LoadingIndicator + 3 Marquee + 1 Navbar)
+**Remaining Components:** 80+
 
-**Completion:** ~56%
+**Completion:** ~60%
 
 ---
 
@@ -366,8 +372,12 @@ None currently.
 17. ✅ **EmojiPicker** components (3 variants) - COMPLETE
 18. ✅ **Form** components (2 variants) - COMPLETE
 19. ✅ **KbdHotkey** components (3 variants) - COMPLETE
-20. **Feedback** components (9 variants) - NEXT
-21. Continue alphabetically through the list
+20. ✅ **Lightbox** component (1 controller) - COMPLETE
+21. ✅ **LoadingIndicator** components (3 variants) - COMPLETE
+22. ✅ **Marquee** components (3 variants) - COMPLETE
+23. ✅ **Navbar** component (1 controller) - COMPLETE
+24. **Feedback** components (9 variants) - NEXT
+25. Continue alphabetically through the list
 
 ---
 

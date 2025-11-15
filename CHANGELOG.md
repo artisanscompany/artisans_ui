@@ -8,6 +8,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Marquee components (3 variants) - RailsBlocks exact implementation
+  - BasicComponent: Smooth scrolling marquee with pause on hover
+  - MultiRowComponent: Multiple rows with different directions and speeds
+  - SlowOnHoverComponent: Slows down on hover instead of pausing
+- Stimulus marquee controller for infinite scrolling animation
+- Content cloning system for seamless loop
+- Bi-directional scrolling (left/right)
+- Smooth speed transitions on hover
+- ResizeObserver integration for responsive content updates
+- CSS animation keyframes with transform
+- Comprehensive RSpec tests for all Marquee variants (48 examples total, 100% passing)
+- Full dark mode support with gradient overlays
+- Navbar component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
+  - Stimulus navbar controller with dropdown menus and smooth animations (1000+ lines)
+  - Responsive design with mobile hamburger menu support
+  - Dropdown menus with hover and click interactions
+  - Smooth transitions between different dropdown contents
+  - Indicator arrow with automatic positioning
+  - Touch device detection (disables hover on touch devices)
+  - Keyboard navigation (Arrow keys, Tab, Shift+Tab, Escape, Enter, Space)
+  - Click outside to close functionality
+  - Configurable alignment (start, center, end) for dropdown positioning
+  - Smart delay system (200ms initial delay, instant transitions after first open)
+  - Animation queuing to prevent conflicts during rapid menu changes
+  - Mobile-first responsive behavior (centered on mobile, aligned to trigger on desktop)
+  - Full dark mode support
+  - **Implementation**: Use ERB templates directly as shown in RailsBlocks examples
 - KbdHotkey components (3 variants) - RailsBlocks exact implementation
   - BasicComponent: Simple KBD element for displaying keyboard shortcuts
   - ButtonWithHotkeyComponent: Interactive button with keyboard shortcut trigger

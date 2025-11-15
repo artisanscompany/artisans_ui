@@ -26,6 +26,8 @@ import SelectController from "./select_controller"
 import SidebarController from "./sidebar_controller"
 import ToastController from "./toast_controller"
 import TooltipController from "./tooltip_controller"
+import TreeViewController from "./tree_view_controller"
+import TwoFactorController from "./two_factor_controller"
 
 // Register controllers
 application.register("artisans-ui--accordion", AccordionController)
@@ -51,5 +53,7 @@ application.register("artisans-ui--select", SelectController)
 application.register("artisans-ui--sidebar", SidebarController)
 application.register("artisans-ui--toast", ToastController)
 application.register("artisans-ui--tooltip", TooltipController)
+application.register("artisans-ui--tree-view", TreeViewController)
+application.register("artisans-ui--two-factor", TwoFactorController)
 
-export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, CarouselController, ClipboardController, ConditionalRadioController, ConfirmationController, DockController, DropdownController, EmojiPickerController, HotkeyController, LightboxController, MarqueeController, ModalController, NavbarController, OsDetectController, PasswordController, PopoverController, SelectController, SidebarController, ToastController, TooltipController }
+export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, CarouselController, ClipboardController, ConditionalRadioController, ConfirmationController, DockController, DropdownController, EmojiPickerController, HotkeyController, LightboxController, MarqueeController, ModalController, NavbarController, OsDetectController, PasswordController, PopoverController, SelectController, SidebarController, ToastController, TooltipController, TreeViewController, TwoFactorController }

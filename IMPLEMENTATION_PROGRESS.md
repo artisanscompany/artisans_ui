@@ -46,6 +46,8 @@
 - **Testimonial** (5 variants) - ✅ ALL 5 VARIANTS COMPLETE
 - **Toast** (1 controller) - ✅ COMPLETE (ERB-only, no ViewComponents)
 - **Tooltip** (1 controller) - ✅ COMPLETE (ERB-only, no ViewComponents)
+- **TreeView** (1 controller) - ✅ COMPLETE (ERB-only, no ViewComponents)
+- **TwoFactor** (1 controller) - ✅ COMPLETE (ERB-only, no ViewComponents)
 
 ---
 
@@ -326,11 +328,17 @@ None currently.
     - **Note**: Requires Floating UI library (external dependency)
     - **Note**: Includes global state management for intelligent multi-tooltip behavior
 
-37. **TreeView** (1 component)
-    - [ ] Basic tree view
+37. **TreeView** (1 component) - ✅ COMPLETE
+    - [x] Tree view controller for hierarchical file/folder structures
+    - Supports: keyboard navigation (Arrow Up/Down, Enter/Space), smooth height animations, automatic icon switching, ARIA attributes, hidden state management, configurable animations
+    - **Note**: ERB-only implementation (no ViewComponents due to complexity)
+    - **Note**: Includes tree_view_controller for collapsible folder structure
 
-38. **TwoFactor** (1 component)
-    - [ ] 2FA code input
+38. **TwoFactor** (1 component) - ✅ COMPLETE
+    - [x] Two-factor authentication 6-digit code input
+    - Supports: automatic focus navigation, paste support, backspace/arrow key navigation, input validation (numeric only), optional auto-submit, mobile-optimized (inputmode="numeric"), autocomplete support
+    - **Note**: ERB-only implementation (no ViewComponents due to complexity)
+    - **Note**: Includes two_factor_controller for verification code input
 
 39. **Button** (14 components - 13 remaining)
     - [x] Basic button with variants (primary, secondary, danger, outline)

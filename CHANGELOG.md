@@ -8,6 +8,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- TreeView component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
+  - Stimulus tree_view controller for hierarchical file/folder structures
+  - Keyboard navigation with Arrow Up/Down keys and Enter/Space to toggle
+  - Smooth height animations for expanding/collapsing folders
+  - Automatic icon switching (closed/open folder icons)
+  - ARIA attributes for accessibility (aria-expanded, aria-controls, role)
+  - Hidden state management (prevents hidden items from keyboard navigation)
+  - Configurable animations (can be disabled for instant toggling)
+  - **Implementation**: Use ERB templates directly as shown in RailsBlocks examples
+- TwoFactor component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
+  - Stimulus two_factor controller for 6-digit verification code input
+  - Automatic focus navigation between input fields
+  - Paste support (auto-fills all 6 digits from clipboard)
+  - Backspace and arrow key navigation
+  - Input validation (numeric only)
+  - Optional auto-submit when all digits entered
+  - Mobile-optimized (inputmode="numeric" for numeric keyboard)
+  - Autocomplete support (autocomplete="one-time-code" for first field)
+  - **Implementation**: Use ERB templates directly as shown in RailsBlocks examples
 - Toast component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
   - Stimulus toast controller with Sonner-like stacking animations
   - Global window.toast() function for easy toast triggering

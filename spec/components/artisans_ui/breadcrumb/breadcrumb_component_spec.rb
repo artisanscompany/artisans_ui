@@ -104,7 +104,7 @@ RSpec.describe "ArtisansUi::Breadcrumb Components", type: :component do
       render_inline(described_class.new(items: items))
 
       expect(rendered_content).to include('viewBox="0 0 20 20"')
-      expect(rendered_content).to include("fill-rule")
+      expect(rendered_content).to include('fill="currentColor"')
     end
 
     it "applies hover background to links" do
@@ -168,7 +168,7 @@ RSpec.describe "ArtisansUi::Breadcrumb Components", type: :component do
       render_inline(described_class.new(items: items))
 
       expect(rendered_content).to include('viewBox="0 0 20 20"')
-      expect(rendered_content).to include("fill-rule")
+      expect(rendered_content).to include('fill="currentColor"')
     end
 
     it "applies medium font weight to links" do

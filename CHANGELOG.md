@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Breadcrumb components (4 variants) - RailsBlocks exact implementation
+  - BasicComponent: Simple breadcrumb with slash separators
+  - WithIconsComponent: Home icon and chevron separators with hover effects
+  - WithBackgroundComponent: Background styling with rounded container
+  - WithTruncationComponent: Ellipsis truncation for long paths
+- Comprehensive RSpec tests for all Breadcrumb variants (7+ examples each)
 - Badge components (6 variants) - RailsBlocks exact implementation
   - BasicComponent: Simple badge with color variants (neutral, primary, success, error, warning, info)
   - ColorVariantComponent: Explicit color options with solid and soft styles

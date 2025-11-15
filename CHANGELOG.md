@@ -8,6 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Form components (2 variants) - RailsBlocks exact implementation
+  - FormFieldsComponent: Comprehensive form fields (text, email, URL, phone, password, date, time, disabled, readonly, error states, file upload, selects, checkboxes, switches, radios)
+  - DatalistComponent: HTML5 datalist examples (text, date, time, datetime-local, month, week, email, URL, number, search)
+- Custom CSS classes for form styling (form-control, label, etc.)
+- Switch components with icons using Tailwind CSS
+- File upload with custom styling and JavaScript
+- Comprehensive RSpec tests for all Form variants (41 examples total, 100% passing)
+- Full dark mode support for all form elements
+- **Note**: CSS-only components, no Stimulus controller required
 - EmojiPicker components (3 variants) - RailsBlocks exact implementation
   - BasicComponent: Simple emoji picker with button trigger and hidden input
   - AutoSubmitComponent: Demonstrates auto-submit enabled vs disabled behavior

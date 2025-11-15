@@ -8,6 +8,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Button components (6 variants) - RailsBlocks exact implementation
+  - BasicComponent: Standard button with clean design (neutral, colored, secondary, danger variants)
+  - FancyComponent: Enhanced button with skeumorphic design and advanced shadows
+  - IconOnlyComponent: Compact icon-only buttons (regular, small, tiny sizes)
+  - WithIconComponent: Button with text + icon (left or right positioning)
+  - LoadingComponent: Button with loading spinner state
+  - GroupComponent: Multiple buttons grouped with shared borders
+- Comprehensive RSpec tests for all Button variants (85 examples total, 100% passing)
+- Full dark mode support with hover/focus states
+- Card components (8 variants) - RailsBlocks exact implementation
+  - BasicComponent: Simple card with shadow and rounded corners
+  - WithHeaderComponent: Header section separated by divider
+  - WithFooterComponent: Footer section for actions and links
+  - CompleteComponent: All three sections (header + body + footer)
+  - EdgeToEdgeComponent: Responsive full width on mobile
+  - WellComponent: Subtle container with no shadow
+  - WithImageComponent: Featured image with metadata and author section
+  - StatsComponent: Dashboard metrics with trends and progress indicators
+- Comprehensive RSpec tests for all Card variants (5+ examples each)
 - Breadcrumb components (4 variants) - RailsBlocks exact implementation
   - BasicComponent: Simple breadcrumb with slash separators
   - WithIconsComponent: Home icon and chevron separators with hover effects

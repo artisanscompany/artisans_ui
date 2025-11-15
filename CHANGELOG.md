@@ -8,6 +8,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Lightbox component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
+  - Stimulus lightbox controller with PhotoSwipe integration (718 lines)
+  - Full-screen image lightbox with zoom, pan, and navigation
+  - Gallery support with thumbnail grid and connected navigation
+  - Custom cursor handling (zoom-in/zoom-out based on zoom level)
+  - Smart zoom cycling (fit → 100% → 1.5x → 2x → fit)
+  - Caption display with automatic positioning
+  - Download button with intelligent filename detection
+  - Zoom percentage indicator with auto-hide at 100%
+  - Dots navigation indicator for galleries (auto-hidden for single images)
+  - Automatic dimension detection for portrait/landscape/square images
+  - Keyboard shortcuts (←/→ navigate, Esc closes, Z zooms, Space pans)
+  - Touch gestures support (swipe, pinch-to-zoom)
+  - Configurable UI elements (download button, zoom indicator, dots can be toggled)
+  - Full dark mode support
+  - **Note**: Requires PhotoSwipe library (external dependency)
+  - **Implementation**: Use ERB templates directly as shown in RailsBlocks examples
 - Form components (2 variants) - RailsBlocks exact implementation
   - FormFieldsComponent: Comprehensive form fields (text, email, URL, phone, password, date, time, disabled, readonly, error states, file upload, selects, checkboxes, switches, radios)
   - DatalistComponent: HTML5 datalist examples (text, date, time, datetime-local, month, week, email, URL, number, search)

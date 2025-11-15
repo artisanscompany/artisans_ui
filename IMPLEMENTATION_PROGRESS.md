@@ -31,6 +31,7 @@
 - **Dock** (2 variants) - ✅ ALL 2 VARIANTS COMPLETE
 - **EmojiPicker** (3 variants) - ✅ ALL 3 VARIANTS COMPLETE
 - **Form** (2 variants) - ✅ ALL 2 VARIANTS COMPLETE
+- **Lightbox** (1 controller) - ✅ COMPLETE (ERB-only, no ViewComponents)
 
 ---
 
@@ -204,10 +205,11 @@ None currently.
     - [ ] Hotkey listener
     - [ ] Shortcut reference
 
-22. **Lightbox** (3 components)
-    - [ ] Image lightbox
-    - [ ] Gallery lightbox
-    - [ ] Video lightbox
+22. **Lightbox** (1 component) - ✅ COMPLETE
+    - [x] Lightbox controller with PhotoSwipe integration
+    - Supports: single images, galleries, custom UI elements, auto-dimension detection
+    - **Note**: ERB-only implementation (no ViewComponents due to complexity)
+    - **Note**: Requires PhotoSwipe library (external dependency)
 
 23. **LoadingIndicator** (3 components)
     - [ ] Spinner

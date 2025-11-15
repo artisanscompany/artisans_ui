@@ -10,13 +10,14 @@ module ArtisansUi
     #     name: "emoji"
     #   ) %>
     class BasicComponent < ApplicationViewComponent
-      def initialize(name: "emoji", **html_options)
+      def initialize(name:, value: nil, **html_options)
         @name = name
+        @value = value
         @html_options = html_options
       end
 
       def call
-        tag.div(data: { controller: "emoji-picker" }) do
+        tag.div(data: { controller: "artisans-ui--emoji-picker" }, **@html_options) do
           safe_join([
             render_button_and_input,
             render_picker_container
@@ -36,16 +37,20 @@ module ArtisansUi
       end
 
       def render_button
+        content = if @value.present?
+          tag.span(@value, class: "size-6 text-xl shrink-0 flex items-center justify-center")
+        else
+          render_emoji_icon
+        end
+
         tag.button(
           type: "button",
           class: "outline-hidden size-8 text-xl shrink-0 flex items-center justify-center rounded-md text-neutral-700 hover:bg-neutral-100 hover:text-neutral-800 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-neutral-200",
           data: {
-            action: "click->emoji-picker#toggle",
-            emoji_picker_target: "button"
+            action: "click->artisans-ui--emoji-picker#toggle",
+            "artisans-ui--emoji-picker-target": "button"
           }
-        ) do
-          render_emoji_icon
-        end
+        ) { content }
       end
 
       def render_emoji_icon
@@ -66,16 +71,16 @@ module ArtisansUi
         tag.input(
           type: "text",
           name: @name,
+          value: @value,
           class: "hidden",
-          placeholder: "Select an emoji...",
-          data: { emoji_picker_target: "input" }
+          data: { "artisans-ui--emoji-picker-target": "input" }
         )
       end
 
       def render_picker_container
         tag.div(
-          data: { emoji_picker_target: "pickerContainer" },
-          class: "hidden absolute z-50 mt-2 flex justify-center inset-x-0"
+          class: "hidden absolute z-50 mt-2 flex justify-center inset-x-0",
+          data: { "artisans-ui--emoji-picker-target": "pickerContainer" }
         )
       end
     end

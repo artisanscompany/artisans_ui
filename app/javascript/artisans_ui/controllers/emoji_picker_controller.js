@@ -17,12 +17,12 @@ export default class extends Controller {
 
   connect() {
     // Prevent duplicate initialization
-    if (this.element.dataset.emojiPickerInitialized === "true") {
+    if (this.element.dataset.artisansUiEmojiPickerInitialized === "true") {
       return;
     }
 
     // Mark as initialized
-    this.element.dataset.emojiPickerInitialized = "true";
+    this.element.dataset.artisansUiEmojiPickerInitialized = "true";
 
     // Use setTimeout to ensure DOM is fully rendered after Turbo navigation
     setTimeout(() => {
@@ -289,7 +289,7 @@ export default class extends Controller {
   disconnect() {
     // Clean up initialization flag
     if (this.element) {
-      delete this.element.dataset.emojiPickerInitialized;
+      delete this.element.dataset.artisansUiEmojiPickerInitialized;
     }
 
     // Clean up event listeners when controller disconnects

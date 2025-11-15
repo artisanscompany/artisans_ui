@@ -2,77 +2,54 @@
 
 module ArtisansUi
   module EmojiPicker
-    # Emoji picker with insert mode - inserts emoji at cursor position
-    # Exact RailsBlocks implementation
+    # Emoji picker with insert mode for textarea/input fields
+    # Exact RailsBlocks implementation for inserting at cursor
     #
     # @example
     #   <%= render ArtisansUi::EmojiPicker::InsertModeComponent.new(
-    #     target_selector: "#chat-message"
+    #     target_field_id: "#message-input"
     #   ) %>
     class InsertModeComponent < ApplicationViewComponent
-      def initialize(target_selector: "#chat-message", **html_options)
-        @target_selector = target_selector
+      def initialize(target_field_id:, name: nil, **html_options)
+        @target_field_id = target_field_id
+        @name = name
         @html_options = html_options
       end
 
       def call
-        tag.div(class: "w-full max-w-lg") do
-          tag.div(class: "w-full bg-white dark:bg-neutral-800 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-700 p-4") do
-            render_emoji_picker_container
-          end
+        tag.div(
+          data: {
+            controller: "artisans-ui--emoji-picker",
+            "artisans-ui--emoji-picker-insert-mode-value": "true",
+            "artisans-ui--emoji-picker-target-selector-value": @target_field_id
+          },
+          **@html_options
+        ) do
+          safe_join([
+            render_button_and_input,
+            render_picker_container
+          ])
         end
       end
 
       private
 
-      def render_emoji_picker_container
-        tag.div(
-          data: {
-            controller: "emoji-picker",
-            emoji_picker_insert_mode_value: "true",
-            emoji_picker_target_selector_value: @target_selector
-          }
-        ) do
-          safe_join([
-            render_textarea,
-            render_controls,
-            render_picker_container,
-            render_hidden_input
-          ])
-        end
-      end
-
-      def render_textarea
-        tag.textarea(
-          id: @target_selector.delete("#"),
-          rows: "4",
-          class: "form-control w-full mb-3 min-h-24 max-h-48",
-          placeholder: "Type your message here..."
-        )
-      end
-
-      def render_controls
-        tag.div(class: "flex items-center justify-between") do
-          safe_join([
-            render_emoji_button_container,
-            render_send_button
-          ])
-        end
-      end
-
-      def render_emoji_button_container
+      def render_button_and_input
         tag.div(class: "flex items-center gap-2") do
-          render_emoji_button
+          safe_join([
+            render_button,
+            @name.present? ? render_input : nil
+          ].compact)
         end
       end
 
-      def render_emoji_button
+      def render_button
         tag.button(
           type: "button",
-          class: "outline-hidden size-8 text-xl shrink-0 flex items-center justify-center rounded-md text-neutral-700 hover:bg-neutral-100 hover:text-neutral-800 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:hover:text-neutral-200",
+          class: "outline-hidden size-8 text-xl shrink-0 flex items-center justify-center rounded-md text-neutral-700 hover:bg-neutral-100 hover:text-neutral-800 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-neutral-200",
           data: {
-            action: "click->emoji-picker#toggle",
-            emoji_picker_target: "button"
+            action: "click->artisans-ui--emoji-picker#toggle",
+            "artisans-ui--emoji-picker-target": "button"
           }
         ) do
           render_emoji_icon
@@ -87,50 +64,25 @@ module ArtisansUi
           height: "18",
           viewBox: "0 0 18 18"
         ) do
-          tag.g(
-            fill: "none",
-            stroke_linecap: "round",
-            stroke_linejoin: "round",
-            stroke_width: "1.5",
-            stroke: "currentColor"
-          ) do
-            safe_join([
-              tag.circle(cx: "9", cy: "9", r: "7.25"),
-              tag.circle(cx: "6", cy: "8", r: "1", fill: "currentColor", data: { stroke: "none" }, stroke: "none"),
-              tag.circle(cx: "12", cy: "8", r: "1", fill: "currentColor", data: { stroke: "none" }, stroke: "none"),
-              tag.path(
-                d: "M11.897,10.757c-.154-.154-.366-.221-.583-.189h0c-1.532,.239-3.112,.238-4.638-.001-.214-.032-.421,.035-.572,.185-.154,.153-.227,.376-.193,.598,.23,1.511,1.558,2.651,3.089,2.651s2.86-1.141,3.089-2.654c.033-.216-.039-.436-.192-.589Z",
-                fill: "currentColor",
-                data: { stroke: "none" },
-                stroke: "none"
-              )
-            ])
+          tag.g(fill: "currentColor") do
+            tag.path(d: "M9,1C4.589,1,1,4.589,1,9s3.589,8,8,8,8-3.589,8-8S13.411,1,9,1Zm-4,7c0-.552,.448-1,1-1s1,.448,1,1-.448,1-1,1-1-.448-1-1Zm4,6c-1.531,0-2.859-1.14-3.089-2.651-.034-.221,.039-.444,.193-.598,.151-.15,.358-.217,.572-.185,1.526,.24,3.106,.24,4.638,.001h0c.217-.032,.428,.036,.583,.189,.153,.153,.225,.373,.192,.589-.229,1.513-1.557,2.654-3.089,2.654Zm3-5c-.552,0-1-.448-1-1s.448-1,1-1,1,.448,1,1-.448,1-1,1Z")
           end
         end
       end
 
-      def render_send_button
-        tag.button(
-          type: "button",
-          class: "flex items-center justify-center gap-1.5 rounded-lg border border-neutral-400/30 bg-neutral-800 px-4 py-2 text-sm font-medium whitespace-nowrap text-white shadow-sm transition-all duration-100 ease-in-out select-none hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-white dark:text-neutral-800 dark:hover:bg-neutral-100 dark:focus-visible:outline-neutral-200"
-        ) do
-          "Send"
-        end
+      def render_input
+        tag.input(
+          type: "text",
+          name: @name,
+          class: "hidden",
+          data: { "artisans-ui--emoji-picker-target": "input" }
+        )
       end
 
       def render_picker_container
         tag.div(
-          data: { emoji_picker_target: "pickerContainer" },
-          class: "hidden absolute z-50 mt-2 flex justify-center inset-x-0 *:w-full"
-        )
-      end
-
-      def render_hidden_input
-        tag.input(
-          type: "text",
-          name: "emoji",
-          class: "form-control !hidden",
-          data: { emoji_picker_target: "input" }
+          class: "hidden absolute z-50 mt-2 flex justify-center inset-x-0",
+          data: { "artisans-ui--emoji-picker-target": "pickerContainer" }
         )
       end
     end

@@ -21,6 +21,7 @@
 - **Breadcrumb** (4 variants) - ✅ ALL 4 VARIANTS COMPLETE
 - **Button** (6 variants) - ✅ ALL 6 VARIANTS COMPLETE
 - **Card** (8 variants) - ✅ ALL 8 VARIANTS COMPLETE
+- **Collapsible** (1 variant) - ✅ COMPLETE
 - **Carousel** (6 variants) - ✅ ALL 6 VARIANTS COMPLETE
 - **Checkbox** (4 variants) - ✅ ALL 4 VARIANTS COMPLETE
 - **Clipboard** (7 variants) - ✅ ALL 7 VARIANTS COMPLETE
@@ -155,8 +156,9 @@ None currently.
     - [x] Without tooltip (WithoutTooltipComponent)
     - [x] Tooltip positions (TooltipPositionsComponent)
 
-12. **Collapsible** (1 component)
-    - [ ] Basic collapsible
+12. **Collapsible** (1 component) - ✅ COMPLETE
+    - [x] Basic collapsible (BasicComponent)
+    - **Note**: FAQ-style collapsible with smooth height transitions, plus/minus icon switching, and Stimulus controller for interactive behavior
 
 13. **ColorPicker** (6 components) - ✅ COMPLETE
     - [x] Basic color picker (BasicComponent)
@@ -360,14 +362,14 @@ None currently.
 ## Progress Summary
 
 **Total Categories:** 39
-**Completed Categories:** 37 (Accordion, Alert, AnimatedNumber, Autogrow, Badge, Banner, Breadcrumb, Button, Card, Carousel, Checkbox, Clipboard, ColorPicker, Combobox, Confirmation, DatePicker, Dock, EmojiPicker, Form, KbdHotkey, Lightbox, LoadingIndicator, Marquee, Navbar, Password, Popover, Radio, ScrollArea, Select, Sidebar, Skeleton, Switch, Tabs, Testimonial, Toast, Tooltip, TreeView, TwoFactor)
-**Remaining Categories:** 2
+**Completed Categories:** 38 (Accordion, Alert, AnimatedNumber, Autogrow, Badge, Banner, Breadcrumb, Button, Card, Carousel, Checkbox, Clipboard, Collapsible, ColorPicker, Combobox, Confirmation, DatePicker, Dock, EmojiPicker, Form, KbdHotkey, Lightbox, LoadingIndicator, Marquee, Navbar, Password, Popover, Radio, ScrollArea, Select, Sidebar, Skeleton, Switch, Tabs, Testimonial, Toast, Tooltip, TreeView, TwoFactor)
+**Remaining Categories:** 1 (Feedback)
 
 **Total Individual Components:** 200+
-**Completed Components:** 158 (11 Accordion + 5 Alert + 8 AnimatedNumber + 3 Autogrow + 6 Badge + 4 Banner + 4 Breadcrumb + 6 Button + 8 Card + 6 Carousel + 4 Checkbox + 7 Clipboard + 6 ColorPicker + 10 Combobox + 5 Confirmation + 10 DatePicker + 2 Dock + 3 EmojiPicker + 2 Form + 3 KbdHotkey + 1 Lightbox + 3 LoadingIndicator + 3 Marquee + 1 Navbar + 5 Password + 1 Popover + 5 Radio + 3 ScrollArea + 10 Select + 1 Sidebar + 6 Skeleton + 3 Switch + 1 Tabs + 5 Testimonial + 1 Toast + 1 Tooltip + 1 TreeView + 1 TwoFactor)
-**Remaining Components:** 10 (1 Collapsible + 9 Feedback)
+**Completed Components:** 159 (11 Accordion + 5 Alert + 8 AnimatedNumber + 3 Autogrow + 6 Badge + 4 Banner + 4 Breadcrumb + 6 Button + 8 Card + 6 Carousel + 4 Checkbox + 7 Clipboard + 1 Collapsible + 6 ColorPicker + 10 Combobox + 5 Confirmation + 10 DatePicker + 2 Dock + 3 EmojiPicker + 2 Form + 3 KbdHotkey + 1 Lightbox + 3 LoadingIndicator + 3 Marquee + 1 Navbar + 5 Password + 1 Popover + 5 Radio + 3 ScrollArea + 10 Select + 1 Sidebar + 6 Skeleton + 3 Switch + 1 Tabs + 5 Testimonial + 1 Toast + 1 Tooltip + 1 TreeView + 1 TwoFactor)
+**Remaining Components:** 9 (Feedback)
 
-**Completion:** ~94%
+**Completion:** ~95%
 
 ---
 

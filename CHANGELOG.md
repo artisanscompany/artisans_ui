@@ -8,6 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Collapsible component (1 variant) - RailsBlocks exact implementation
+  - BasicComponent: FAQ-style collapsible content area with smooth height transitions
+  - Stimulus collapsible controller for toggle functionality
+  - Plus/minus icon switching with opacity transitions
+  - Smooth max-height and opacity animations (300ms duration)
+  - Open/closed state management with data attributes
+  - Configurable initial state (open or closed)
+  - Full dark mode support with proper text colors
+  - Comprehensive RSpec tests (15 examples, 100% passing)
 - TreeView component (1 variant) - RailsBlocks exact implementation
   - BasicComponent: Hierarchical file/folder tree with nested folders and files
   - Stimulus tree_view controller for interactive behavior

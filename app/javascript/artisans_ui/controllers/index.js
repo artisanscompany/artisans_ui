@@ -6,6 +6,7 @@ import { application } from "@hotwired/stimulus"
 import AccordionController from "./accordion_controller"
 import AnimatedNumberController from "./animated_number_controller"
 import AutogrowController from "./autogrow_controller"
+import BannerController from "./banner_controller"
 import ModalController from "./modal_controller"
 import DropdownController from "./dropdown_controller"
 import TooltipController from "./tooltip_controller"
@@ -14,8 +15,9 @@ import TooltipController from "./tooltip_controller"
 application.register("artisans-ui--accordion", AccordionController)
 application.register("artisans-ui--animated-number", AnimatedNumberController)
 application.register("artisans-ui--autogrow", AutogrowController)
+application.register("artisans-ui--banner", BannerController)
 application.register("artisans-ui--modal", ModalController)
 application.register("artisans-ui--dropdown", DropdownController)
 application.register("artisans-ui--tooltip", TooltipController)
 
-export { AccordionController, AnimatedNumberController, AutogrowController, ModalController, DropdownController, TooltipController }
+export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, ModalController, DropdownController, TooltipController }

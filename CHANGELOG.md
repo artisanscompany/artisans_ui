@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Badge components (6 variants) - RailsBlocks exact implementation
+  - BasicComponent: Simple badge with color variants (neutral, primary, success, error, warning, info)
+  - ColorVariantComponent: Explicit color options with solid and soft styles
+  - WithIconComponent: Badge with SVG icons (check, star, alert, info) and positioning
+  - RoundedPillComponent: Fully rounded pill-style badges
+  - WithDotComponent: Status badges with indicator dots and optional pulse animation
+  - NotificationComponent: Compact notification counts with max display (99+)
+- Comprehensive RSpec tests for all Badge variants (9+ examples each)
 - AnimatedNumber components (8 variants) - RailsBlocks exact implementation
   - BasicComponent: Simple counter animation
   - CurrencyComponent: Currency formatting with suffix support

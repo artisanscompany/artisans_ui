@@ -16,6 +16,7 @@ import DropdownController from "./dropdown_controller"
 import EmojiPickerController from "./emoji_picker_controller"
 import HotkeyController from "./hotkey_controller"
 import LightboxController from "./lightbox_controller"
+import MarqueeController from "./marquee_controller"
 import ModalController from "./modal_controller"
 import NavbarController from "./navbar_controller"
 import OsDetectController from "./os_detect_controller"
@@ -38,6 +39,7 @@ application.register("artisans-ui--dropdown", DropdownController)
 application.register("artisans-ui--emoji-picker", EmojiPickerController)
 application.register("artisans-ui--hotkey", HotkeyController)
 application.register("artisans-ui--lightbox", LightboxController)
+application.register("artisans-ui--marquee", MarqueeController)
 application.register("artisans-ui--modal", ModalController)
 application.register("artisans-ui--navbar", NavbarController)
 application.register("artisans-ui--os-detect", OsDetectController)
@@ -46,4 +48,4 @@ application.register("artisans-ui--popover", PopoverController)
 application.register("artisans-ui--select", SelectController)
 application.register("artisans-ui--tooltip", TooltipController)
 
-export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, CarouselController, ClipboardController, ConfirmationController, DockController, DropdownController, EmojiPickerController, HotkeyController, LightboxController, ModalController, NavbarController, OsDetectController, PasswordController, PopoverController, SelectController, TooltipController }
+export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, CarouselController, ClipboardController, ConditionalRadioController, ConfirmationController, DockController, DropdownController, EmojiPickerController, HotkeyController, LightboxController, MarqueeController, ModalController, NavbarController, OsDetectController, PasswordController, PopoverController, SelectController, TooltipController }

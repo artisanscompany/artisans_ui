@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Clipboard components (7 variants) - RailsBlocks exact implementation
+  - BasicComponent: Simple copy button with text
+  - WithIconStatesComponent: Copy/copied icon states with visual feedback
+  - WithInputComponent: Input field with attached copy button
+  - CodeBlockComponent: Code block with positioned copy button and tooltip
+  - IconOnlyComponent: Minimal icon-only button with tooltip support
+  - WithoutTooltipComponent: Visual state changes only, no tooltip
+  - TooltipPositionsComponent: Configurable tooltip placement (12 positions)
+- Stimulus clipboard controller using native Navigator Clipboard API
+- Floating UI integration for intelligent tooltip positioning
+- Comprehensive RSpec tests for all Clipboard variants (49 examples total, 100% passing)
+- Full dark mode support with hover/focus states
 - Checkbox components (4 variants) - RailsBlocks exact implementation
   - BasicComponent: Simple checkbox with label
   - WithDescriptionComponent: Checkbox with label and description text

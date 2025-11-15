@@ -44,6 +44,8 @@
 - **Skeleton** (6 variants) - ✅ ALL 6 VARIANTS COMPLETE
 - **Switch** (3 variants) - ✅ ALL 3 VARIANTS COMPLETE
 - **Testimonial** (5 variants) - ✅ ALL 5 VARIANTS COMPLETE
+- **Toast** (1 controller) - ✅ COMPLETE (ERB-only, no ViewComponents)
+- **Tooltip** (1 controller) - ✅ COMPLETE (ERB-only, no ViewComponents)
 
 ---
 
@@ -311,23 +313,18 @@ None currently.
     - **Note**: Pure CSS/HTML components, no JavaScript required
     - **Note**: Additional patterns (popover testimonials, marquee, auto-switching) use existing Popover, Marquee, and Tabs controllers
 
-35. **Toast** (7 components)
-    - [ ] Basic toast
-    - [ ] Success toast
-    - [ ] Error toast
-    - [ ] Warning toast
-    - [ ] Info toast
-    - [ ] With action
-    - [ ] Stacked toasts
+35. **Toast** (1 component) - ✅ COMPLETE
+    - [x] Toast controller with Sonner-like stacking animations
+    - Supports: 6 toast types (default/success/error/info/warning/danger/loading), 6 screen positions, stacked/expanded layouts, action buttons, custom HTML, server-side integration
+    - **Note**: ERB-only implementation (no ViewComponents due to global toast() function)
+    - **Note**: Includes global window.toast() function, flash message integration, Turbo Stream support
 
-36. **Tooltip** (7 components)
-    - [ ] Basic tooltip
-    - [ ] Positioned tooltip
-    - [ ] With arrow
-    - [ ] Hover delay
-    - [ ] Click trigger
-    - [ ] Rich content
-    - [ ] Interactive tooltip
+36. **Tooltip** (1 component) - ✅ COMPLETE
+    - [x] Tooltip controller with Floating UI integration
+    - Supports: 12 placement options, arrow positioning, 3 sizes (small/regular/large), 4 animation types (fade/origin/combined/none), hover delays with fast mode, auto-trigger detection (touch vs mouse), click trigger with outside click handling
+    - **Note**: ERB-only implementation (no ViewComponents due to complexity)
+    - **Note**: Requires Floating UI library (external dependency)
+    - **Note**: Includes global state management for intelligent multi-tooltip behavior
 
 37. **TreeView** (1 component)
     - [ ] Basic tree view
@@ -355,14 +352,14 @@ None currently.
 ## Progress Summary
 
 **Total Categories:** 39
-**Completed Categories:** 29 (Accordion, Alert, AnimatedNumber, Autogrow, Badge, Banner, Breadcrumb, Card, Carousel, Checkbox, Clipboard, ColorPicker, Combobox, Confirmation, DatePicker, Dock, EmojiPicker, Form, KbdHotkey, Lightbox, LoadingIndicator, Marquee, Navbar, Password, Popover, Radio, Select, Sidebar, Skeleton, Switch; 1 partial: Button 6/14)
-**Remaining Categories:** 10
+**Completed Categories:** 31 (Accordion, Alert, AnimatedNumber, Autogrow, Badge, Banner, Breadcrumb, Card, Carousel, Checkbox, Clipboard, ColorPicker, Combobox, Confirmation, DatePicker, Dock, EmojiPicker, Form, KbdHotkey, Lightbox, LoadingIndicator, Marquee, Navbar, Password, Popover, Radio, Select, Sidebar, Skeleton, Switch, Testimonial, Toast, Tooltip; 1 partial: Button 6/14)
+**Remaining Categories:** 8
 
 **Total Individual Components:** 200+
-**Completed Components:** 151 (11 Accordion + 5 Alert + 8 AnimatedNumber + 3 Autogrow + 6 Badge + 4 Banner + 4 Breadcrumb + 6 Button + 8 Card + 6 Carousel + 4 Checkbox + 7 Clipboard + 6 ColorPicker + 10 Combobox + 5 Confirmation + 10 DatePicker + 2 Dock + 3 EmojiPicker + 2 Form + 3 KbdHotkey + 1 Lightbox + 3 LoadingIndicator + 3 Marquee + 1 Navbar + 5 Password + 1 Popover + 5 Radio + 10 Select + 1 Sidebar + 6 Skeleton + 3 Switch)
-**Remaining Components:** 49+
+**Completed Components:** 158 (11 Accordion + 5 Alert + 8 AnimatedNumber + 3 Autogrow + 6 Badge + 4 Banner + 4 Breadcrumb + 6 Button + 8 Card + 6 Carousel + 4 Checkbox + 7 Clipboard + 6 ColorPicker + 10 Combobox + 5 Confirmation + 10 DatePicker + 2 Dock + 3 EmojiPicker + 2 Form + 3 KbdHotkey + 1 Lightbox + 3 LoadingIndicator + 3 Marquee + 1 Navbar + 5 Password + 1 Popover + 5 Radio + 10 Select + 1 Sidebar + 6 Skeleton + 3 Switch + 5 Testimonial + 1 Toast + 1 Tooltip)
+**Remaining Components:** 42+
 
-**Completion:** ~75%
+**Completion:** ~79%
 
 ---
 

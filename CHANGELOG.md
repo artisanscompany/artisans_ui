@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Feedback component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
+  - Stimulus feedback controller with Motion.dev spring animations
+  - Animated form expansion from button trigger
+  - 9 anchor point options (center, top, top-left, top-right, bottom, bottom-left, bottom-right, left, right)
+  - Smooth spring-based animations for open/close
+  - Automatic textarea focus on open
+  - Click-outside and Escape key dismissal
+  - Form submission handling with reset
+  - Transform origin based on anchor point for natural expansion
+  - Full dark mode support
+  - **Note**: Requires Motion.dev library (external dependency)
+  - **Implementation**: Use ERB templates with data-controller="feedback" as shown in RailsBlocks examples
 - Collapsible component (1 variant) - RailsBlocks exact implementation
   - BasicComponent: FAQ-style collapsible content area with smooth height transitions
   - Stimulus collapsible controller for toggle functionality

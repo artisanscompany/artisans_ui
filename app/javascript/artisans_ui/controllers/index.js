@@ -15,6 +15,7 @@ import ConfirmationController from "./confirmation_controller"
 import DockController from "./dock_controller"
 import DropdownController from "./dropdown_controller"
 import EmojiPickerController from "./emoji_picker_controller"
+import FeedbackController from "./feedback_controller"
 import HotkeyController from "./hotkey_controller"
 import LightboxController from "./lightbox_controller"
 import MarqueeController from "./marquee_controller"
@@ -43,6 +44,7 @@ application.register("artisans-ui--confirmation", ConfirmationController)
 application.register("artisans-ui--dock", DockController)
 application.register("artisans-ui--dropdown", DropdownController)
 application.register("artisans-ui--emoji-picker", EmojiPickerController)
+application.register("artisans-ui--feedback", FeedbackController)
 application.register("artisans-ui--hotkey", HotkeyController)
 application.register("artisans-ui--lightbox", LightboxController)
 application.register("artisans-ui--marquee", MarqueeController)
@@ -58,4 +60,4 @@ application.register("artisans-ui--tooltip", TooltipController)
 application.register("artisans-ui--tree-view", TreeViewController)
 application.register("artisans-ui--two-factor", TwoFactorController)
 
-export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, CarouselController, ClipboardController, CollapsibleController, ConditionalRadioController, ConfirmationController, DockController, DropdownController, EmojiPickerController, HotkeyController, LightboxController, MarqueeController, ModalController, NavbarController, OsDetectController, PasswordController, PopoverController, SelectController, SidebarController, ToastController, TooltipController, TreeViewController, TwoFactorController }
+export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, CarouselController, ClipboardController, CollapsibleController, ConditionalRadioController, ConfirmationController, DockController, DropdownController, EmojiPickerController, FeedbackController, HotkeyController, LightboxController, MarqueeController, ModalController, NavbarController, OsDetectController, PasswordController, PopoverController, SelectController, SidebarController, ToastController, TooltipController, TreeViewController, TwoFactorController }

@@ -8,6 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Confirmation components (5 variants) - RailsBlocks exact implementation
+  - BasicComponent: Text confirmation for destructive actions (type "DELETE")
+  - CaseSensitiveComponent: Case-sensitive text matching with warning box
+  - ArrayValuesComponent: Multiple acceptable text values (DELETE, REMOVE, DESTROY)
+  - AnyTextComponent: Accept any text input (for project names, etc.)
+  - MultiStepComponent: Combined text + multiple checkbox confirmations
+- Stimulus confirmation controller with form submission prevention
+- Comprehensive RSpec tests for all Confirmation variants (26 examples total, 100% passing)
+- Full dark mode support with appropriate button styling (red for destructive, neutral for standard)
 - ColorPicker components (6 variants) - RailsBlocks exact implementation
   - BasicComponent: Native HTML5 color input with minimal styling
   - WithSwatchesComponent: HTML5 color input with datalist predefined colors and visual swatch buttons

@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Checkbox components (4 variants) - RailsBlocks exact implementation
+  - BasicComponent: Simple checkbox with label
+  - WithDescriptionComponent: Checkbox with label and description text
+  - CardComponent: Card-style checkbox for pricing/features with has-[:checked] states
+  - CustomComponent: Custom styled checkbox with animated checkmark icon
+- Comprehensive RSpec tests for all Checkbox variants (44 examples total, 100% passing)
+- Auto-generated IDs for label/input association
+- Full dark mode support across all checkbox components
 - Button components (6 variants) - RailsBlocks exact implementation (replaces legacy Ui::ButtonComponent)
   - BasicComponent: Standard button with clean design (neutral, colored, secondary, danger variants)
   - FancyComponent: Enhanced button with skeumorphic design and advanced shadows

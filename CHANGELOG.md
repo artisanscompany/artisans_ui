@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Dock components (2 variants) - RailsBlocks exact implementation
+  - TopPlacementComponent: Desktop dock menu at top with tooltips below icons
+  - BottomPlacementComponent: Desktop dock menu at bottom with tooltips above icons
+- Stimulus dock controller with Motion.dev spring animations
+- Desktop hover animations with distance-based icon scaling (40-80px)
+- Mobile menu toggle with staggered spring animations
+- Tooltip system with Floating UI positioning and hotkey display
+- Active state management based on URL pathname and query params
+- Turbo compatibility (restore tooltips, update active states)
+- Stimulus hotkey controller for keyboard shortcuts integration
+- Comprehensive RSpec tests for all Dock components (30 examples total, 100% passing)
+- Full dark mode support with backdrop blur and shadows
 - Confirmation components (5 variants) - RailsBlocks exact implementation
   - BasicComponent: Text confirmation for destructive actions (type "DELETE")
   - CaseSensitiveComponent: Case-sensitive text matching with warning box

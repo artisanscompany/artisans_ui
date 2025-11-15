@@ -10,8 +10,10 @@ import BannerController from "./banner_controller"
 import CarouselController from "./carousel_controller"
 import ClipboardController from "./clipboard_controller"
 import ConfirmationController from "./confirmation_controller"
-import ModalController from "./modal_controller"
+import DockController from "./dock_controller"
 import DropdownController from "./dropdown_controller"
+import HotkeyController from "./hotkey_controller"
+import ModalController from "./modal_controller"
 import SelectController from "./select_controller"
 import TooltipController from "./tooltip_controller"
 
@@ -23,9 +25,11 @@ application.register("artisans-ui--banner", BannerController)
 application.register("artisans-ui--carousel", CarouselController)
 application.register("artisans-ui--clipboard", ClipboardController)
 application.register("artisans-ui--confirmation", ConfirmationController)
-application.register("artisans-ui--modal", ModalController)
+application.register("artisans-ui--dock", DockController)
 application.register("artisans-ui--dropdown", DropdownController)
+application.register("artisans-ui--hotkey", HotkeyController)
+application.register("artisans-ui--modal", ModalController)
 application.register("artisans-ui--select", SelectController)
 application.register("artisans-ui--tooltip", TooltipController)
 
-export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, CarouselController, ClipboardController, ConfirmationController, ModalController, DropdownController, SelectController, TooltipController }
+export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, CarouselController, ClipboardController, ConfirmationController, DockController, DropdownController, HotkeyController, ModalController, SelectController, TooltipController }

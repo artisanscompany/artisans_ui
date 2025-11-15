@@ -25,6 +25,8 @@
 - **Checkbox** (4 variants) - ✅ ALL 4 VARIANTS COMPLETE
 - **Clipboard** (7 variants) - ✅ ALL 7 VARIANTS COMPLETE
 - **Combobox** (10 variants) - ✅ ALL 10 VARIANTS COMPLETE
+- **Confirmation** (5 variants) - ✅ ALL 5 VARIANTS COMPLETE
+- **Dock** (2 variants) - ✅ ALL 2 VARIANTS COMPLETE
 
 ---
 
@@ -166,8 +168,9 @@ None currently.
     - [ ] Week picker
     - [ ] Month/year picker
 
-17. **DockMenu** (1 component)
-    - [ ] Mac-style dock menu
+17. **Dock** (2 components) - ✅ COMPLETE
+    - [x] Top placement (TopPlacementComponent)
+    - [x] Bottom placement (BottomPlacementComponent)
 
 18. **EmojiPicker** (3 components)
     - [ ] Basic emoji picker
@@ -319,14 +322,14 @@ None currently.
 ## Progress Summary
 
 **Total Categories:** 39
-**Completed Categories:** 14 (Accordion, Alert, AnimatedNumber, Autogrow, Badge, Banner, Breadcrumb, Card, Carousel, Checkbox, Clipboard, ColorPicker, Combobox, Confirmation; 1 partial: Button 6/14)
-**Remaining Categories:** 25
+**Completed Categories:** 15 (Accordion, Alert, AnimatedNumber, Autogrow, Badge, Banner, Breadcrumb, Card, Carousel, Checkbox, Clipboard, ColorPicker, Combobox, Confirmation, Dock; 1 partial: Button 6/14)
+**Remaining Categories:** 24
 
 **Total Individual Components:** 200+
-**Completed Components:** 93 (11 Accordion + 5 Alert + 8 AnimatedNumber + 3 Autogrow + 6 Badge + 4 Banner + 4 Breadcrumb + 6 Button + 8 Card + 6 Carousel + 4 Checkbox + 7 Clipboard + 6 ColorPicker + 10 Combobox + 5 Confirmation)
-**Remaining Components:** 107+
+**Completed Components:** 95 (11 Accordion + 5 Alert + 8 AnimatedNumber + 3 Autogrow + 6 Badge + 4 Banner + 4 Breadcrumb + 6 Button + 8 Card + 6 Carousel + 4 Checkbox + 7 Clipboard + 6 ColorPicker + 10 Combobox + 5 Confirmation + 2 Dock)
+**Remaining Components:** 105+
 
-**Completion:** ~46%
+**Completion:** ~47%
 
 ---
 
@@ -346,8 +349,9 @@ None currently.
 12. ✅ **ColorPicker** components (6 variants) - COMPLETE
 13. ✅ **Combobox** components (10 variants) - COMPLETE
 14. ✅ **Confirmation** components (5 variants) - COMPLETE
-15. **Collapsible** components (1 variant) - NEXT
-16. Continue alphabetically through the list
+15. ✅ **Dock** components (2 variants) - COMPLETE
+16. **Collapsible** components (1 variant) - NEXT
+17. Continue alphabetically through the list
 
 ---
 

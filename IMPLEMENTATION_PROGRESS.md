@@ -31,6 +31,7 @@
 - **Dock** (2 variants) - ✅ ALL 2 VARIANTS COMPLETE
 - **EmojiPicker** (3 variants) - ✅ ALL 3 VARIANTS COMPLETE
 - **Form** (2 variants) - ✅ ALL 2 VARIANTS COMPLETE
+- **KbdHotkey** (3 variants) - ✅ ALL 3 VARIANTS COMPLETE
 - **Lightbox** (1 controller) - ✅ COMPLETE (ERB-only, no ViewComponents)
 
 ---
@@ -200,10 +201,11 @@ None currently.
     - [x] Datalist (DatalistComponent)
     - **Note**: CSS-only components, no Stimulus controller required
 
-21. **KbdHotkey** (3 components)
-    - [ ] Keyboard shortcut display
-    - [ ] Hotkey listener
-    - [ ] Shortcut reference
+21. **KbdHotkey** (3 components) - ✅ COMPLETE
+    - [x] Basic KBD (BasicComponent)
+    - [x] Button with hotkey (ButtonWithHotkeyComponent)
+    - [x] OS-specific shortcuts (OsSpecificComponent)
+    - **Note**: Includes 2 Stimulus controllers (hotkey_controller, os_detect_controller)
 
 22. **Lightbox** (1 component) - ✅ COMPLETE
     - [x] Lightbox controller with PhotoSwipe integration
@@ -331,14 +333,14 @@ None currently.
 ## Progress Summary
 
 **Total Categories:** 39
-**Completed Categories:** 18 (Accordion, Alert, AnimatedNumber, Autogrow, Badge, Banner, Breadcrumb, Card, Carousel, Checkbox, Clipboard, ColorPicker, Combobox, Confirmation, DatePicker, Dock, EmojiPicker, Form; 1 partial: Button 6/14)
-**Remaining Categories:** 21
+**Completed Categories:** 19 (Accordion, Alert, AnimatedNumber, Autogrow, Badge, Banner, Breadcrumb, Card, Carousel, Checkbox, Clipboard, ColorPicker, Combobox, Confirmation, DatePicker, Dock, EmojiPicker, Form, KbdHotkey; 1 partial: Button 6/14)
+**Remaining Categories:** 20
 
 **Total Individual Components:** 200+
-**Completed Components:** 110 (11 Accordion + 5 Alert + 8 AnimatedNumber + 3 Autogrow + 6 Badge + 4 Banner + 4 Breadcrumb + 6 Button + 8 Card + 6 Carousel + 4 Checkbox + 7 Clipboard + 6 ColorPicker + 10 Combobox + 5 Confirmation + 10 DatePicker + 2 Dock + 3 EmojiPicker + 2 Form)
-**Remaining Components:** 90+
+**Completed Components:** 113 (11 Accordion + 5 Alert + 8 AnimatedNumber + 3 Autogrow + 6 Badge + 4 Banner + 4 Breadcrumb + 6 Button + 8 Card + 6 Carousel + 4 Checkbox + 7 Clipboard + 6 ColorPicker + 10 Combobox + 5 Confirmation + 10 DatePicker + 2 Dock + 3 EmojiPicker + 2 Form + 3 KbdHotkey)
+**Remaining Components:** 87+
 
-**Completion:** ~55%
+**Completion:** ~56%
 
 ---
 
@@ -362,8 +364,9 @@ None currently.
 16. ✅ **Dock** components (2 variants) - COMPLETE
 17. ✅ **EmojiPicker** components (3 variants) - COMPLETE
 18. ✅ **Form** components (2 variants) - COMPLETE
-19. **Feedback** components (9 variants) - NEXT
-20. Continue alphabetically through the list
+19. ✅ **KbdHotkey** components (3 variants) - COMPLETE
+20. **Feedback** components (9 variants) - NEXT
+21. Continue alphabetically through the list
 
 ---
 

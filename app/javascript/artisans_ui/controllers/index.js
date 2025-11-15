@@ -16,6 +16,7 @@ import EmojiPickerController from "./emoji_picker_controller"
 import HotkeyController from "./hotkey_controller"
 import LightboxController from "./lightbox_controller"
 import ModalController from "./modal_controller"
+import OsDetectController from "./os_detect_controller"
 import SelectController from "./select_controller"
 import TooltipController from "./tooltip_controller"
 
@@ -33,7 +34,8 @@ application.register("artisans-ui--emoji-picker", EmojiPickerController)
 application.register("artisans-ui--hotkey", HotkeyController)
 application.register("artisans-ui--lightbox", LightboxController)
 application.register("artisans-ui--modal", ModalController)
+application.register("artisans-ui--os-detect", OsDetectController)
 application.register("artisans-ui--select", SelectController)
 application.register("artisans-ui--tooltip", TooltipController)
 
-export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, CarouselController, ClipboardController, ConfirmationController, DockController, DropdownController, EmojiPickerController, HotkeyController, LightboxController, ModalController, SelectController, TooltipController }
+export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, CarouselController, ClipboardController, ConfirmationController, DockController, DropdownController, EmojiPickerController, HotkeyController, LightboxController, ModalController, OsDetectController, SelectController, TooltipController }

@@ -8,6 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- KbdHotkey components (3 variants) - RailsBlocks exact implementation
+  - BasicComponent: Simple KBD element for displaying keyboard shortcuts
+  - ButtonWithHotkeyComponent: Interactive button with keyboard shortcut trigger
+  - OsSpecificComponent: OS-aware shortcuts (Cmd/Ctrl, Opt/Alt based on platform)
+- Stimulus hotkey controller for keyboard shortcut handling (press/hold detection)
+- Stimulus os_detect controller for platform detection (macOS vs non-macOS)
+- Modern userAgentData API with fallback to userAgent detection
+- Comprehensive RSpec tests for all KbdHotkey variants (37 examples total, 100% passing)
+- Full dark mode support with clean, modern styling
 - Lightbox component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
   - Stimulus lightbox controller with PhotoSwipe integration (718 lines)
   - Full-screen image lightbox with zoom, pan, and navigation

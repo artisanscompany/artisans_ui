@@ -8,6 +8,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Select components (10 variants) - RailsBlocks exact implementation with TomSelect
+  - BasicComponent: Simple select dropdown with search and styling
+  - WithSearchComponent: Enhanced search with dropdown input plugin
+  - MultiSelectComponent: Multiple selection with checkboxes and remove buttons
+  - WithGroupsComponent: Grouped options with optgroup support
+  - WithIconsComponent: Options with icons and custom rendering
+  - AsyncLoadingComponent: Async data loading from API endpoints
+  - WithTagsComponent: Selected items displayed as tags
+  - CustomRenderingComponent: Custom option rendering with images/metadata
+  - WithCreateOptionComponent: Allow creating new options on the fly
+  - WithInfiniteScrollComponent: Infinite scroll with pagination support
+- Stimulus select controller (1653 lines) for advanced select functionality
+- TomSelect integration with Floating UI positioning
+- Virtual scroll support for large datasets
+- Custom rendering with image/subtitle/metadata fields
+- Flexible tag positioning (inline/above/below/custom container)
+- Count display mode (show "X selected" instead of individual items)
+- Flag toggle functionality for marking/unmarking items
+- Clear button with smart visibility (typing or selection)
+- Scroll buttons for long dropdown lists
+- Type-ahead search support
+- Drag & drop reordering for multi-select
+- API response auto-detection (data/results/items fields)
+- Form submission with flag data
+- External tags container support
+- Comprehensive RSpec tests for all Select variants (72 examples total, 100% passing)
+- Full dark mode support with proper styling
 - Popover component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
   - Stimulus popover controller with Floating UI integration (500+ lines)
   - Intelligent positioning with 12 placement options (top, bottom, left, right + start/end variants)

@@ -1,0 +1,16 @@
+<div <%= tag.attributes(html_options) %>>
+  <% testimonials.each do |testimonial| %>
+    <div class="bg-white dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-700 p-6 flex flex-col justify-between">
+      <blockquote class="text-neutral-700 dark:text-neutral-300 mb-4">
+        <%= testimonial.quote %>
+      </blockquote>
+      <footer class="flex items-center">
+        <%= image_tag testimonial.author_image, class: "size-8 rounded-full object-cover", alt: testimonial.author_name %>
+        <div class="ml-3">
+          <div class="text-sm font-semibold text-neutral-900 dark:text-white"><%= testimonial.author_name %></div>
+          <div class="text-xs text-neutral-500 dark:text-neutral-400"><%= testimonial.author_title %></div>
+        </div>
+      </footer>
+    </div>
+  <% end %>
+</div>

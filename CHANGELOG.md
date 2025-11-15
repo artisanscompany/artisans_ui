@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Testimonial components (5 variants) - RailsBlocks exact implementation
+  - BasicComponent: Simple testimonial with quote, author name, and title
+  - CardComponent: Enhanced testimonial card with customer avatar shown first
+  - WithStarRatingComponent: Testimonial featuring star ratings for product reviews
+  - GridComponent: Multiple testimonials in responsive grid layout (renders_many pattern)
+  - WithBackgroundImageComponent: Hero-style testimonial with background image and gradient overlay
+  - **Note**: Pure CSS/HTML components, no JavaScript required for base components
+  - **Note**: WithPopoverComponent, MarqueeComponent, and AutoSwitchingComponent examples use existing Popover, Marquee, and Tabs controllers (ERB-only)
 - Sidebar component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
   - Stimulus sidebar controller with responsive mobile/desktop behavior
   - Desktop collapsible sidebar using HTML5 `<details>` element with localStorage persistence

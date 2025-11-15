@@ -1,0 +1,64 @@
+# frozen_string_literal: true
+
+module ArtisansUi
+  module Alert
+    # Blue Minimal Alert Component (Variant 5)
+    # Blue color scheme with sparkle icon, no description
+    # Alert without description for limited space scenarios
+    # Exact RailsBlocks implementation
+    #
+    # @example
+    #   <%= render ArtisansUi::Alert::BlueMinimalComponent.new(
+    #     title: "This is an alert title with no description"
+    #   ) %>
+    class BlueMinimalComponent < ApplicationViewComponent
+      def initialize(title:, **html_options)
+        @title = title
+        @html_options = html_options
+      end
+
+      def call
+        tag.div(
+          class: "rounded-xl border border-blue-200 bg-blue-50 p-4 dark:border-blue-800 dark:bg-blue-900/20",
+          **@html_options
+        ) do
+          tag.div(class: "grid grid-cols-[auto_1fr] gap-2 items-start") do
+            safe_join([
+              render_icon,
+              render_title
+            ])
+          end
+        end
+      end
+
+      private
+
+      def render_icon
+        tag.div(class: "flex items-center h-full") do
+          tag.svg(
+            xmlns: "http://www.w3.org/2000/svg",
+            width: "18",
+            height: "18",
+            viewBox: "0 0 18 18",
+            class: "text-blue-500 dark:text-blue-400"
+          ) do
+            tag.g(fill: "currentColor") do
+              safe_join([
+                tag.path(d: "M2.34201 4.97401L3.60501 5.39501L4.02601 6.65801C4.09401 6.86201 4.28601 7.00001 4.50101 7.00001C4.71601 7.00001 4.90701 6.86201 4.97601 6.65801L5.39701 5.39501L6.66001 4.97401C6.86401 4.90601 7.00201 4.71501 7.00201 4.50001C7.00201 4.28501 6.86401 4.09401 6.66001 4.02601L5.39701 3.60501L4.97601 2.34201C4.83901 1.93401 4.16401 1.93401 4.02701 2.34201L3.60601 3.60501L2.34301 4.02601C2.13901 4.09401 2.00101 4.28501 2.00101 4.50001C2.00101 4.71501 2.13801 4.90601 2.34201 4.97401Z"),
+                tag.path(d: "M15.659 13.026L14.395 12.605L13.974 11.342C13.837 10.934 13.162 10.934 13.025 11.342L12.604 12.605L11.341 13.026C11.137 13.094 10.999 13.285 10.999 13.5C10.999 13.715 11.137 13.906 11.341 13.974L12.604 14.395L13.025 15.658C13.093 15.862 13.285 16 13.5 16C13.715 16 13.906 15.862 13.975 15.658L14.396 14.395L15.659 13.974C15.863 13.906 16.001 13.715 16.001 13.5C16.001 13.285 15.863 13.094 15.659 13.026Z"),
+                tag.path("fill-rule": "evenodd", "clip-rule": "evenodd", d: "M6 8C6.34148 8 6.63985 8.23067 6.72584 8.56115L7.28597 10.714L9.43885 11.2742C9.76933 11.3601 10 11.6585 10 12C10 12.3415 9.76933 12.6399 9.43885 12.7258L7.28597 13.286L6.72584 15.4388C6.63985 15.7693 6.34148 16 6 16C5.65852 16 5.36015 15.7693 5.27416 15.4388L4.71403 13.286L2.56115 12.7258C2.23067 12.6399 2 12.3415 2 12C2 11.6585 2.23067 11.3601 2.56115 11.2742L4.71403 10.714L5.27416 8.56115C5.36015 8.23067 5.65852 8 6 8Z"),
+                tag.path("fill-rule": "evenodd", "clip-rule": "evenodd", d: "M12 2C12.3415 2 12.6399 2.23067 12.7258 2.56115L13.286 4.71402L15.4389 5.27417C15.7693 5.36015 16 5.65852 16 6C16 6.34148 15.7693 6.63985 15.4389 6.72583L13.286 7.28598L12.7258 9.43885C12.6399 9.76933 12.3415 10 12 10C11.6585 10 11.3601 9.76933 11.2742 9.43885L10.714 7.28598L8.56115 6.72583C8.23067 6.63985 8 6.34148 8 6C8 5.65852 8.23067 5.36015 8.56115 5.27417L10.714 4.71402L11.2742 2.56115C11.3601 2.23067 11.6585 2 12 2Z")
+              ])
+            end
+          end
+        end
+      end
+
+      def render_title
+        tag.h3(
+          class: "text-sm font-medium text-blue-800 dark:text-blue-200"
+        ) { @title }
+      end
+    end
+  end
+end

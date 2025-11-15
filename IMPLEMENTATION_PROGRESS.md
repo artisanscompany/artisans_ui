@@ -19,7 +19,7 @@
 - **Badge** (6 variants) - ✅ ALL 6 VARIANTS COMPLETE
 - **Banner** (4 variants) - ✅ ALL 4 VARIANTS COMPLETE
 - **Breadcrumb** (4 variants) - ✅ ALL 4 VARIANTS COMPLETE
-- **Button** (14 variants) - 🔄 7/14 complete (Basic, Fancy, IconOnly, WithIcon, Loading, Group + legacy Ui::ButtonComponent)
+- **Button** (14 variants) - 🔄 6/14 complete (Basic, Fancy, IconOnly, WithIcon, Loading, Group)
 - **Card** (8 variants) - ✅ ALL 8 VARIANTS COMPLETE
 
 ---

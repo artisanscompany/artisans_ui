@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Button components (6 variants) - RailsBlocks exact implementation
+- Button components (6 variants) - RailsBlocks exact implementation (replaces legacy Ui::ButtonComponent)
   - BasicComponent: Standard button with clean design (neutral, colored, secondary, danger variants)
   - FancyComponent: Enhanced button with skeumorphic design and advanced shadows
   - IconOnlyComponent: Compact icon-only buttons (regular, small, tiny sizes)
@@ -17,6 +17,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - GroupComponent: Multiple buttons grouped with shared borders
 - Comprehensive RSpec tests for all Button variants (85 examples total, 100% passing)
 - Full dark mode support with hover/focus states
+
+### Removed
+- Legacy Ui::ButtonComponent (replaced by Button::BasicComponent and other variants)
+
+### Changed
+- Button components moved from Ui namespace to Button namespace for better organization
 - Card components (8 variants) - RailsBlocks exact implementation
   - BasicComponent: Simple card with shadow and rounded corners
   - WithHeaderComponent: Header section separated by divider

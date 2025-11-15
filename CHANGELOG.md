@@ -8,6 +8,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Sidebar component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
+  - Stimulus sidebar controller with responsive mobile/desktop behavior
+  - Desktop collapsible sidebar using HTML5 `<details>` element with localStorage persistence
+  - Mobile slide-out overlay with backdrop and smooth animations
+  - Content template cloning system for shared navigation between mobile/desktop
+  - Automatic transition disabling on page load to prevent flash
+  - Mobile close button with icon replacement (collapse → X)
+  - Configurable storage key for state persistence
+  - **Implementation**: Use ERB templates directly as shown in RailsBlocks examples
+- Enhanced Tooltip controller with global state management
+  - TooltipGlobalState class for tracking all visible/closing tooltips
+  - Fast mode: instant tooltip display after first tooltip (100ms reset window)
+  - Intelligent hiding: automatically hides all other tooltips when showing new one
+  - Better UX for rapid hovering (e.g., sidebar collapsed icons)
+  - Touch device auto-detection (uses click trigger instead of hover)
+  - IntersectionObserver integration for auto-hide on scroll
 - Select components (10 variants) - RailsBlocks exact implementation with TomSelect
   - BasicComponent: Simple select dropdown with search and styling
   - WithSearchComponent: Enhanced search with dropdown input plugin

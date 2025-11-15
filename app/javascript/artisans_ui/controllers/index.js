@@ -23,6 +23,7 @@ import OsDetectController from "./os_detect_controller"
 import PasswordController from "./password_controller"
 import PopoverController from "./popover_controller"
 import SelectController from "./select_controller"
+import SidebarController from "./sidebar_controller"
 import TooltipController from "./tooltip_controller"
 
 // Register controllers
@@ -46,6 +47,7 @@ application.register("artisans-ui--os-detect", OsDetectController)
 application.register("artisans-ui--password", PasswordController)
 application.register("artisans-ui--popover", PopoverController)
 application.register("artisans-ui--select", SelectController)
+application.register("artisans-ui--sidebar", SidebarController)
 application.register("artisans-ui--tooltip", TooltipController)
 
-export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, CarouselController, ClipboardController, ConditionalRadioController, ConfirmationController, DockController, DropdownController, EmojiPickerController, HotkeyController, LightboxController, MarqueeController, ModalController, NavbarController, OsDetectController, PasswordController, PopoverController, SelectController, TooltipController }
+export { AccordionController, AnimatedNumberController, AutogrowController, BannerController, CarouselController, ClipboardController, ConditionalRadioController, ConfirmationController, DockController, DropdownController, EmojiPickerController, HotkeyController, LightboxController, MarqueeController, ModalController, NavbarController, OsDetectController, PasswordController, PopoverController, SelectController, SidebarController, TooltipController }

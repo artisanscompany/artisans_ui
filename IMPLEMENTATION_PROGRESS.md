@@ -40,6 +40,7 @@
 - **Popover** (1 controller) - ✅ COMPLETE (ERB-only, no ViewComponents)
 - **Radio** (5 variants) - ✅ ALL 5 VARIANTS COMPLETE
 - **Select** (10 variants) - ✅ ALL 10 VARIANTS COMPLETE
+- **Sidebar** (1 controller) - ✅ COMPLETE (ERB-only, no ViewComponents)
 
 ---
 
@@ -277,10 +278,11 @@ None currently.
     - [x] With create option (WithCreateOptionComponent)
     - [x] With infinite scroll (WithInfiniteScrollComponent)
 
-31. **Sidebar** (3 components)
-    - [ ] Fixed sidebar
-    - [ ] Collapsible sidebar
-    - [ ] Mobile sidebar
+31. **Sidebar** (1 component) - ✅ COMPLETE
+    - [x] Sidebar controller with responsive mobile/desktop behavior
+    - Supports: desktop collapsible sidebar, mobile slide-out overlay, localStorage persistence, content template cloning
+    - **Note**: ERB-only implementation (no ViewComponents due to complexity)
+    - **Note**: Includes sidebar_controller and enhanced tooltip_controller with global state management
 
 32. **Skeleton** (6 components)
     - [ ] Text skeleton

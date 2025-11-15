@@ -38,6 +38,7 @@
 - **Navbar** (1 controller) - ✅ COMPLETE (ERB-only, no ViewComponents)
 - **Password** (5 variants) - ✅ ALL 5 VARIANTS COMPLETE
 - **Popover** (1 controller) - ✅ COMPLETE (ERB-only, no ViewComponents)
+- **Radio** (5 variants) - ✅ ALL 5 VARIANTS COMPLETE
 - **Select** (10 variants) - ✅ ALL 10 VARIANTS COMPLETE
 
 ---
@@ -251,12 +252,13 @@ None currently.
     - **Note**: ERB-only implementation (no ViewComponents due to complexity)
     - **Note**: Requires Floating UI library (external dependency)
 
-28. **Radio** (5 components)
-    - [ ] Basic radio
-    - [ ] With description
-    - [ ] Card style
-    - [ ] Button group
-    - [ ] Custom styled
+28. **Radio** (5 components) - ✅ COMPLETE
+    - [x] Basic radio group (BasicComponent)
+    - [x] With description (WithDescriptionComponent)
+    - [x] Card style (CardComponent)
+    - [x] With icons (WithIconsComponent)
+    - [x] With conditional fields (WithConditionalFieldsComponent)
+    - **Note**: Mostly CSS-only, conditional variant uses conditional_radio_controller for show/hide logic
 
 29. **ScrollArea** (3 components)
     - [ ] Custom scrollbar
@@ -347,14 +349,14 @@ None currently.
 ## Progress Summary
 
 **Total Categories:** 39
-**Completed Categories:** 25 (Accordion, Alert, AnimatedNumber, Autogrow, Badge, Banner, Breadcrumb, Card, Carousel, Checkbox, Clipboard, ColorPicker, Combobox, Confirmation, DatePicker, Dock, EmojiPicker, Form, KbdHotkey, Lightbox, LoadingIndicator, Marquee, Navbar, Password, Popover, Select; 1 partial: Button 6/14)
-**Remaining Categories:** 14
+**Completed Categories:** 26 (Accordion, Alert, AnimatedNumber, Autogrow, Badge, Banner, Breadcrumb, Card, Carousel, Checkbox, Clipboard, ColorPicker, Combobox, Confirmation, DatePicker, Dock, EmojiPicker, Form, KbdHotkey, Lightbox, LoadingIndicator, Marquee, Navbar, Password, Popover, Radio, Select; 1 partial: Button 6/14)
+**Remaining Categories:** 13
 
 **Total Individual Components:** 200+
-**Completed Components:** 136 (11 Accordion + 5 Alert + 8 AnimatedNumber + 3 Autogrow + 6 Badge + 4 Banner + 4 Breadcrumb + 6 Button + 8 Card + 6 Carousel + 4 Checkbox + 7 Clipboard + 6 ColorPicker + 10 Combobox + 5 Confirmation + 10 DatePicker + 2 Dock + 3 EmojiPicker + 2 Form + 3 KbdHotkey + 1 Lightbox + 3 LoadingIndicator + 3 Marquee + 1 Navbar + 5 Password + 1 Popover + 10 Select)
-**Remaining Components:** 64+
+**Completed Components:** 141 (11 Accordion + 5 Alert + 8 AnimatedNumber + 3 Autogrow + 6 Badge + 4 Banner + 4 Breadcrumb + 6 Button + 8 Card + 6 Carousel + 4 Checkbox + 7 Clipboard + 6 ColorPicker + 10 Combobox + 5 Confirmation + 10 DatePicker + 2 Dock + 3 EmojiPicker + 2 Form + 3 KbdHotkey + 1 Lightbox + 3 LoadingIndicator + 3 Marquee + 1 Navbar + 5 Password + 1 Popover + 5 Radio + 10 Select)
+**Remaining Components:** 59+
 
-**Completion:** ~68%
+**Completion:** ~70%
 
 ---
 
@@ -385,8 +387,9 @@ None currently.
 23. ✅ **Navbar** component (1 controller) - COMPLETE
 24. ✅ **Password** components (5 variants) - COMPLETE
 25. ✅ **Popover** component (1 controller) - COMPLETE
-26. **Feedback** components (9 variants) - NEXT
-27. Continue alphabetically through the list
+26. ✅ **Radio** components (5 variants) - COMPLETE
+27. **Feedback** components (9 variants) - NEXT
+28. Continue alphabetically through the list
 
 ---
 

@@ -41,7 +41,7 @@ module ArtisansUi
       private
 
       def default_classes
-        "h-4 w-4 rounded border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white focus:ring-2 focus:ring-neutral-400 dark:focus:ring-neutral-600 transition-colors"
+        "h-4 w-4 rounded border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white focus:ring-2 focus:ring-neutral-400 dark:focus:ring-neutral-600 transition-colors"
       end
 
       def merged_options

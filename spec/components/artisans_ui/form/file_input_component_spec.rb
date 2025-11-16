@@ -11,7 +11,7 @@ RSpec.describe ArtisansUi::Form::FileInputComponent, type: :component do
 
   it "includes default styling" do
     render_inline(described_class.new)
-    expect(rendered_content).to include("border-neutral-300")
+    expect(rendered_content).to include("border-neutral-200")
     expect(rendered_content).to include("rounded-lg")
   end
 

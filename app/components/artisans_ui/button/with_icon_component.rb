@@ -43,10 +43,11 @@ module ArtisansUi
     #   ) %>
     class WithIconComponent < ApplicationViewComponent
       VARIANTS = {
-        neutral: "border-neutral-400/30 bg-neutral-800 text-white hover:bg-neutral-700 focus-visible:outline-neutral-600 dark:bg-white dark:text-neutral-800 dark:hover:bg-neutral-100 dark:focus-visible:outline-neutral-200",
-        colored: "border-blue-400/30 bg-blue-600 text-white hover:bg-blue-500 focus-visible:outline-neutral-600 dark:focus-visible:outline-neutral-200",
+        neutral: "bg-neutral-800 text-white hover:bg-neutral-700 focus-visible:outline-neutral-600 dark:bg-white dark:text-neutral-800 dark:hover:bg-neutral-100 dark:focus-visible:outline-neutral-200",
+        colored: "bg-blue-600 text-white hover:bg-blue-500 focus-visible:outline-neutral-600 dark:focus-visible:outline-neutral-200",
         secondary: "border-neutral-200 bg-white/90 text-neutral-800 shadow-xs hover:bg-neutral-50 focus-visible:outline-neutral-600 dark:border-neutral-700 dark:bg-neutral-800/50 dark:text-neutral-50 dark:hover:bg-neutral-700/50 dark:focus-visible:outline-neutral-200",
-        danger: "border-red-300/30 bg-red-600 text-white hover:bg-red-500 focus-visible:outline-neutral-600 dark:focus-visible:outline-neutral-200"
+        danger: "bg-red-600 text-white hover:bg-red-500 focus-visible:outline-neutral-600 dark:focus-visible:outline-neutral-200",
+        warning: "bg-yellow-500 text-white hover:bg-yellow-600 focus-visible:outline-yellow-600 dark:bg-yellow-500 dark:text-white dark:hover:bg-yellow-600 dark:focus-visible:outline-yellow-600"
       }.freeze
 
       SIZES = {

@@ -13,7 +13,7 @@ RSpec.describe ArtisansUi::Form::TextInputComponent, type: :component do
     render_inline(described_class.new)
     expect(rendered_content).to include("border-neutral-300")
     expect(rendered_content).to include("rounded-lg")
-    expect(rendered_content).to include("focus:ring-neutral-400")
+    expect(rendered_content).to include("focus:ring-neutral-900")
   end
 
   it "accepts HTML options" do

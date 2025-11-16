@@ -18,7 +18,7 @@ RSpec.describe ArtisansUi::Form::ErrorInputComponent, type: :component do
   it "includes error styling" do
     render_inline(described_class.new)
     expect(rendered_content).to include("border-red-300")
-    expect(rendered_content).to include("focus:ring-red-500")
+    expect(rendered_content).to include("focus:ring-red-600")
   end
 
   it "supports dark mode error colors" do

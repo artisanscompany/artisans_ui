@@ -43,9 +43,6 @@ module ArtisansUi
     #     <% end %>
     #   <% end %>
     class WithAvatarComponent < ApplicationViewComponent
-      renders_one :metadata
-      renders_one :footer
-
       VARIANTS = {
         default: "bg-white border-neutral-200",
         highlighted: "bg-gradient-to-br from-yellow-50 to-amber-50 border-yellow-300 shadow-md"
@@ -86,8 +83,7 @@ module ArtisansUi
             render_badge,
             render_avatar_section,
             render_title,
-            render_metadata,
-            render_footer
+            tag.div(class: "flex-1") { content }
           ].compact)
         end
 
@@ -167,22 +163,6 @@ module ArtisansUi
           class: "mb-2 sm:mb-3 line-clamp-2 group-hover:text-yellow-600 transition-colors"
         ) do
           @title
-        end
-      end
-
-      def render_metadata
-        return unless metadata?
-
-        tag.div(class: "flex-1 space-y-1.5 sm:space-y-2") do
-          metadata
-        end
-      end
-
-      def render_footer
-        return unless footer?
-
-        tag.div(class: "flex flex-wrap gap-1.5 sm:gap-2 mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-neutral-100 dark:border-neutral-700") do
-          footer
         end
       end
     end

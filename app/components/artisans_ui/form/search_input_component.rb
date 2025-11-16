@@ -44,11 +44,13 @@ module ArtisansUi
       private
 
       def search_input
-        tag.input(
-          type: "search",
-          class: @icon ? input_with_icon_classes : default_classes,
-          **@html_options
-        )
+        tag.input(type: "search", **merged_options)
+      end
+
+      def merged_options
+        custom_class = @html_options.delete(:class)
+        base_classes = @icon ? input_with_icon_classes : default_classes
+        @html_options.merge(class: [base_classes, custom_class].compact.join(" "))
       end
 
       def search_icon

@@ -35,13 +35,18 @@ module ArtisansUi
       end
 
       def call
-        tag.input(type: "checkbox", class: default_classes, **@html_options)
+        tag.input(type: "checkbox", **merged_options)
       end
 
       private
 
       def default_classes
         "h-4 w-4 rounded border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white focus:ring-2 focus:ring-neutral-900 dark:focus:ring-neutral-100 transition-colors"
+      end
+
+      def merged_options
+        custom_class = @html_options.delete(:class)
+        @html_options.merge(class: [default_classes, custom_class].compact.join(" "))
       end
     end
   end

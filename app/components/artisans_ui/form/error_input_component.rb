@@ -26,13 +26,18 @@ module ArtisansUi
       end
 
       def call
-        tag.input(type: @type, class: error_classes, **@html_options)
+        tag.input(type: @type, **merged_options)
       end
 
       private
 
       def error_classes
         "w-full px-4 py-2.5 text-sm border border-red-300 dark:border-red-700 rounded-lg bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white placeholder-neutral-500 dark:placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-red-600 dark:focus:ring-red-400 focus:border-transparent transition-colors"
+      end
+
+      def merged_options
+        custom_class = @html_options.delete(:class)
+        @html_options.merge(class: [error_classes, custom_class].compact.join(" "))
       end
     end
   end

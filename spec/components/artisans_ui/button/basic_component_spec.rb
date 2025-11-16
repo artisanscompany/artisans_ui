@@ -107,6 +107,23 @@ RSpec.describe ArtisansUi::Button::BasicComponent, type: :component do
     expect(rendered_content).to include("focus-visible:outline-offset-2")
   end
 
+  it "renders a warning (yellow) button" do
+    render_inline(described_class.new(variant: :warning)) { "Warning Button" }
+
+    expect(rendered_content).to include("Warning Button")
+    expect(rendered_content).to include("bg-yellow-500")
+    expect(rendered_content).to include("text-white")
+  end
+
+  it "renders with nil variant (no variant classes)" do
+    render_inline(described_class.new(variant: nil, class: "bg-purple-500")) { "Custom Button" }
+
+    expect(rendered_content).to include("Custom Button")
+    expect(rendered_content).to include("bg-purple-500")
+    expect(rendered_content).not_to include("bg-neutral-800")
+    expect(rendered_content).not_to include("bg-blue-600")
+  end
+
   it "raises an error for invalid variant" do
     expect {
       described_class.new(variant: :invalid)

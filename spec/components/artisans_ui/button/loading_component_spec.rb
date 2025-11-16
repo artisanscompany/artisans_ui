@@ -111,6 +111,15 @@ RSpec.describe ArtisansUi::Button::LoadingComponent, type: :component do
     expect(rendered_content).to include("rounded-lg")
   end
 
+  it "renders with nil variant (no variant classes)" do
+    render_inline(described_class.new(text: "Custom", loading: false, variant: nil, class: "bg-purple-500"))
+
+    expect(rendered_content).to include("Custom")
+    expect(rendered_content).to include("bg-purple-500")
+    expect(rendered_content).not_to include("bg-neutral-800")
+    expect(rendered_content).not_to include("bg-blue-600")
+  end
+
   it "raises an error for invalid variant" do
     expect {
       described_class.new(text: "Button", loading: false, variant: :invalid)

@@ -96,6 +96,16 @@ RSpec.describe ArtisansUi::Button::IconOnlyComponent, type: :component do
     expect(rendered_content).to include("shadow-sm")
   end
 
+  it "renders with nil variant (no variant classes)" do
+    render_inline(described_class.new(variant: nil, class: "bg-purple-500")) do
+      '<svg class="size-4"><path/></svg>'.html_safe
+    end
+
+    expect(rendered_content).to include("bg-purple-500")
+    expect(rendered_content).not_to include("bg-neutral-800")
+    expect(rendered_content).not_to include("bg-blue-600")
+  end
+
   it "raises an error for invalid variant" do
     expect {
       described_class.new(variant: :invalid)

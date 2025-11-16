@@ -56,7 +56,7 @@ module ArtisansUi
       }.freeze
 
       def initialize(variant: :neutral, size: :regular, disabled: false, **html_options)
-        @variant = variant.to_sym
+        @variant = variant&.to_sym
         @size = size.to_sym
         @disabled = disabled
         @html_options = html_options
@@ -77,16 +77,16 @@ module ArtisansUi
       private
 
       def validate_params!
-        raise ArgumentError, "Invalid variant: #{@variant}" unless VARIANTS.key?(@variant)
+        if @variant && !VARIANTS.key?(@variant)
+          raise ArgumentError, "Invalid variant: #{@variant}"
+        end
         raise ArgumentError, "Invalid size: #{@size}" unless SIZES.key?(@size)
       end
 
       def button_classes
-        [
-          base_classes,
-          SIZES[@size],
-          VARIANTS[@variant]
-        ].join(" ")
+        classes = [base_classes, SIZES[@size]]
+        classes << VARIANTS[@variant] if @variant
+        classes.join(" ")
       end
 
       def base_classes

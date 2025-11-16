@@ -60,7 +60,7 @@ module ArtisansUi
         @text = text
         @icon = icon
         @icon_position = icon_position.to_sym
-        @variant = variant.to_sym
+        @variant = variant&.to_sym
         @size = size.to_sym
         @disabled = disabled
         @html_options = html_options
@@ -81,7 +81,9 @@ module ArtisansUi
       private
 
       def validate_params!
-        raise ArgumentError, "Invalid variant: #{@variant}" unless VARIANTS.key?(@variant)
+        if @variant && !VARIANTS.key?(@variant)
+          raise ArgumentError, "Invalid variant: #{@variant}"
+        end
         raise ArgumentError, "Invalid size: #{@size}" unless SIZES.key?(@size)
         raise ArgumentError, "Invalid icon_position: #{@icon_position}" unless ICON_POSITIONS.include?(@icon_position)
       end
@@ -99,11 +101,9 @@ module ArtisansUi
       end
 
       def button_classes
-        [
-          base_classes,
-          SIZES[@size],
-          VARIANTS[@variant]
-        ].join(" ")
+        classes = [base_classes, SIZES[@size]]
+        classes << VARIANTS[@variant] if @variant
+        classes.join(" ")
       end
 
       def base_classes

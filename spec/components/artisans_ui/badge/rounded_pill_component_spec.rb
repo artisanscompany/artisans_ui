@@ -83,4 +83,31 @@ RSpec.describe ArtisansUi::Badge::RoundedPillComponent, type: :component do
     expect(rendered_content).to include("dark:bg-neutral-700")
     expect(rendered_content).to include("dark:text-neutral-300")
   end
+
+  it "renders a sky pill badge" do
+    render_inline(described_class.new(text: "Office", variant: :sky))
+
+    expect(rendered_content).to include("Office")
+    expect(rendered_content).to include("rounded-full")
+    expect(rendered_content).to include("bg-sky-100")
+    expect(rendered_content).to include("text-sky-800")
+  end
+
+  it "renders a violet pill badge" do
+    render_inline(described_class.new(text: "Flexible", variant: :violet))
+
+    expect(rendered_content).to include("Flexible")
+    expect(rendered_content).to include("rounded-full")
+    expect(rendered_content).to include("bg-violet-100")
+    expect(rendered_content).to include("text-violet-800")
+  end
+
+  it "renders an orange pill badge" do
+    render_inline(described_class.new(text: "7 days left", variant: :orange))
+
+    expect(rendered_content).to include("7 days left")
+    expect(rendered_content).to include("rounded-full")
+    expect(rendered_content).to include("bg-orange-100")
+    expect(rendered_content).to include("text-orange-700")
+  end
 end

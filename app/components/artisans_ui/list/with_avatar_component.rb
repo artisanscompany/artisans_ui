@@ -49,8 +49,8 @@ module ArtisansUi
     #   <% end %>
     class WithAvatarComponent < ApplicationViewComponent
       VARIANTS = {
-        default: "bg-white border-neutral-200",
-        highlighted: "bg-gradient-to-br from-yellow-50 to-amber-50 border-yellow-300"
+        default: "bg-neutral-50",
+        highlighted: "bg-gradient-to-br from-yellow-50 to-amber-50"
       }.freeze
 
       def initialize(
@@ -81,7 +81,7 @@ module ArtisansUi
 
       def call
         list_content = tag.div(
-          class: "#{list_classes} flex items-center gap-3 sm:gap-4 py-3 sm:py-4 px-4 sm:px-6 relative",
+          class: "#{list_classes} flex items-center gap-3 sm:gap-4 py-3 sm:py-4 px-4 sm:px-6 relative mb-2 rounded-lg",
           **@html_options
         ) do
           safe_join([
@@ -107,8 +107,8 @@ module ArtisansUi
       end
 
       def list_classes
-        base = "border-b hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
-        "#{base} #{VARIANTS[@variant]} dark:bg-neutral-900 dark:border-neutral-700"
+        base = "hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+        "#{base} #{VARIANTS[@variant]} dark:bg-neutral-800"
       end
 
       def render_badge

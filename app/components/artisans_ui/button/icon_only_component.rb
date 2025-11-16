@@ -91,7 +91,7 @@ module ArtisansUi
       end
 
       def base_classes
-        "flex items-center justify-center gap-1.5 rounded-lg border shadow-sm transition-all duration-100 ease-in-out select-none font-medium whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+        "flex items-center justify-center gap-1.5 rounded-xl shadow transition-all duration-100 ease-in-out select-none font-semibold whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
       end
     end
   end

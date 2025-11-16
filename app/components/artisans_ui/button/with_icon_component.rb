@@ -51,8 +51,8 @@ module ArtisansUi
       }.freeze
 
       SIZES = {
-        regular: "px-3.5 py-2 text-sm",
-        small: "px-3 py-2 text-xs"
+        regular: "px-6 py-3 text-base",
+        small: "px-4 py-2 text-xs"
       }.freeze
 
       ICON_POSITIONS = [:left, :right].freeze
@@ -108,7 +108,7 @@ module ArtisansUi
       end
 
       def base_classes
-        "flex items-center justify-center gap-1.5 rounded-lg border shadow-sm transition-all duration-100 ease-in-out select-none font-medium whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+        "flex items-center justify-center gap-1.5 rounded-xl shadow transition-all duration-100 ease-in-out select-none font-semibold whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
       end
     end
   end

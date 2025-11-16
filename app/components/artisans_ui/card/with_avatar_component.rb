@@ -134,8 +134,10 @@ module ArtisansUi
 
       def render_avatar
         if @avatar_url
+          # Handle both string URLs and Active Storage attachments
+          img_src = @avatar_url.respond_to?(:url) ? @avatar_url.url : @avatar_url
           tag.img(
-            src: @avatar_url,
+            src: img_src,
             alt: @avatar_alt,
             class: "w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover"
           )

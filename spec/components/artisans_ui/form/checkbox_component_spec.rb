@@ -13,13 +13,13 @@ RSpec.describe ArtisansUi::Form::CheckboxComponent, type: :component do
     render_inline(described_class.new)
     expect(rendered_content).to include("h-4 w-4")
     expect(rendered_content).to include("rounded")
-    expect(rendered_content).to include("border-neutral-200")
+    expect(rendered_content).to include("border-neutral-300")
   end
 
   it "supports dark mode" do
     render_inline(described_class.new)
     expect(rendered_content).to include("dark:bg-neutral-900")
-    expect(rendered_content).to include("dark:border-neutral-800")
+    expect(rendered_content).to include("dark:border-neutral-700")
   end
 
   it "accepts HTML options" do

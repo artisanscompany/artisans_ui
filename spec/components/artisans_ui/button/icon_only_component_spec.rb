@@ -93,6 +93,7 @@ RSpec.describe ArtisansUi::Button::IconOnlyComponent, type: :component do
     expect(rendered_content).to include("justify-center")
     expect(rendered_content).to include("rounded-lg")
     expect(rendered_content).to include("shadow-sm")
+    expect(rendered_content).to include("border")
   end
 
   it "renders with nil variant (no variant classes)" do

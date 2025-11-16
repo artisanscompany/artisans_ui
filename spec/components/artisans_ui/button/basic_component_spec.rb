@@ -82,6 +82,7 @@ RSpec.describe ArtisansUi::Button::BasicComponent, type: :component do
     expect(rendered_content).to include("justify-center")
     expect(rendered_content).to include("rounded-lg")
     expect(rendered_content).to include("shadow-sm")
+    expect(rendered_content).to include("border")
   end
 
   it "includes dark mode classes" do

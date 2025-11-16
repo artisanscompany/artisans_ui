@@ -11,7 +11,7 @@ RSpec.describe ArtisansUi::Form::TextInputComponent, type: :component do
 
   it "includes default styling" do
     render_inline(described_class.new)
-    expect(rendered_content).to include("border-neutral-200")
+    expect(rendered_content).to include("border-neutral-300")
     expect(rendered_content).to include("rounded-lg")
     expect(rendered_content).to include("focus:ring-neutral-400")
   end

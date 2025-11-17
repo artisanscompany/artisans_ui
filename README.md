@@ -5,6 +5,7 @@ A shared ViewComponent library for Artisans applications. This gem provides reus
 ## 📚 Documentation
 
 - **[Usage Guide](USAGE_GUIDE.md)** - Complete guide for installation, development, and workflows
+- **[Sidebar Component Guide](docs/SIDEBAR_COMPONENT.md)** - Comprehensive sidebar component documentation with Tailwind CSS 4 integration
 - **[Contributing Guide](CONTRIBUTING.md)** - Guidelines for creating and contributing components
 - **[Changelog](CHANGELOG.md)** - Version history and release notes
 
@@ -490,9 +491,10 @@ bundle config unset local.artisans_ui
   - NavItemComponent: Navigation links with icons, active states, and badges
   - NavSectionComponent: Section dividers with optional headings
   - Responsive mobile slide-out and desktop persistent layouts
-  - localStorage persistence for collapse state
+  - Configurable breakpoints (`md` or `lg`)
   - Dark mode support throughout
-  - Uses existing sidebar_controller.js for interactions
+  - **📖 [View Complete Sidebar Documentation](docs/SIDEBAR_COMPONENT.md)**
+  - **⚠️ Requires [bundler-bare_symlink setup](docs/SIDEBAR_COMPONENT.md#tailwind-css-4-integration) for Tailwind CSS 4**
 
 More components coming soon!
 
@@ -536,6 +538,7 @@ bundle exec rspec spec/components/artisans_ui/ui/button_component_spec.rb
 
 ### Documentation
 - [Usage Guide](USAGE_GUIDE.md) - Installation, workflows, troubleshooting
+- [Sidebar Component Guide](docs/SIDEBAR_COMPONENT.md) - Sidebar setup and Tailwind CSS 4 integration
 - [Contributing Guide](CONTRIBUTING.md) - Component creation guidelines
 - [Changelog](CHANGELOG.md) - Version history
 

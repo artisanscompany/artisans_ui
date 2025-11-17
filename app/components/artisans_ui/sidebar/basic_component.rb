@@ -25,6 +25,11 @@ module ArtisansUi
     #     <% sidebar.with_nav_section(heading: "Settings") %>
     #     <% sidebar.with_nav_item(label: "Profile", href: "/profile") %>
     #   <% end %>
+    #
+    # @example With custom breakpoint for larger screens
+    #   <%= render ArtisansUi::Sidebar::BasicComponent.new(breakpoint: "lg") do |sidebar| %>
+    #     <% sidebar.with_nav_item(label: "Admin", href: "/admin") %>
+    #   <% end %>
     class BasicComponent < ApplicationViewComponent
       renders_one :header
       renders_one :footer
@@ -38,12 +43,16 @@ module ArtisansUi
 
       # Creates a new sidebar component
       #
+      # @param breakpoint [String] Responsive breakpoint for desktop visibility ("md" or "lg", default: "md")
       # @param storage_key [String] localStorage key for collapse state persistence
       # @param html_options [Hash] Additional HTML attributes
-      def initialize(storage_key: "sidebarOpen", **html_options)
+      def initialize(breakpoint: "md", storage_key: "sidebarOpen", **html_options)
+        @breakpoint = breakpoint
         @storage_key = storage_key
         @html_options = html_options
       end
+
+      attr_reader :breakpoint
 
       private
 

@@ -9,6 +9,16 @@ RSpec.describe ArtisansUi::Sidebar::BasicComponent, type: :component do
 
       expect(rendered_content).to include("data-controller=\"sidebar\"")
       expect(rendered_content).to include("flex h-full w-full relative")
+      expect(rendered_content).to include("md:hidden")
+      expect(rendered_content).to include("md:translate-x-0")
+    end
+
+    it "renders with custom breakpoint" do
+      render_inline(described_class.new(breakpoint: "lg"))
+
+      expect(rendered_content).to include("lg:hidden")
+      expect(rendered_content).to include("lg:translate-x-0")
+      expect(rendered_content).not_to include("md:hidden")
     end
 
     it "renders with custom storage key" do

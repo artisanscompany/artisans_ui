@@ -158,7 +158,7 @@ module ArtisansUi
       end
 
       def render_title
-        tag.h3(class: "text-base sm:text-lg font-semibold text-neutral-900 dark:text-white truncate group-hover:text-yellow-600 transition-colors") do
+        tag.h3(class: "text-sm font-medium text-neutral-900 dark:text-white truncate group-hover:text-yellow-600 dark:group-hover:text-yellow-500 transition-colors") do
           @title
         end
       end

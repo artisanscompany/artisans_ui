@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= page_title %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= helpers.csrf_meta_tags %>
+    <%= helpers.csp_meta_tag %>
+
+    <% if helpers.respond_to?(:stylesheet_link_tag) %>
+      <%= helpers.stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <% end %>
+    <% if helpers.respond_to?(:javascript_importmap_tags) %>
+      <%= helpers.javascript_importmap_tags %>
+    <% end %>
+
+    <%# Additional head content from slot %>
+    <%= head if head? %>
+
+    <%# Google Analytics (optional) %>
+    <% if render_google_analytics? %>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=<%= google_analytics_id %>"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '<%= google_analytics_id %>');
+      </script>
+    <% end %>
+  </head>
+
+  <body class="<%= body_class %>">
+    <%= sidebar %>
+  </body>
+</html>

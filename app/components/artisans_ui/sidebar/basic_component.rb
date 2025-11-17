@@ -29,7 +29,7 @@ module ArtisansUi
       renders_one :header
       renders_one :footer
       renders_many :nav_items, lambda { |**args, &block|
-        if args[:heading]
+        if args[:heading] || args.empty?
           NavSectionComponent.new(**args)
         else
           NavItemComponent.new(**args, &block)

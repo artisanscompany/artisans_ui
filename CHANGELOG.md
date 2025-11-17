@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Sidebar components (3 variants) - ViewComponent implementation with existing sidebar_controller.js
+  - BasicComponent: Full sidebar layout with header, navigation, and footer slots
+  - NavItemComponent: Individual navigation links with icon support, active states, and badge notifications
+  - NavSectionComponent: Section dividers with optional headings for organizing navigation groups
+  - Responsive design: Mobile slide-out overlay, desktop persistent sidebar
+  - localStorage persistence for collapse state
+  - Active state styling with yellow highlight (matching RailsBlocks patterns)
+  - Badge support with 5 color variants (yellow, red, green, blue, neutral)
+  - Full dark mode support throughout
+  - Uses existing sidebar_controller.js for mobile/desktop interactions
+  - Comprehensive RSpec tests (50 examples, 100% passing)
+  - Complete documentation with usage examples in README
 - Feedback component - RailsBlocks exact implementation (ERB-only, no ViewComponents)
   - Stimulus feedback controller with Motion.dev spring animations
   - Animated form expansion from button trigger

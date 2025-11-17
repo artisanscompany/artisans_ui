@@ -49,7 +49,7 @@ module ArtisansUi
         tag.label(
           @label,
           for: @label_for,
-          class: "block text-sm font-medium text-neutral-900 dark:text-white mb-1.5"
+          class: "block text-sm font-medium text-neutral-900 dark:text-white mb-3"
         )
       end
 

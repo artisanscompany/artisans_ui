@@ -20,8 +20,8 @@ module ArtisansUi
       end
 
       def call
-        tag.div(class: "w-full flex justify-center", **@html_options) do
-          tag.nav(aria: { label: "Breadcrumb" }, class: "flex justify-center overflow-x-auto whitespace-nowrap") do
+        tag.div(class: "w-full flex justify-start", **@html_options) do
+          tag.nav(aria: { label: "Breadcrumb" }, class: "flex justify-start overflow-x-auto whitespace-nowrap") do
             tag.ol(class: "flex items-center space-x-2 text-sm w-full") do
               safe_join(@items.map.with_index { |item, index| render_item(item, index) })
             end

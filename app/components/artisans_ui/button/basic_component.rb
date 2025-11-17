@@ -51,8 +51,8 @@ module ArtisansUi
       }.freeze
 
       SIZES = {
-        regular: "px-3 py-2 text-sm",
-        small: "px-3 py-2 text-xs"
+        regular: "px-3 py-2 text-xs",
+        small: "px-2.5 py-1.5 text-xs"
       }.freeze
 
       def initialize(variant: :neutral, size: :regular, disabled: false, **html_options)

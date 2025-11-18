@@ -36,7 +36,7 @@ module ArtisansUi
       def label_tag
         tag.label(
           "Password",
-          class: "block text-sm font-medium text-neutral-700 dark:text-neutral-300"
+          class: "block text-sm font-medium text-neutral-700"
         )
       end
 
@@ -60,7 +60,7 @@ module ArtisansUi
           type: "password",
           name: @name,
           placeholder: @placeholder,
-          class: "w-full px-3 py-2 pr-10 border border-neutral-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400",
+          class: "w-full px-3 py-2 pr-10 border border-neutral-300 rounded-lg bg-white text-neutral-900 focus:outline-none focus:ring-2 focus:ring-blue-500",
           data: {
             "artisans-ui--password-target": "input",
             action: "input->artisans-ui--password#handleInput"
@@ -72,7 +72,7 @@ module ArtisansUi
       def toggle_button
         tag.button(
           type: "button",
-          class: "absolute inset-y-0 right-0 flex items-center pr-3 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300",
+          class: "absolute inset-y-0 right-0 flex items-center pr-3 text-neutral-400 hover:text-neutral-600",
           data: { action: "click->artisans-ui--password#toggle" }
         ) do
           eye_icon
@@ -105,9 +105,9 @@ module ArtisansUi
       end
 
       def strength_bar
-        tag.div(class: "h-2 bg-neutral-200 dark:bg-neutral-700 rounded-full overflow-hidden") do
+        tag.div(class: "h-2 bg-neutral-200 rounded-full overflow-hidden") do
           tag.div(
-            class: "h-full bg-neutral-300 dark:bg-neutral-600 transition-all duration-300",
+            class: "h-full bg-neutral-300 transition-all duration-300",
             style: "width: 0%",
             data: { "artisans-ui--password-target": "strengthBar" }
           )
@@ -117,7 +117,7 @@ module ArtisansUi
       def strength_text
         tag.p(
           "Password strength: ",
-          class: "text-xs text-neutral-500 dark:text-neutral-400",
+          class: "text-xs text-neutral-500",
           data: { "artisans-ui--password-target": "strengthText" }
         )
       end

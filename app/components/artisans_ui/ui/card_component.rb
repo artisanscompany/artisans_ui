@@ -47,10 +47,10 @@ module ArtisansUi
       end
 
       def card_classes
-        base_classes = "bg-white dark:bg-neutral-800 border border-black/10 dark:border-white/10 rounded-xl shadow-xs overflow-hidden"
+        base_classes = "bg-white border border-black/10 rounded-xl shadow-xs overflow-hidden"
 
         # Add divide classes if we have multiple sections
-        divide_classes = multiple_sections? ? "divide-y divide-black/10 dark:divide-white/10" : ""
+        divide_classes = multiple_sections? ? "divide-y divide-black/10" : ""
 
         [base_classes, divide_classes, @html_options[:class]].compact.join(" ")
       end
@@ -74,7 +74,7 @@ module ArtisansUi
       def render_footer
         return unless footer?
 
-        content_tag(:div, footer, class: "px-4 py-5 sm:px-6 bg-neutral-50 dark:bg-neutral-900/50")
+        content_tag(:div, footer, class: "px-4 py-5 sm:px-6 bg-neutral-50")
       end
     end
   end

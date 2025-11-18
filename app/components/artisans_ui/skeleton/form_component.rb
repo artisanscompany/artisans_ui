@@ -12,32 +12,32 @@ module ArtisansUi
           safe_join([
             tag.div(class: "space-y-2") do
               safe_join([
-                tag.div(class: "h-4 bg-neutral-200 dark:bg-neutral-700 rounded w-20"),
-                tag.div(class: "h-10 bg-neutral-200 dark:bg-neutral-700 rounded w-full")
+                tag.div(class: "h-4 bg-neutral-200 rounded w-20"),
+                tag.div(class: "h-10 bg-neutral-200 rounded w-full")
               ])
             end,
             tag.div(class: "space-y-2") do
               safe_join([
-                tag.div(class: "h-4 bg-neutral-200 dark:bg-neutral-700 rounded w-24"),
-                tag.div(class: "h-10 bg-neutral-200 dark:bg-neutral-700 rounded w-full")
+                tag.div(class: "h-4 bg-neutral-200 rounded w-24"),
+                tag.div(class: "h-10 bg-neutral-200 rounded w-full")
               ])
             end,
             tag.div(class: "space-y-2") do
               safe_join([
-                tag.div(class: "h-4 bg-neutral-200 dark:bg-neutral-700 rounded w-32"),
-                tag.div(class: "h-24 bg-neutral-200 dark:bg-neutral-700 rounded w-full")
+                tag.div(class: "h-4 bg-neutral-200 rounded w-32"),
+                tag.div(class: "h-24 bg-neutral-200 rounded w-full")
               ])
             end,
             tag.div(class: "flex items-center space-x-2") do
               safe_join([
-                tag.div(class: "h-4 w-4 bg-neutral-200 dark:bg-neutral-700 rounded"),
-                tag.div(class: "h-4 bg-neutral-200 dark:bg-neutral-700 rounded w-32")
+                tag.div(class: "h-4 w-4 bg-neutral-200 rounded"),
+                tag.div(class: "h-4 bg-neutral-200 rounded w-32")
               ])
             end,
             tag.div(class: "flex space-x-4") do
               safe_join([
-                tag.div(class: "h-10 bg-neutral-200 dark:bg-neutral-700 rounded w-24"),
-                tag.div(class: "h-10 bg-neutral-200 dark:bg-neutral-700 rounded w-24")
+                tag.div(class: "h-10 bg-neutral-200 rounded w-24"),
+                tag.div(class: "h-10 bg-neutral-200 rounded w-24")
               ])
             end
           ])

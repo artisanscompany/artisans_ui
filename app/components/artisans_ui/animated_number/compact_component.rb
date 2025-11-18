@@ -33,7 +33,7 @@ module ArtisansUi
         tag.div(class: "space-y-4", **@html_options) do
           tag.div(class: "text-center") do
             content = [
-              tag.div(class: "text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-2") do
+              tag.div(class: "text-4xl font-bold text-neutral-800 mb-2") do
                 tag.span(
                   data: {
                     controller: "animated-number",
@@ -47,7 +47,7 @@ module ArtisansUi
             ]
 
             if @label
-              content << tag.p(class: "text-sm text-neutral-600 dark:text-neutral-400") { @label }
+              content << tag.p(class: "text-sm text-neutral-600") { @label }
             end
 
             safe_join(content)

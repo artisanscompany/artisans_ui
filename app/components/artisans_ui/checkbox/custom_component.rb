@@ -93,11 +93,11 @@ module ArtisansUi
       end
 
       def label_classes
-        "relative py-2 px-2.5 flex items-center font-medium bg-white text-neutral-800 rounded-xl cursor-pointer ring-1 ring-neutral-200 has-[:checked]:ring-2 has-[:checked]:ring-neutral-400 dark:bg-neutral-700/50 dark:text-neutral-200 dark:ring-neutral-700 dark:has-[:checked]:ring-neutral-400 has-[:checked]:bg-neutral-100 has-[:checked]:text-neutral-900 dark:has-[:checked]:bg-neutral-600/60 dark:has-[:checked]:text-white"
+        "relative py-2 px-2.5 flex items-center font-medium bg-white text-neutral-800 rounded-xl cursor-pointer ring-1 ring-neutral-200 has-[:checked]:ring-2 has-[:checked]:ring-neutral-400 has-[:checked]:bg-neutral-100 has-[:checked]:text-neutral-900"
       end
 
       def icon_classes
-        "flex size-0 shrink-0 items-center justify-center rounded-full bg-neutral-700 text-transparent transition-all duration-200 peer-checked:me-1.5 peer-checked:size-4 peer-checked:text-white dark:bg-neutral-50 dark:peer-checked:text-neutral-800"
+        "flex size-0 shrink-0 items-center justify-center rounded-full bg-neutral-700 text-transparent transition-all duration-200 peer-checked:me-1.5 peer-checked:size-4 peer-checked:text-white"
       end
 
       def generate_id

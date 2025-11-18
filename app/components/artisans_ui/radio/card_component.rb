@@ -48,7 +48,7 @@ module ArtisansUi
 
         tag.label(
           for: input_id,
-          class: "relative flex items-start gap-4 rounded-xl border border-neutral-200 dark:border-neutral-700 p-4 cursor-pointer has-[:checked]:ring-2 has-[:checked]:ring-neutral-400 dark:has-[:checked]:ring-neutral-500"
+          class: "relative flex items-start gap-4 rounded-xl border border-neutral-200 p-4 cursor-pointer has-[:checked]:ring-2 has-[:checked]:ring-neutral-400"
         ) do
           safe_join([
             tag.input(
@@ -63,8 +63,8 @@ module ArtisansUi
               safe_join([
                 tag.div(class: "flex items-center justify-between") do
                   safe_join([
-                    tag.div(class: "font-semibold text-neutral-900 dark:text-neutral-100") { title },
-                    tag.div(class: "text-sm font-medium text-neutral-700 dark:text-neutral-300") { price }
+                    tag.div(class: "font-semibold text-neutral-900") { title },
+                    tag.div(class: "text-sm font-medium text-neutral-700") { price }
                   ])
                 end,
                 tag.p(

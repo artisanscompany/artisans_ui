@@ -40,7 +40,7 @@ module ArtisansUi
       private
 
       def default_classes
-        "w-full h-2 bg-neutral-200 dark:bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-neutral-900 dark:accent-white focus:outline-none focus:ring-2 focus:ring-neutral-400 dark:focus:ring-neutral-600 transition-colors"
+        "w-full h-2 bg-neutral-200 rounded-lg appearance-none cursor-pointer accent-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-400 transition-colors"
       end
 
       def merged_options

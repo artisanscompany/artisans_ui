@@ -54,7 +54,7 @@ module ArtisansUi
 
         tag.label(
           for: input_id,
-          class: "relative flex items-start gap-4 rounded-xl border border-neutral-200 dark:border-neutral-700 p-4 cursor-pointer has-[:checked]:ring-2 has-[:checked]:ring-neutral-400 dark:has-[:checked]:ring-neutral-500"
+          class: "relative flex items-start gap-4 rounded-xl border border-neutral-200 p-4 cursor-pointer has-[:checked]:ring-2 has-[:checked]:ring-neutral-400"
         ) do
           safe_join([
             tag.input(
@@ -70,7 +70,7 @@ module ArtisansUi
                 tag.div(class: "flex-shrink-0 mt-0.5") { icon },
                 tag.div do
                   safe_join([
-                    tag.div(class: "font-semibold text-neutral-900 dark:text-neutral-100") { title },
+                    tag.div(class: "font-semibold text-neutral-900") { title },
                     tag.p(
                       description,
                       class: "text-sm text-neutral-500 mt-1"
@@ -90,7 +90,7 @@ module ArtisansUi
           viewBox: "0 0 24 24",
           "stroke-width": "1.5",
           stroke: "currentColor",
-          class: "w-6 h-6 text-neutral-600 dark:text-neutral-400"
+          class: "w-6 h-6 text-neutral-600"
         ) do
           tag.path(
             "stroke-linecap": "round",
@@ -107,7 +107,7 @@ module ArtisansUi
           viewBox: "0 0 24 24",
           "stroke-width": "1.5",
           stroke: "currentColor",
-          class: "w-6 h-6 text-neutral-600 dark:text-neutral-400"
+          class: "w-6 h-6 text-neutral-600"
         ) do
           tag.path(
             "stroke-linecap": "round",
@@ -124,7 +124,7 @@ module ArtisansUi
           viewBox: "0 0 24 24",
           "stroke-width": "1.5",
           stroke: "currentColor",
-          class: "w-6 h-6 text-neutral-600 dark:text-neutral-400"
+          class: "w-6 h-6 text-neutral-600"
         ) do
           tag.path(
             "stroke-linecap": "round",
@@ -141,7 +141,7 @@ module ArtisansUi
           viewBox: "0 0 24 24",
           "stroke-width": "1.5",
           stroke: "currentColor",
-          class: "w-6 h-6 text-neutral-600 dark:text-neutral-400"
+          class: "w-6 h-6 text-neutral-600"
         ) do
           tag.path(
             "stroke-linecap": "round",

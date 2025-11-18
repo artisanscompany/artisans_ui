@@ -15,7 +15,6 @@ A shared ViewComponent library for Artisans applications. This gem provides reus
 - [RailsBlocks](https://railsblocks.com/)-inspired Tailwind CSS styling for modern, responsive design
 - Comprehensive test coverage with RSpec
 - Easy to extend and customize
-- Dark mode support across all components
 
 ## Quick Start
 
@@ -224,7 +223,7 @@ bundle install
   <% sidebar.with_header do %>
     <%= link_to root_path, class: "flex items-center space-x-2 min-w-0" do %>
       <%= image_tag "/logo-48.png", alt: "My App", class: "h-8 w-8 flex-shrink-0" %>
-      <span class="text-lg font-bold text-neutral-900 dark:text-neutral-100 whitespace-nowrap">My App</span>
+      <span class="text-lg font-bold text-neutral-900 whitespace-nowrap">My App</span>
     <% end %>
   <% end %>
 
@@ -243,18 +242,18 @@ bundle install
 
   <% sidebar.with_footer do %>
     <div class="flex items-center space-x-3 px-3 py-2 mb-2">
-      <div class="w-8 h-8 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center flex-shrink-0">
-        <svg class="w-5 h-5 text-neutral-600 dark:text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center flex-shrink-0">
+        <svg class="w-5 h-5 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
         </svg>
       </div>
       <div class="flex-1 min-w-0">
-        <p class="text-sm font-medium text-neutral-900 dark:text-neutral-100 truncate">John Doe</p>
-        <p class="text-xs text-neutral-500 dark:text-neutral-400 truncate">john@example.com</p>
+        <p class="text-sm font-medium text-neutral-900 truncate">John Doe</p>
+        <p class="text-xs text-neutral-500 truncate">john@example.com</p>
       </div>
     </div>
 
-    <%= link_to destroy_session_path, data: { "turbo-method": :delete }, class: "flex items-center space-x-3 px-3 py-2 rounded-lg text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors" do %>
+    <%= link_to destroy_session_path, data: { "turbo-method": :delete }, class: "flex items-center space-x-3 px-3 py-2 rounded-lg text-neutral-700 hover:bg-neutral-100 transition-colors" do %>
       <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
       </svg>
@@ -282,40 +281,40 @@ bundle install
 ```erb
 <%# Basic card %>
 <%= render ArtisansUi::Card::BasicComponent.new do %>
-  <h3 class="text-lg font-medium leading-6 text-neutral-900 dark:text-white">Basic Card</h3>
-  <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">Simple card with shadow and rounded corners</p>
+  <h3 class="text-lg font-medium leading-6 text-neutral-900">Basic Card</h3>
+  <p class="mt-2 text-sm text-neutral-600">Simple card with shadow and rounded corners</p>
 <% end %>
 
 <%# Card with header %>
 <%= render ArtisansUi::Card::WithHeaderComponent.new do |card| %>
   <% card.with_header do %>
-    <h3 class="text-lg leading-6 font-medium text-neutral-900 dark:text-white">Card with Header</h3>
-    <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">Separated by divider</p>
+    <h3 class="text-lg leading-6 font-medium text-neutral-900">Card with Header</h3>
+    <p class="mt-1 text-sm text-neutral-600">Separated by divider</p>
   <% end %>
   <% card.with_body do %>
-    <p class="text-neutral-700 dark:text-neutral-300">Main content goes here</p>
+    <p class="text-neutral-700">Main content goes here</p>
   <% end %>
 <% end %>
 
 <%# Card with footer %>
 <%= render ArtisansUi::Card::WithFooterComponent.new do |card| %>
   <% card.with_body do %>
-    <h3 class="text-lg font-medium text-neutral-900 dark:text-white">Card with Footer</h3>
-    <p class="mt-2 text-neutral-700 dark:text-neutral-300">Footer section for actions</p>
+    <h3 class="text-lg font-medium text-neutral-900">Card with Footer</h3>
+    <p class="mt-2 text-neutral-700">Footer section for actions</p>
   <% end %>
   <% card.with_footer do %>
-    <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-400">View details</a>
+    <a href="#" class="text-sm font-medium text-blue-600">View details</a>
   <% end %>
 <% end %>
 
 <%# Complete card (header + body + footer) %>
 <%= render ArtisansUi::Card::CompleteComponent.new do |card| %>
   <% card.with_header do %>
-    <h3 class="text-lg leading-6 font-medium text-neutral-900 dark:text-white">Complete Card</h3>
-    <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">All three sections</p>
+    <h3 class="text-lg leading-6 font-medium text-neutral-900">Complete Card</h3>
+    <p class="mt-1 text-sm text-neutral-600">All three sections</p>
   <% end %>
   <% card.with_body do %>
-    <p class="text-neutral-700 dark:text-neutral-300">Main content area</p>
+    <p class="text-neutral-700">Main content area</p>
   <% end %>
   <% card.with_footer do %>
     <div class="flex justify-between">
@@ -328,15 +327,15 @@ bundle install
 <%# Edge-to-edge on mobile %>
 <%= render ArtisansUi::Card::EdgeToEdgeComponent.new do |card| %>
   <% card.with_body do %>
-    <h3 class="text-lg font-medium text-neutral-900 dark:text-white">Edge-to-Edge</h3>
-    <p class="mt-2 text-neutral-700 dark:text-neutral-300">Full width on mobile, standard on desktop</p>
+    <h3 class="text-lg font-medium text-neutral-900">Edge-to-Edge</h3>
+    <p class="mt-2 text-neutral-700">Full width on mobile, standard on desktop</p>
   <% end %>
 <% end %>
 
 <%# Well card %>
 <%= render ArtisansUi::Card::WellComponent.new do %>
-  <h3 class="text-lg font-medium text-neutral-900 dark:text-white">Well Card</h3>
-  <p class="mt-2 text-neutral-700 dark:text-neutral-300">Subtle container with no shadow</p>
+  <h3 class="text-lg font-medium text-neutral-900">Well Card</h3>
+  <p class="mt-2 text-neutral-700">Subtle container with no shadow</p>
 <% end %>
 
 <%# Card with image %>

@@ -104,7 +104,7 @@ module ArtisansUi
 
       def card_classes
         base = "rounded-lg border p-4 sm:p-6 hover:shadow-lg hover:border-yellow-400 transition-all duration-200"
-        "#{base} #{VARIANTS[@variant]} dark:bg-neutral-800 dark:border-neutral-700"
+        "#{base} #{VARIANTS[@variant]}"
       end
 
       def render_badge
@@ -138,8 +138,8 @@ module ArtisansUi
             class: "w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover"
           )
         elsif @avatar_fallback
-          tag.div(class: "w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-neutral-100 dark:bg-neutral-700 flex items-center justify-center") do
-            tag.span(class: "text-sm sm:text-lg font-semibold text-neutral-500 dark:text-neutral-400") do
+          tag.div(class: "w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-neutral-100 flex items-center justify-center") do
+            tag.span(class: "text-sm sm:text-lg font-semibold text-neutral-500") do
               @avatar_fallback
             end
           end
@@ -150,7 +150,7 @@ module ArtisansUi
         return unless @subtitle
 
         tag.div(class: "flex-1") do
-          tag.p(class: "text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white") do
+          tag.p(class: "text-xs sm:text-sm font-semibold text-neutral-900") do
             @subtitle
           end
         end

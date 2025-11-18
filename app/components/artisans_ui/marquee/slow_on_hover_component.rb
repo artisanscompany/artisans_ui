@@ -59,8 +59,8 @@ module ArtisansUi
         tag.div(class: "flex pointer-events-none absolute inset-0 justify-between items-center") do
           tag.div(class: "relative h-full w-full") do
             safe_join([
-              tag.div(class: "w-5 bg-gradient-to-r from-white dark:from-[#080808] to-transparent absolute left-0 inset-y-0"),
-              tag.div(class: "w-5 bg-gradient-to-l from-white dark:from-[#080808] to-transparent absolute right-0 inset-y-0")
+              tag.div(class: "w-5 bg-gradient-to-r from-white to-transparent absolute left-0 inset-y-0"),
+              tag.div(class: "w-5 bg-gradient-to-l from-white to-transparent absolute right-0 inset-y-0")
             ])
           end
         end

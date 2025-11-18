@@ -9,11 +9,11 @@ module ArtisansUi
     # @example
     #   <%= render ArtisansUi::Card::WithHeaderComponent.new do |card| %>
     #     <% card.with_header do %>
-    #       <h3 class="text-lg leading-6 font-medium text-neutral-900 dark:text-white">Card with Header</h3>
-    #       <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">This card has a header section</p>
+    #       <h3 class="text-lg leading-6 font-medium text-neutral-900">Card with Header</h3>
+    #       <p class="mt-1 text-sm text-neutral-600">This card has a header section</p>
     #     <% end %>
     #     <% card.with_body do %>
-    #       <p class="text-neutral-700 dark:text-neutral-300">Main content goes here.</p>
+    #       <p class="text-neutral-700">Main content goes here.</p>
     #     <% end %>
     #   <% end %>
     class WithHeaderComponent < ApplicationViewComponent
@@ -26,7 +26,7 @@ module ArtisansUi
 
       def call
         tag.div(
-          class: "bg-white dark:bg-neutral-800 border border-black/10 dark:border-white/10 rounded-xl shadow-xs overflow-hidden divide-y divide-black/10 dark:divide-white/10",
+          class: "bg-white border border-black/10 rounded-xl shadow-xs overflow-hidden divide-y divide-black/10",
           **@html_options
         ) do
           safe_join([

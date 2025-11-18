@@ -36,13 +36,13 @@ module ArtisansUi
           id: @input_id,
           value: @text,
           readonly: true,
-          class: "flex-1 rounded-l-lg border border-r-0 border-neutral-300 bg-neutral-50 px-3 py-2 text-sm text-neutral-600 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 dark:focus-visible:outline-neutral-200"
+          class: "flex-1 rounded-l-lg border border-r-0 border-neutral-300 bg-neutral-50 px-3 py-2 text-sm text-neutral-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600"
         )
       end
 
       def render_button
         tag.button(
-          class: "rounded-r-lg border border-l border-neutral-300 bg-white px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 dark:border-neutral-600 dark:bg-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 dark:focus-visible:outline-neutral-200",
+          class: "rounded-r-lg border border-l border-neutral-300 bg-white px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600",
           data: {
             controller: "clipboard",
             clipboard_text: @text,

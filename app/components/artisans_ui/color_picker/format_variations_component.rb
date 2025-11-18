@@ -48,7 +48,7 @@ module ArtisansUi
       def description_text
         tag.p(
           "Choose the output format that best suits your needs",
-          class: "text-sm text-neutral-500 dark:text-neutral-400 text-center"
+          class: "text-sm text-neutral-500 text-center"
         )
       end
 
@@ -87,10 +87,10 @@ module ArtisansUi
       def output_display(format, value)
         tag.div(class: "text-center") do
           safe_join([
-            tag.div("Output:", class: "text-xs text-neutral-500 dark:text-neutral-400 mb-1"),
+            tag.div("Output:", class: "text-xs text-neutral-500 mb-1"),
             tag.code(
               value,
-              class: "px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded font-mono text-xs text-neutral-700 dark:text-neutral-300",
+              class: "px-2 py-1 bg-neutral-100 rounded font-mono text-xs text-neutral-700",
               id: "#{@id_prefix}-#{format}-output"
             )
           ])

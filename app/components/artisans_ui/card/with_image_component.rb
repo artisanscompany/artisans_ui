@@ -48,7 +48,7 @@ module ArtisansUi
 
       def call
         tag.div(
-          class: "bg-white dark:bg-neutral-800 rounded-xl shadow-xs overflow-hidden border border-black/10 dark:border-white/10",
+          class: "bg-white rounded-xl shadow-xs overflow-hidden border border-black/10",
           **@html_options
         ) do
           safe_join([
@@ -62,7 +62,7 @@ module ArtisansUi
       private
 
       def render_image
-        tag.div(class: "aspect-w-16 aspect-h-9 bg-neutral-200 dark:bg-neutral-700") do
+        tag.div(class: "aspect-w-16 aspect-h-9 bg-neutral-200") do
           tag.img(
             src: @image_url,
             alt: @image_alt,
@@ -80,18 +80,18 @@ module ArtisansUi
               badge_and_meta = []
               if @badge_text
                 badge_and_meta << tag.span(
-                  class: "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-#{@badge_color}-100 dark:bg-#{@badge_color}-900/30 text-#{@badge_color}-800 dark:text-#{@badge_color}-300"
+                  class: "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-#{@badge_color}-100 text-#{@badge_color}-800"
                 ) { @badge_text }
               end
               if @meta_text
-                badge_and_meta << tag.span(class: "ml-2 text-sm text-neutral-500 dark:text-neutral-400") { @meta_text }
+                badge_and_meta << tag.span(class: "ml-2 text-sm text-neutral-500") { @meta_text }
               end
               safe_join(badge_and_meta)
             end
           end
 
-          content << tag.h3(class: "text-xl font-semibold text-neutral-900 dark:text-white mb-2") { @title }
-          content << tag.p(class: "text-neutral-700 dark:text-neutral-300 text-sm") { @description }
+          content << tag.h3(class: "text-xl font-semibold text-neutral-900 mb-2") { @title }
+          content << tag.p(class: "text-neutral-700 text-sm") { @description }
 
           safe_join(content)
         end
@@ -100,7 +100,7 @@ module ArtisansUi
       def render_footer
         return unless @author_name
 
-        tag.div(class: "px-6 py-4 bg-neutral-50 dark:bg-neutral-900/50 border-t border-black/10 dark:border-white/10") do
+        tag.div(class: "px-6 py-4 bg-neutral-50 border-t border-black/10") do
           tag.div(class: "flex items-center justify-between") do
             safe_join([
               tag.div(class: "flex items-center") do
@@ -110,8 +110,8 @@ module ArtisansUi
                 end
                 author_content << tag.div(class: "ml-3") do
                   safe_join([
-                    tag.p(class: "text-sm font-medium text-neutral-900 dark:text-white") { @author_name },
-                    @author_date ? tag.p(class: "text-xs text-neutral-500 dark:text-neutral-400") { @author_date } : nil
+                    tag.p(class: "text-sm font-medium text-neutral-900") { @author_name },
+                    @author_date ? tag.p(class: "text-xs text-neutral-500") { @author_date } : nil
                   ].compact)
                 end
                 safe_join(author_content)

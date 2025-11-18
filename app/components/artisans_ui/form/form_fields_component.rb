@@ -175,7 +175,7 @@ module ArtisansUi
             ),
             tag.p(
               "Please enter a valid URL",
-              class: "mt-1 text-sm leading-normal text-red-500 dark:text-red-400 italic"
+              class: "mt-1 text-sm leading-normal text-red-500 italic"
             )
           ])
         end
@@ -195,14 +195,14 @@ module ArtisansUi
                 ),
                 tag.label(
                   for: "file-upload",
-                  class: "flex items-center gap-2 cursor-pointer rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 px-4 py-2 text-sm font-medium text-neutral-700 transition-colors hover:border-neutral-400 hover:bg-neutral-100 focus-within:ring-2 focus-within:ring-neutral-600 focus-within:ring-offset-2 dark:border-neutral-600 dark:bg-neutral-700 dark:text-neutral-200 dark:hover:border-neutral-500 dark:hover:bg-neutral-700"
+                  class: "flex items-center gap-2 cursor-pointer rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 px-4 py-2 text-sm font-medium text-neutral-700 transition-colors hover:border-neutral-400 hover:bg-neutral-100 focus-within:ring-2 focus-within:ring-neutral-600 focus-within:ring-offset-2"
                 ) do
                   safe_join([
                     tag.span("Choose File", class: "shrink-0"),
                     tag.span(
                       "No file chosen",
                       id: "file-name",
-                      class: "truncate text-neutral-500 dark:text-neutral-400 text-xs"
+                      class: "truncate text-neutral-500 text-xs"
                     )
                   ])
                 end,
@@ -257,7 +257,7 @@ module ArtisansUi
                   "Choose games",
                   value: "",
                   disabled: true,
-                  class: "cursor-not-allowed border-b !rounded-b-none border-neutral-200 dark:border-neutral-600"
+                  class: "cursor-not-allowed border-b !rounded-b-none border-neutral-200"
                 ),
                 tag.option("Minecraft", value: "minecraft"),
                 tag.option("Fortnite", value: "fortnite"),
@@ -350,10 +350,10 @@ module ArtisansUi
           safe_join([
             tag.input(type: "checkbox", class: "sr-only peer", name: name, id: name),
             tag.div(
-              class: "w-10 h-6 bg-neutral-200 border border-black/10 rounded-full transition-all duration-150 ease-in-out cursor-pointer group-hover:bg-[#dcdcdb] peer-checked:bg-[#404040] peer-checked:group-hover:bg-neutral-600 peer-checked:border-white/10 dark:bg-neutral-700 dark:border-white/10 dark:group-hover:bg-neutral-600 dark:peer-checked:bg-neutral-50 dark:peer-checked:group-hover:bg-neutral-100 dark:peer-checked:border-black/20 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-neutral-600 dark:peer-focus-visible:outline-neutral-200"
+              class: "w-10 h-6 bg-neutral-200 border border-black/10 rounded-full transition-all duration-150 ease-in-out cursor-pointer group-hover:bg-[#dcdcdb] peer-checked:bg-[#404040] peer-checked:group-hover:bg-neutral-600 peer-checked:border-white/10 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-neutral-600"
             ),
             tag.div(
-              class: "absolute top-[3px] left-[3px] w-[18px] h-[18px] bg-white rounded-full shadow-sm transition-all duration-150 ease-in-out peer-checked:translate-x-4 flex items-center justify-center dark:bg-neutral-200 dark:peer-checked:bg-neutral-800"
+              class: "absolute top-[3px] left-[3px] w-[18px] h-[18px] bg-white rounded-full shadow-sm transition-all duration-150 ease-in-out peer-checked:translate-x-4 flex items-center justify-center"
             )
           ])
         end
@@ -364,10 +364,10 @@ module ArtisansUi
           safe_join([
             tag.input(type: "checkbox", class: "sr-only peer", name: name, id: name),
             tag.div(
-              class: "w-10 h-6 bg-neutral-200 border border-black/10 rounded-full transition-all duration-150 ease-in-out cursor-pointer group-hover:bg-[#dcdcdb] peer-checked:bg-[#404040] peer-checked:group-hover:bg-neutral-600 peer-checked:border-white/10 dark:bg-neutral-700 dark:border-white/10 dark:group-hover:bg-neutral-600 dark:peer-checked:bg-neutral-50 dark:peer-checked:group-hover:bg-neutral-100 dark:peer-checked:border-black/20 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-neutral-600 dark:peer-focus-visible:outline-neutral-200"
+              class: "w-10 h-6 bg-neutral-200 border border-black/10 rounded-full transition-all duration-150 ease-in-out cursor-pointer group-hover:bg-[#dcdcdb] peer-checked:bg-[#404040] peer-checked:group-hover:bg-neutral-600 peer-checked:border-white/10 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-neutral-600"
             ),
             tag.div(
-              class: "absolute top-[3px] left-[3px] w-[18px] h-[18px] bg-white rounded-full shadow-sm transition-all duration-150 ease-in-out peer-checked:translate-x-4 flex items-center justify-center dark:bg-neutral-200 dark:peer-checked:bg-neutral-800"
+              class: "absolute top-[3px] left-[3px] w-[18px] h-[18px] bg-white rounded-full shadow-sm transition-all duration-150 ease-in-out peer-checked:translate-x-4 flex items-center justify-center"
             ) do
               safe_join([
                 render_x_icon,
@@ -380,7 +380,7 @@ module ArtisansUi
 
       def render_x_icon
         tag.svg(
-          class: "w-3 h-3 text-neutral-400 transition-all duration-150 ease-in-out group-has-[:checked]:opacity-0 dark:text-neutral-500",
+          class: "w-3 h-3 text-neutral-400 transition-all duration-150 ease-in-out group-has-[:checked]:opacity-0",
           fill: "none",
           viewBox: "0 0 12 12",
           xmlns: "http://www.w3.org/2000/svg"
@@ -397,7 +397,7 @@ module ArtisansUi
 
       def render_checkmark_icon
         tag.svg(
-          class: "absolute w-3 h-3 text-neutral-700 transition-all duration-150 ease-in-out opacity-0 group-has-[:checked]:opacity-100 dark:text-neutral-100",
+          class: "absolute w-3 h-3 text-neutral-700 transition-all duration-150 ease-in-out opacity-0 group-has-[:checked]:opacity-100",
           fill: "currentColor",
           viewBox: "0 0 12 12",
           xmlns: "http://www.w3.org/2000/svg"

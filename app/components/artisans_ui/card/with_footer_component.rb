@@ -9,12 +9,12 @@ module ArtisansUi
     # @example
     #   <%= render ArtisansUi::Card::WithFooterComponent.new do |card| %>
     #     <% card.with_body do %>
-    #       <h3 class="text-lg font-medium leading-6 text-neutral-900 dark:text-white mb-2">Card with Footer</h3>
-    #       <p class="text-neutral-700 dark:text-neutral-300">Main content</p>
+    #       <h3 class="text-lg font-medium leading-6 text-neutral-900 mb-2">Card with Footer</h3>
+    #       <p class="text-neutral-700">Main content</p>
     #     <% end %>
     #     <% card.with_footer do %>
     #       <div class="text-sm">
-    #         <a href="#" class="font-medium text-blue-600 dark:text-blue-400 hover:text-blue-500">View details</a>
+    #         <a href="#" class="font-medium text-blue-600 hover:text-blue-500">View details</a>
     #       </div>
     #     <% end %>
     #   <% end %>
@@ -28,7 +28,7 @@ module ArtisansUi
 
       def call
         tag.div(
-          class: "bg-white dark:bg-neutral-800 border border-black/10 dark:border-white/10 rounded-xl shadow-xs overflow-hidden",
+          class: "bg-white border border-black/10 rounded-xl shadow-xs overflow-hidden",
           **@html_options
         ) do
           safe_join([
@@ -49,7 +49,7 @@ module ArtisansUi
       def render_footer
         return unless footer?
 
-        content_tag(:div, footer, class: "bg-neutral-50 dark:bg-neutral-900/50 px-4 py-4 sm:px-6 border-t border-black/10 dark:border-white/10")
+        content_tag(:div, footer, class: "bg-neutral-50 px-4 py-4 sm:px-6 border-t border-black/10")
       end
     end
   end

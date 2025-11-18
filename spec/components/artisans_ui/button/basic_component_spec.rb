@@ -24,7 +24,7 @@ RSpec.describe ArtisansUi::Button::BasicComponent, type: :component do
     render_inline(described_class.new(variant: :secondary)) { "Secondary Button" }
 
     expect(rendered_content).to include("Secondary Button")
-    expect(rendered_content).to include("bg-white/90")
+    expect(rendered_content).to include("bg-white")
     expect(rendered_content).to include("text-neutral-800")
   end
 
@@ -39,16 +39,16 @@ RSpec.describe ArtisansUi::Button::BasicComponent, type: :component do
   it "renders a regular sized button by default" do
     render_inline(described_class.new) { "Regular" }
 
-    expect(rendered_content).to include("px-3.5")
+    expect(rendered_content).to include("px-3")
     expect(rendered_content).to include("py-2")
-    expect(rendered_content).to include("text-sm")
+    expect(rendered_content).to include("text-xs")
   end
 
   it "renders a small sized button" do
     render_inline(described_class.new(size: :small)) { "Small" }
 
-    expect(rendered_content).to include("px-3")
-    expect(rendered_content).to include("py-2")
+    expect(rendered_content).to include("px-2.5")
+    expect(rendered_content).to include("py-1.5")
     expect(rendered_content).to include("text-xs")
   end
 
@@ -85,11 +85,11 @@ RSpec.describe ArtisansUi::Button::BasicComponent, type: :component do
     expect(rendered_content).to include("shadow-sm")
   end
 
-  it "includes dark mode classes" do
-    render_inline(described_class.new(variant: :neutral)) { "Dark Mode" }
+  it "does not include dark mode classes" do
+    render_inline(described_class.new(variant: :neutral)) { "No Dark Mode" }
 
-    expect(rendered_content).to include("dark:bg-white")
-    expect(rendered_content).to include("dark:text-neutral-800")
+    expect(rendered_content).not_to include("dark:bg-white")
+    expect(rendered_content).not_to include("dark:text-neutral-800")
   end
 
   it "includes transition classes" do

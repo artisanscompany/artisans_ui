@@ -51,7 +51,7 @@ module ArtisansUi
       def render_static_display
         tag.div(
           data: { controller: "os-detect" },
-          class: "flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400",
+          class: "flex items-center gap-2 text-sm text-neutral-600",
           **@html_options
         ) do
           safe_join([
@@ -125,7 +125,7 @@ module ArtisansUi
       end
 
       def button_classes
-        "flex flex-wrap items-center justify-center gap-1.5 rounded-lg border border-neutral-200 bg-white/90 px-3.5 py-2 text-sm font-medium whitespace-nowrap text-neutral-800 shadow-xs transition-all duration-100 ease-in-out select-none hover:bg-neutral-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-800/50 dark:text-neutral-50 dark:hover:bg-neutral-700/50 dark:focus-visible:outline-neutral-200"
+        "flex flex-wrap items-center justify-center gap-1.5 rounded-lg border border-neutral-200 bg-white/90 px-3.5 py-2 text-sm font-medium whitespace-nowrap text-neutral-800 shadow-xs transition-all duration-100 ease-in-out select-none hover:bg-neutral-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50"
       end
     end
   end

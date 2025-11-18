@@ -48,7 +48,7 @@ module ArtisansUi
 
       def input_element
         tag.input(
-          class: "block w-full rounded-lg border-0 px-3 py-2 text-neutral-900 shadow-sm ring-1 ring-inset ring-neutral-300 placeholder:text-neutral-500 focus:ring-2 focus:ring-neutral-600 outline-hidden leading-6 dark:bg-neutral-700 dark:ring-neutral-600 dark:placeholder-neutral-300 dark:text-white dark:focus:ring-neutral-500 text-base sm:text-sm",
+          class: "block w-full rounded-lg border-0 px-3 py-2 text-neutral-900 shadow-sm ring-1 ring-inset ring-neutral-300 placeholder:text-neutral-500 focus:ring-2 focus:ring-neutral-600 outline-hidden leading-6 text-base sm:text-sm",
           readonly: true,
           data: { date_picker_target: "input" },
           placeholder: @placeholder,

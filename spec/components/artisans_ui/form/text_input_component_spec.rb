@@ -11,9 +11,9 @@ RSpec.describe ArtisansUi::Form::TextInputComponent, type: :component do
 
   it "includes default styling" do
     render_inline(described_class.new)
-    expect(rendered_content).to include("border-neutral-300")
+    expect(rendered_content).to include("border-neutral-200")
     expect(rendered_content).to include("rounded-lg")
-    expect(rendered_content).to include("focus:ring-neutral-900")
+    expect(rendered_content).to include("focus:ring-neutral-300")
   end
 
   it "accepts HTML options" do
@@ -23,10 +23,10 @@ RSpec.describe ArtisansUi::Form::TextInputComponent, type: :component do
     expect(rendered_content).to include('id="user"')
   end
 
-  it "supports dark mode" do
+  it "does not include dark mode classes" do
     render_inline(described_class.new)
-    expect(rendered_content).to include("dark:bg-neutral-900")
-    expect(rendered_content).to include("dark:text-white")
+    expect(rendered_content).not_to include("dark:bg-neutral-900")
+    expect(rendered_content).not_to include("dark:text-white")
   end
 
   it "accepts custom classes" do

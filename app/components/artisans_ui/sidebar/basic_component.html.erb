@@ -5,19 +5,19 @@
        data-action="click->sidebar#close"></div>
 
   <%# Sidebar Panel (Mobile slides in, Desktop always visible) %>
-  <div class="fixed inset-y-0 left-0 z-50 w-64 bg-neutral-50 dark:bg-neutral-900 border-r border-neutral-200 dark:border-neutral-800 transform -translate-x-full <%= breakpoint == 'lg' ? 'lg:translate-x-0 lg:relative lg:inset-0' : 'md:translate-x-0 md:relative md:inset-0' %> motion-safe:transition-all motion-safe:duration-300 ease-in-out"
+  <div class="fixed inset-y-0 left-0 z-50 w-64 bg-neutral-50 border-r border-neutral-200 transform -translate-x-full <%= breakpoint == 'lg' ? 'lg:translate-x-0 lg:relative lg:inset-0' : 'md:translate-x-0 md:relative md:inset-0' %> motion-safe:transition-all motion-safe:duration-300 ease-in-out"
        data-sidebar-target="panel">
     <div class="h-full flex flex-col">
       <%# Header Section %>
       <% if header? %>
-        <div class="flex items-center justify-between px-4 py-4 border-b border-neutral-200 dark:border-neutral-800">
+        <div class="flex items-center justify-between px-4 py-4 border-b border-neutral-200">
           <div class="flex items-center space-x-2 overflow-hidden">
             <%= header %>
           </div>
           <button type="button"
-                  class="<%= breakpoint == 'lg' ? 'lg:hidden' : 'md:hidden' %> p-1.5 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors flex-shrink-0"
+                  class="<%= breakpoint == 'lg' ? 'lg:hidden' : 'md:hidden' %> p-1.5 rounded-md hover:bg-neutral-100 transition-colors flex-shrink-0"
                   data-action="click->sidebar#close">
-            <svg class="w-5 h-5 text-neutral-600 dark:text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
@@ -33,7 +33,7 @@
 
       <%# Footer Section %>
       <% if footer? %>
-        <div class="border-t border-neutral-200 dark:border-neutral-800 p-4">
+        <div class="border-t border-neutral-200 p-4">
           <%= footer %>
         </div>
       <% end %>
@@ -43,11 +43,11 @@
   <%# Main Content Area %>
   <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
     <%# Mobile Header %>
-    <header class="<%= breakpoint == 'lg' ? 'lg:hidden' : 'md:hidden' %> bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800 px-4 py-3 flex items-center justify-between sticky top-0 z-40">
+    <header class="<%= breakpoint == 'lg' ? 'lg:hidden' : 'md:hidden' %> bg-white border-b border-neutral-200 px-4 py-3 flex items-center justify-between sticky top-0 z-40">
       <button type="button"
-              class="p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              class="p-2 rounded-lg hover:bg-neutral-100 transition-colors"
               data-action="click->sidebar#toggle">
-        <svg class="w-6 h-6 text-neutral-600 dark:text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>

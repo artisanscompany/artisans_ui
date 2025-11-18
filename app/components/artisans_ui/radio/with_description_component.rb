@@ -58,7 +58,7 @@ module ArtisansUi
                 tag.label(
                   label,
                   for: input_id,
-                  class: "text-sm font-medium text-neutral-700 dark:text-neutral-300"
+                  class: "text-sm font-medium text-neutral-700"
                 ),
                 tag.p(
                   description,

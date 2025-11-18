@@ -36,7 +36,7 @@ module ArtisansUi
 
       def render_copy_button
         tag.button(
-          class: "absolute top-2 right-4 flex items-center gap-1.5 rounded-lg px-3.5 py-2 text-sm font-medium shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 bg-neutral-800/50 text-neutral-50 hover:bg-neutral-700/50 dark:focus-visible:outline-neutral-200 border border-neutral-700",
+          class: "absolute top-2 right-4 flex items-center gap-1.5 rounded-lg px-3.5 py-2 text-sm font-medium shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 bg-neutral-800/50 text-neutral-50 hover:bg-neutral-700/50 border border-neutral-700",
           data: {
             controller: "clipboard",
             clipboard_text: @code,

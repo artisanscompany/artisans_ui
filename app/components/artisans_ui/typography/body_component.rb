@@ -30,9 +30,9 @@ module ArtisansUi
     #   <% end %>
     class BodyComponent < ApplicationViewComponent
       VARIANTS = {
-        large: "text-base sm:text-lg text-neutral-700 dark:text-neutral-300",
-        regular: "text-sm sm:text-base text-neutral-700 dark:text-neutral-300",
-        small: "text-xs sm:text-sm text-neutral-600 dark:text-neutral-400"
+        large: "text-base sm:text-lg text-neutral-700",
+        regular: "text-sm sm:text-base text-neutral-700",
+        small: "text-xs sm:text-sm text-neutral-600"
       }.freeze
 
       def initialize(variant: :regular, **html_options)

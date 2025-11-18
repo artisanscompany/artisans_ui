@@ -29,12 +29,12 @@ module ArtisansUi
     #   ) %>
     class BasicComponent < ApplicationViewComponent
       VARIANTS = {
-        neutral: "bg-neutral-100 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300",
-        primary: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
-        success: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300",
-        error: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300",
-        warning: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300",
-        info: "bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300"
+        neutral: "bg-neutral-100 text-neutral-700",
+        primary: "bg-blue-100 text-blue-700",
+        success: "bg-green-100 text-green-700",
+        error: "bg-red-100 text-red-700",
+        warning: "bg-yellow-100 text-yellow-700",
+        info: "bg-cyan-100 text-cyan-700"
       }.freeze
 
       def initialize(text:, variant: :neutral, **html_options)

@@ -23,17 +23,17 @@ module ArtisansUi
       def call
         if @heading.present?
           tag.div(class: "px-2 pt-4 pb-2 #{divider_class}", **@html_options) do
-            tag.h3(@heading, class: "text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider px-2")
+            tag.h3(@heading, class: "text-xs font-semibold text-neutral-500 uppercase tracking-wider px-2")
           end
         else
-          tag.div(class: "border-t border-neutral-200 dark:border-neutral-800 my-2", **@html_options)
+          tag.div(class: "border-t border-neutral-200 my-2", **@html_options)
         end
       end
 
       private
 
       def divider_class
-        @heading.present? ? "border-t border-neutral-200 dark:border-neutral-800" : ""
+        @heading.present? ? "border-t border-neutral-200" : ""
       end
     end
   end

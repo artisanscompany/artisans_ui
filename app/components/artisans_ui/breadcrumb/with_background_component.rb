@@ -22,7 +22,7 @@ module ArtisansUi
       def call
         tag.div(class: "w-full flex justify-center", **@html_options) do
           tag.nav(aria: { label: "Breadcrumb" }, class: "flex justify-center w-full") do
-            tag.ol(class: "flex items-center space-x-1 text-sm bg-neutral-50 dark:bg-neutral-900 px-4 py-2 rounded-lg overflow-x-auto whitespace-nowrap") do
+            tag.ol(class: "flex items-center space-x-1 text-sm bg-neutral-50 px-4 py-2 rounded-lg overflow-x-auto whitespace-nowrap") do
               safe_join(@items.map.with_index { |item, index| render_item(item, index) })
             end
           end
@@ -53,13 +53,13 @@ module ArtisansUi
       def render_link(item)
         tag.a(
           href: item[:href],
-          class: "text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors font-medium"
+          class: "text-neutral-600 hover:text-neutral-900 transition-colors font-medium"
         ) { item[:label] }
       end
 
       def render_current_page(item)
         tag.span(
-          class: "text-neutral-900 dark:text-neutral-100 font-semibold",
+          class: "text-neutral-900 font-semibold",
           aria: { current: "page" }
         ) { item[:label] }
       end

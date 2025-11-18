@@ -26,7 +26,7 @@ module ArtisansUi
             tag.label(
               @label,
               for: @id,
-              class: "block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2"
+              class: "block text-sm font-medium text-neutral-700 mb-2"
             ),
             tag.textarea(
               "",

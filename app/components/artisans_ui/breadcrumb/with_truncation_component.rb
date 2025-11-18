@@ -57,7 +57,7 @@ module ArtisansUi
           # Subsequent items (with separator)
           tag.li(class: "flex items-center space-x-2") do
             safe_join([
-              tag.span(class: "text-neutral-400 dark:text-neutral-600") { "/" },
+              tag.span(class: "text-neutral-400") { "/" },
               if is_last
                 render_current_page(item)
               elsif item[:collapsed]
@@ -73,21 +73,21 @@ module ArtisansUi
       def render_link(item)
         tag.a(
           href: item[:href],
-          class: "text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors"
+          class: "text-neutral-500 hover:text-neutral-700 transition-colors"
         ) { item[:label] }
       end
 
       def render_collapsed_button(item)
         tag.button(
           type: "button",
-          class: "text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors"
+          class: "text-neutral-500 hover:text-neutral-700 transition-colors"
         ) { item[:label] }
       end
 
       def render_current_page(item)
         max_width = item[:max_width] || "200px"
 
-        classes = "text-neutral-900 dark:text-neutral-100 font-medium truncate"
+        classes = "text-neutral-900 font-medium truncate"
         classes += " max-w-[#{max_width}]" if item[:max_width] || item[:label].length > 50
 
         tag.span(

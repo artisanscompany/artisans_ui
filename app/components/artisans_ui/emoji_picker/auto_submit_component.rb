@@ -37,8 +37,8 @@ module ArtisansUi
       def render_auto_submit_form
         tag.div(class: "space-y-2") do
           safe_join([
-            tag.h4("Auto-submit enabled (default)", class: "text-sm font-medium text-neutral-700 dark:text-neutral-300"),
-            tag.form(class: "p-4 border border-neutral-200 dark:border-neutral-700 rounded-lg bg-neutral-50 dark:bg-neutral-800") do
+            tag.h4("Auto-submit enabled (default)", class: "text-sm font-medium text-neutral-700"),
+            tag.form(class: "p-4 border border-neutral-200 rounded-lg bg-neutral-50") do
               render_emoji_picker(
                 auto_submit: true,
                 input_id: "reaction_1",
@@ -52,8 +52,8 @@ module ArtisansUi
       def render_manual_submit_form
         tag.div(class: "space-y-2") do
           safe_join([
-            tag.h4("Auto-submit disabled", class: "text-sm font-medium text-neutral-700 dark:text-neutral-300"),
-            tag.form(class: "p-4 border border-neutral-200 dark:border-neutral-700 rounded-lg bg-neutral-50 dark:bg-neutral-800") do
+            tag.h4("Auto-submit disabled", class: "text-sm font-medium text-neutral-700"),
+            tag.form(class: "p-4 border border-neutral-200 rounded-lg bg-neutral-50") do
               tag.div(class: "space-y-4") do
                 safe_join([
                   render_emoji_picker(
@@ -90,7 +90,7 @@ module ArtisansUi
         tag.label(
           text,
           for: input_id,
-          class: "block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2"
+          class: "block text-sm font-medium text-neutral-700 mb-2"
         )
       end
 
@@ -106,7 +106,7 @@ module ArtisansUi
       def render_emoji_button
         tag.button(
           type: "button",
-          class: "outline-hidden size-8 text-xl shrink-0 flex items-center justify-center rounded-md text-neutral-700 hover:bg-neutral-100 hover:text-neutral-800 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-neutral-200",
+          class: "outline-hidden size-8 text-xl shrink-0 flex items-center justify-center rounded-md text-neutral-700 hover:bg-neutral-100 hover:text-neutral-800 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50",
           data: {
             action: "click->emoji-picker#toggle",
             emoji_picker_target: "button"
@@ -152,7 +152,7 @@ module ArtisansUi
       def render_submit_button
         tag.button(
           type: "submit",
-          class: "w-full flex items-center justify-center gap-1.5 rounded-lg border border-neutral-400/30 bg-neutral-800 px-3 py-2 text-xs font-medium whitespace-nowrap text-white shadow-sm transition-all duration-100 ease-in-out select-none hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-white dark:text-neutral-800 dark:hover:bg-neutral-100 dark:focus-visible:outline-neutral-200"
+          class: "w-full flex items-center justify-center gap-1.5 rounded-lg border border-neutral-400/30 bg-neutral-800 px-3 py-2 text-xs font-medium whitespace-nowrap text-white shadow-sm transition-all duration-100 ease-in-out select-none hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50"
         ) do
           "Send"
         end

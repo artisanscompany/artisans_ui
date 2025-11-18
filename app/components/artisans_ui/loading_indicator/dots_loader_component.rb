@@ -10,7 +10,7 @@ module ArtisansUi
     #   <%= render ArtisansUi::LoadingIndicator::DotsLoaderComponent.new %>
     #   <%= render ArtisansUi::LoadingIndicator::DotsLoaderComponent.new(size: "size-2", color: "bg-blue-600") %>
     class DotsLoaderComponent < ApplicationViewComponent
-      def initialize(size: "size-1.5", color: "bg-neutral-800 dark:bg-neutral-200", **html_options)
+      def initialize(size: "size-1.5", color: "bg-neutral-800", **html_options)
         @size = size
         @color = color
         @html_options = html_options

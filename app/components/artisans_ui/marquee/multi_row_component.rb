@@ -40,8 +40,8 @@ module ArtisansUi
         tag.div(class: "mx-auto") do
           tag.div(class: "mx-auto max-w-2xl text-center") do
             safe_join([
-              (@subtitle ? tag.h2(@subtitle, class: "text-base leading-7 font-medium text-neutral-500 dark:text-neutral-400") : nil),
-              tag.p(@title, class: "mt-2 text-xl font-bold tracking-tight text-neutral-900 sm:text-2xl lg:text-3xl dark:text-white")
+              (@subtitle ? tag.h2(@subtitle, class: "text-base leading-7 font-medium text-neutral-500") : nil),
+              tag.p(@title, class: "mt-2 text-xl font-bold tracking-tight text-neutral-900 sm:text-2xl lg:text-3xl")
             ].compact)
           end
         end
@@ -94,12 +94,12 @@ module ArtisansUi
 
       def brand_card(item)
         tag.div(
-          class: "flex min-w-[150px] items-center justify-center rounded-xl border border-black/5 bg-neutral-50 px-6 py-4 shadow-xs transition-all hover:bg-neutral-100 dark:border-white/10 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+          class: "flex min-w-[150px] items-center justify-center rounded-xl border border-black/5 bg-neutral-50 px-6 py-4 shadow-xs transition-all hover:bg-neutral-100"
         ) do
           tag.div(class: "flex items-center space-x-3") do
             safe_join([
               (item[:icon] ? raw(item[:icon]) : nil),
-              tag.span(item[:name], class: "text-lg font-medium text-neutral-800 dark:text-neutral-200")
+              tag.span(item[:name], class: "text-lg font-medium text-neutral-800")
             ].compact)
           end
         end
@@ -109,8 +109,8 @@ module ArtisansUi
         tag.div(class: "pointer-events-none absolute inset-0 flex items-center justify-between") do
           tag.div(class: "relative h-full w-full") do
             safe_join([
-              tag.div(class: "absolute inset-y-0 left-0 w-5 bg-gradient-to-r from-white to-transparent dark:from-[#080808]"),
-              tag.div(class: "absolute inset-y-0 right-0 w-5 bg-gradient-to-l from-white to-transparent dark:from-[#080808]")
+              tag.div(class: "absolute inset-y-0 left-0 w-5 bg-gradient-to-r from-white to-transparent"),
+              tag.div(class: "absolute inset-y-0 right-0 w-5 bg-gradient-to-l from-white to-transparent")
             ])
           end
         end

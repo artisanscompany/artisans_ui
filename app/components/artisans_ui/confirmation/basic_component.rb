@@ -24,7 +24,7 @@ module ArtisansUi
 
       def call
         tag.div(
-          class: "max-w-md bg-white dark:bg-neutral-800 border border-black/10 dark:border-white/10 rounded-xl shadow-xs overflow-hidden px-4 py-5 sm:p-6",
+          class: "max-w-md bg-white border border-black/10 rounded-xl shadow-xs overflow-hidden px-4 py-5 sm:p-6",
           **@html_options
         ) do
           safe_join([
@@ -39,8 +39,8 @@ module ArtisansUi
       def render_header
         tag.div(class: "mb-4") do
           safe_join([
-            tag.h3(@title, class: "text-lg font-semibold text-neutral-900 dark:text-white mb-2"),
-            tag.p(@description, class: "text-sm text-neutral-600 dark:text-neutral-400")
+            tag.h3(@title, class: "text-lg font-semibold text-neutral-900 mb-2"),
+            tag.p(@description, class: "text-sm text-neutral-600")
           ])
         end
       end
@@ -76,10 +76,10 @@ module ArtisansUi
       end
 
       def render_label
-        tag.label(for: "confirm-delete", class: "block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2") do
+        tag.label(for: "confirm-delete", class: "block text-sm font-medium text-neutral-700 mb-2") do
           safe_join([
             "Type ",
-            tag.span(@confirm_text, class: "inline rounded-md border border-black/10 bg-white px-1 py-0.5 font-mono text-neutral-800 dark:border-white/10 dark:bg-neutral-900 dark:text-neutral-200"),
+            tag.span(@confirm_text, class: "inline rounded-md border border-black/10 bg-white px-1 py-0.5 font-mono text-neutral-800"),
             " to confirm:"
           ])
         end
@@ -98,7 +98,7 @@ module ArtisansUi
         tag.button(
           type: "button",
           data: { action: "click->confirmation#cancel" },
-          class: "flex items-center justify-center gap-1.5 rounded-lg border border-neutral-200 bg-white/90 px-3.5 py-2 text-sm font-medium whitespace-nowrap text-neutral-800 shadow-xs transition-all duration-100 ease-in-out select-none hover:bg-neutral-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-800/50 dark:text-neutral-50 dark:hover:bg-neutral-700/50 dark:focus-visible:outline-neutral-200"
+          class: "flex items-center justify-center gap-1.5 rounded-lg border border-neutral-200 bg-white/90 px-3.5 py-2 text-sm font-medium whitespace-nowrap text-neutral-800 shadow-xs transition-all duration-100 ease-in-out select-none hover:bg-neutral-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50"
         ) { "Cancel" }
       end
 
@@ -110,7 +110,7 @@ module ArtisansUi
             action: "click->confirmation#confirm"
           },
           disabled: true,
-          class: "flex items-center justify-center gap-1.5 rounded-lg border border-red-300/30 bg-red-600 px-3.5 py-2 text-sm font-medium whitespace-nowrap text-white shadow-sm transition-all duration-100 ease-in-out select-none hover:bg-red-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 dark:focus-visible:outline-neutral-200"
+          class: "flex items-center justify-center gap-1.5 rounded-lg border border-red-300/30 bg-red-600 px-3.5 py-2 text-sm font-medium whitespace-nowrap text-white shadow-sm transition-all duration-100 ease-in-out select-none hover:bg-red-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50"
         ) { @button_text }
       end
     end

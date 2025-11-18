@@ -36,7 +36,7 @@ module ArtisansUi
       def label_tag
         tag.label(
           "Password",
-          class: "block text-sm font-medium text-neutral-700 dark:text-neutral-300"
+          class: "block text-sm font-medium text-neutral-700"
         )
       end
 
@@ -60,7 +60,7 @@ module ArtisansUi
           type: "password",
           name: @name,
           placeholder: @placeholder,
-          class: "w-full px-3 py-2 pr-10 border border-neutral-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400",
+          class: "w-full px-3 py-2 pr-10 border border-neutral-300 rounded-lg bg-white text-neutral-900 focus:outline-none focus:ring-2 focus:ring-blue-500",
           data: {
             "artisans-ui--password-target": "input",
             action: "input->artisans-ui--password#handleInput"
@@ -72,7 +72,7 @@ module ArtisansUi
       def toggle_button
         tag.button(
           type: "button",
-          class: "absolute inset-y-0 right-0 flex items-center pr-3 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300",
+          class: "absolute inset-y-0 right-0 flex items-center pr-3 text-neutral-400 hover:text-neutral-600",
           data: { action: "click->artisans-ui--password#toggle" }
         ) do
           eye_icon
@@ -108,7 +108,7 @@ module ArtisansUi
 
       def requirement_item(text, target)
         tag.li(
-          class: "flex items-center gap-2 text-neutral-600 dark:text-neutral-400",
+          class: "flex items-center gap-2 text-neutral-600",
           data: { "artisans-ui--password-target": target }
         ) do
           safe_join([
@@ -127,7 +127,7 @@ module ArtisansUi
 
       def unchecked_icon
         tag.svg(
-          class: "w-5 h-5 text-neutral-400 dark:text-neutral-500",
+          class: "w-5 h-5 text-neutral-400",
           fill: "none",
           stroke: "currentColor",
           "stroke-width": "2",
@@ -139,7 +139,7 @@ module ArtisansUi
 
       def checked_icon
         tag.svg(
-          class: "w-5 h-5 text-green-500 dark:text-green-400 hidden",
+          class: "w-5 h-5 text-green-500 hidden",
           fill: "none",
           stroke: "currentColor",
           "stroke-width": "2",

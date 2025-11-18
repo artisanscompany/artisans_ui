@@ -28,7 +28,7 @@ module ArtisansUi
       def render_item(item, index)
         tag.div(
           data: { accordion_target: "item", state: "closed" },
-          class: "pb-2 mb-2 bg-neutral-50 dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-700 overflow-hidden"
+          class: "pb-2 mb-2 bg-neutral-50 rounded-xl border border-neutral-200 overflow-hidden"
         ) do
           safe_join([
             render_trigger(item, index),
@@ -44,7 +44,7 @@ module ArtisansUi
             data: { accordion_target: "trigger", action: "click->accordion#toggle", state: "closed" },
             aria: { controls: "accordion-content-#{index}", expanded: "false" },
             id: "accordion-trigger-#{index}",
-            class: "flex flex-1 items-center text-left justify-between py-4 px-6 font-medium transition-all hover:bg-neutral-100 dark:hover:bg-neutral-800 [&[data-state=open]>svg]:rotate-180 focus:outline-neutral-700 dark:focus:outline-white focus:outline-offset-2"
+            class: "flex flex-1 items-center text-left justify-between py-4 px-6 font-medium transition-all hover:bg-neutral-100 [&[data-state=open]>svg]:rotate-180 focus:outline-neutral-700 focus:outline-offset-2"
           ) do
             safe_join([
               item[:question],

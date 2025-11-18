@@ -33,12 +33,12 @@ module ArtisansUi
     #   ) %>
     class IconTextComponent < ApplicationViewComponent
       VARIANTS = {
-        default: "text-neutral-600 dark:text-neutral-400",
-        emphasis: "text-neutral-900 dark:text-white font-medium",
-        success: "text-green-600 dark:text-green-400",
-        warning: "text-yellow-600 dark:text-yellow-400",
-        error: "text-red-600 dark:text-red-400",
-        info: "text-blue-600 dark:text-blue-400"
+        default: "text-neutral-600",
+        emphasis: "text-neutral-900 font-medium",
+        success: "text-green-600",
+        warning: "text-yellow-600",
+        error: "text-red-600",
+        info: "text-blue-600"
       }.freeze
 
       def initialize(text:, icon: nil, variant: :default, icon_class: nil, **html_options)

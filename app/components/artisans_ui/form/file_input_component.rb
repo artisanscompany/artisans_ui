@@ -41,7 +41,7 @@ module ArtisansUi
       private
 
       def default_classes
-        "w-full px-4 py-2.5 text-sm border border-neutral-300 dark:border-neutral-700 rounded-lg bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-neutral-100 dark:file:bg-neutral-800 file:text-neutral-900 dark:file:text-white hover:file:bg-neutral-200 dark:hover:file:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-400 dark:focus:ring-neutral-600 focus:border-transparent transition-colors"
+        "w-full px-4 py-2.5 text-sm border border-neutral-300 rounded-lg bg-white text-neutral-900 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-neutral-100 file:text-neutral-900 hover:file:bg-neutral-200 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:border-transparent transition-colors"
       end
 
       def merged_options

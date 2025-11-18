@@ -61,8 +61,8 @@ module ArtisansUi
       def value_display_section
         tag.div(class: "flex justify-center items-center gap-3 text-sm") do
           safe_join([
-            tag.span("Current value:", class: "text-neutral-600 dark:text-neutral-400"),
-            tag.code(@value, class: "px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded font-mono text-xs", id: "#{@id}-value")
+            tag.span("Current value:", class: "text-neutral-600"),
+            tag.code(@value, class: "px-2 py-1 bg-neutral-100 rounded font-mono text-xs", id: "#{@id}-value")
           ])
         end
       end

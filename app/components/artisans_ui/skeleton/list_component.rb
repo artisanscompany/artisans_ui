@@ -13,14 +13,14 @@ module ArtisansUi
             4.times.map do
               tag.div(class: "flex items-center space-x-4") do
                 safe_join([
-                  tag.div(class: "rounded-full bg-neutral-200 dark:bg-neutral-700 h-12 w-12"),
+                  tag.div(class: "rounded-full bg-neutral-200 h-12 w-12"),
                   tag.div(class: "flex-1 min-w-0 space-y-2") do
                     safe_join([
-                      tag.div(class: "h-4 bg-neutral-200 dark:bg-neutral-700 rounded w-3/4"),
-                      tag.div(class: "h-3 bg-neutral-200 dark:bg-neutral-700 rounded w-1/2")
+                      tag.div(class: "h-4 bg-neutral-200 rounded w-3/4"),
+                      tag.div(class: "h-3 bg-neutral-200 rounded w-1/2")
                     ])
                   end,
-                  tag.div(class: "h-6 w-6 bg-neutral-200 dark:bg-neutral-700 rounded")
+                  tag.div(class: "h-6 w-6 bg-neutral-200 rounded")
                 ])
               end
             end

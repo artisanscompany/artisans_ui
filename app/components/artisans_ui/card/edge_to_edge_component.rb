@@ -9,11 +9,11 @@ module ArtisansUi
     # @example
     #   <%= render ArtisansUi::Card::EdgeToEdgeComponent.new do |card| %>
     #     <% card.with_body do %>
-    #       <h3 class="text-lg font-medium leading-6 text-neutral-900 dark:text-white mb-2">Edge-to-Edge on Mobile</h3>
-    #       <p class="text-neutral-700 dark:text-neutral-300">Full width on mobile, standard on desktop</p>
+    #       <h3 class="text-lg font-medium leading-6 text-neutral-900 mb-2">Edge-to-Edge on Mobile</h3>
+    #       <p class="text-neutral-700">Full width on mobile, standard on desktop</p>
     #     <% end %>
     #     <% card.with_footer do %>
-    #       <div class="text-sm text-neutral-500 dark:text-neutral-400">Resize to see behavior</div>
+    #       <div class="text-sm text-neutral-500">Resize to see behavior</div>
     #     <% end %>
     #   <% end %>
     class EdgeToEdgeComponent < ApplicationViewComponent
@@ -26,7 +26,7 @@ module ArtisansUi
 
       def call
         tag.div(
-          class: "bg-white dark:bg-neutral-800 border-y sm:border border-black/10 dark:border-white/10 overflow-hidden shadow-xs sm:rounded-xl",
+          class: "bg-white border-y sm:border border-black/10 overflow-hidden shadow-xs sm:rounded-xl",
           **@html_options
         ) do
           safe_join([
@@ -47,7 +47,7 @@ module ArtisansUi
       def render_footer
         return unless footer?
 
-        content_tag(:div, footer, class: "bg-neutral-50 dark:bg-neutral-900/50 px-4 py-4 sm:px-6 border-t border-black/10 dark:border-white/10")
+        content_tag(:div, footer, class: "bg-neutral-50 px-4 py-4 sm:px-6 border-t border-black/10")
       end
     end
   end

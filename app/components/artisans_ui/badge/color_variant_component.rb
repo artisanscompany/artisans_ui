@@ -40,15 +40,15 @@ module ArtisansUi
       }.freeze
 
       SOFT_COLORS = {
-        red: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300",
-        green: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300",
-        blue: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
-        yellow: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300",
-        purple: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300",
-        pink: "bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300",
-        indigo: "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300",
-        orange: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300",
-        neutral: "bg-neutral-100 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300"
+        red: "bg-red-100 text-red-700",
+        green: "bg-green-100 text-green-700",
+        blue: "bg-blue-100 text-blue-700",
+        yellow: "bg-yellow-100 text-yellow-700",
+        purple: "bg-purple-100 text-purple-700",
+        pink: "bg-pink-100 text-pink-700",
+        indigo: "bg-indigo-100 text-indigo-700",
+        orange: "bg-orange-100 text-orange-700",
+        neutral: "bg-neutral-100 text-neutral-700"
       }.freeze
 
       def initialize(text:, color: :neutral, style: :soft, **html_options)

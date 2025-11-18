@@ -29,7 +29,7 @@ module ArtisansUi
       private
 
       def render_item(item, index)
-        tag.details(name: @accordion_name, class: "border-b pb-2 border-neutral-200 dark:border-neutral-700 group") do
+        tag.details(name: @accordion_name, class: "border-b pb-2 border-neutral-200 group") do
           safe_join([
             render_summary(item),
             render_content(item)
@@ -39,7 +39,7 @@ module ArtisansUi
 
       def render_summary(item)
         tag.summary(
-          class: "flex items-center text-left justify-between py-2 font-medium transition-all hover:underline focus:outline-neutral-700 dark:focus:outline-white focus:outline-offset-2 px-2 cursor-pointer list-none [&::-webkit-details-marker]:hidden mt-2 text-base font-semibold"
+          class: "flex items-center text-left justify-between py-2 font-medium transition-all hover:underline focus:outline-neutral-700 focus:outline-offset-2 px-2 cursor-pointer list-none [&::-webkit-details-marker]:hidden mt-2 text-base font-semibold"
         ) do
           safe_join([
             tag.span { item[:question] },

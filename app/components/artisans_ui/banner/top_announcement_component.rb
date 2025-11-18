@@ -32,7 +32,7 @@ module ArtisansUi
             artisans_ui__banner_cookie_name_value: @cookie_name,
             artisans_ui__banner_cookie_days_value: -1
           },
-          class: "hidden fixed top-0 left-0 right-0 z-50 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white border-b border-black/10 dark:border-white/10 shadow-xs transition-all duration-300 ease-in-out opacity-0 -translate-y-full",
+          class: "hidden fixed top-0 left-0 right-0 z-50 bg-white text-neutral-900 border-b border-black/10 shadow-xs transition-all duration-300 ease-in-out opacity-0 -translate-y-full",
           **@html_options
         ) do
           tag.div(class: "container mx-auto px-4") do
@@ -40,7 +40,7 @@ module ArtisansUi
               safe_join([
                 tag.div(class: "flex items-center gap-3 flex-1") do
                   safe_join([
-                    tag.div(class: "hidden sm:flex size-9 shrink-0 items-center justify-center rounded-full sm:bg-neutral-100 sm:dark:bg-neutral-800", aria: { hidden: "true" }) do
+                    tag.div(class: "hidden sm:flex size-9 shrink-0 items-center justify-center rounded-full sm:bg-neutral-100", aria: { hidden: "true" }) do
                       tag.svg(
                         xmlns: "http://www.w3.org/2000/svg",
                         width: "16",
@@ -64,7 +64,7 @@ module ArtisansUi
                     tag.div(class: "space-y-1") do
                       content = [tag.p(@title, class: "text-sm font-semibold")]
                       if @description
-                        content << tag.p(@description, class: "hidden sm:block text-xs text-neutral-600 dark:text-neutral-400")
+                        content << tag.p(@description, class: "hidden sm:block text-xs text-neutral-600")
                       end
                       safe_join(content)
                     end
@@ -76,7 +76,7 @@ module ArtisansUi
                     content << tag.a(
                       @button_text,
                       href: @button_url,
-                      class: "inline-flex items-center justify-center gap-1.5 rounded-lg border border-neutral-400/30 bg-neutral-800 px-3 py-1.5 text-sm font-medium whitespace-nowrap text-white shadow-sm transition-all duration-100 ease-in-out select-none hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-white dark:text-neutral-800 dark:hover:bg-neutral-100 dark:focus-visible:outline-neutral-200"
+                      class: "inline-flex items-center justify-center gap-1.5 rounded-lg border border-neutral-400/30 bg-neutral-800 px-3 py-1.5 text-sm font-medium whitespace-nowrap text-white shadow-sm transition-all duration-100 ease-in-out select-none hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50"
                     )
                   end
                   content << tag.button(

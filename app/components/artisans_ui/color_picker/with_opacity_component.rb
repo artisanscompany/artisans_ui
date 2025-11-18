@@ -66,8 +66,8 @@ module ArtisansUi
       def hex_alpha_display
         tag.div(class: "flex items-center gap-3 text-sm") do
           safe_join([
-            tag.span("Hex (with alpha):", class: "text-neutral-600 dark:text-neutral-400"),
-            tag.code(@value, class: "px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded font-mono text-xs", id: "#{@id}-hex-alpha")
+            tag.span("Hex (with alpha):", class: "text-neutral-600"),
+            tag.code(@value, class: "px-2 py-1 bg-neutral-100 rounded font-mono text-xs", id: "#{@id}-hex-alpha")
           ])
         end
       end
@@ -78,8 +78,8 @@ module ArtisansUi
 
         tag.div(class: "flex items-center gap-3 text-sm") do
           safe_join([
-            tag.span("RGBA:", class: "text-neutral-600 dark:text-neutral-400"),
-            tag.code(initial_rgba, class: "px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded font-mono text-xs", id: "#{@id}-rgba")
+            tag.span("RGBA:", class: "text-neutral-600"),
+            tag.code(initial_rgba, class: "px-2 py-1 bg-neutral-100 rounded font-mono text-xs", id: "#{@id}-rgba")
           ])
         end
       end
@@ -87,14 +87,14 @@ module ArtisansUi
       def preview_section
         tag.div(class: "space-y-2") do
           safe_join([
-            tag.p("Preview:", class: "text-sm font-medium text-neutral-700 dark:text-neutral-300 text-center"),
+            tag.p("Preview:", class: "text-sm font-medium text-neutral-700 text-center"),
             preview_container
           ])
         end
       end
 
       def preview_container
-        tag.div(class: "relative h-24 rounded-lg overflow-hidden outline-1 -outline-offset-1 outline-black/15 dark:outline-white/20") do
+        tag.div(class: "relative h-24 rounded-lg overflow-hidden outline-1 -outline-offset-1 outline-black/15") do
           safe_join([
             checkerboard_background,
             color_overlay

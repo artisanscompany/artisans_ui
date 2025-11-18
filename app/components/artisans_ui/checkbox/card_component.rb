@@ -77,7 +77,7 @@ module ArtisansUi
       def title_tag
         tag.div(
           @title,
-          class: "text-sm font-semibold text-neutral-900 dark:text-neutral-100"
+          class: "text-sm font-semibold text-neutral-900"
         )
       end
 
@@ -86,7 +86,7 @@ module ArtisansUi
 
         tag.div(
           @subtitle,
-          class: "text-xs text-neutral-500 dark:text-neutral-400"
+          class: "text-xs text-neutral-500"
         )
       end
 
@@ -95,12 +95,12 @@ module ArtisansUi
 
         tag.div(
           @price,
-          class: "text-sm font-medium text-neutral-900 dark:text-neutral-100"
+          class: "text-sm font-medium text-neutral-900"
         )
       end
 
       def label_classes
-        "relative py-3 px-4 flex items-center font-medium bg-white text-neutral-800 rounded-xl cursor-pointer ring-1 ring-neutral-200 has-[:checked]:ring-2 has-[:checked]:ring-neutral-400 dark:bg-neutral-700/50 dark:text-neutral-200 dark:ring-neutral-700 dark:has-[:checked]:ring-neutral-400 has-[:checked]:bg-neutral-100 has-[:checked]:text-neutral-900 dark:has-[:checked]:bg-neutral-600/60 dark:has-[:checked]:text-white"
+        "relative py-3 px-4 flex items-center font-medium bg-white text-neutral-800 rounded-xl cursor-pointer ring-1 ring-neutral-200 has-[:checked]:ring-2 has-[:checked]:ring-neutral-400 has-[:checked]:bg-neutral-100 has-[:checked]:text-neutral-900"
       end
 
       def generate_id

@@ -54,7 +54,7 @@ module ArtisansUi
         tag.label(
           @label,
           for: @id,
-          class: "block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+          class: "block text-sm font-medium text-neutral-700 mb-1"
         )
       end
 
@@ -64,7 +64,7 @@ module ArtisansUi
           name: @name,
           id: @id,
           value: @value,
-          class: "size-10 rounded-lg outline-1 -outline-offset-1 outline-black/15 dark:outline-white/20 cursor-pointer hover:scale-105 transition-transform focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 dark:focus-visible:outline-neutral-200",
+          class: "size-10 rounded-lg outline-1 -outline-offset-1 outline-black/15 cursor-pointer hover:scale-105 transition-transform focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600",
           **@html_options
         )
       end

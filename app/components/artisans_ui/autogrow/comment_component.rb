@@ -29,7 +29,7 @@ module ArtisansUi
 
       def call
         tag.div(class: "w-full max-w-lg") do
-          tag.div(class: "bg-white dark:bg-neutral-800 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-700 p-4") do
+          tag.div(class: "bg-white rounded-xl shadow-sm border border-neutral-200 p-4") do
             safe_join([
               render_parent_comment,
               render_comment_form
@@ -43,7 +43,7 @@ module ArtisansUi
       def render_parent_comment
         return unless @parent_user_name && @parent_comment
 
-        tag.div(class: "mb-4 p-3 bg-neutral-50 dark:bg-neutral-900 rounded-lg") do
+        tag.div(class: "mb-4 p-3 bg-neutral-50 rounded-lg") do
           tag.div(class: "flex items-start gap-3") do
             safe_join([
               tag.img(
@@ -53,8 +53,8 @@ module ArtisansUi
               ),
               tag.div(class: "flex-1") do
                 safe_join([
-                  tag.p(@parent_user_name, class: "text-sm font-medium text-neutral-900 dark:text-neutral-100"),
-                  tag.p(@parent_comment, class: "text-sm text-neutral-700 dark:text-neutral-300 mt-1")
+                  tag.p(@parent_user_name, class: "text-sm font-medium text-neutral-900"),
+                  tag.p(@parent_comment, class: "text-sm text-neutral-700 mt-1")
                 ])
               end
             ])
@@ -109,7 +109,7 @@ module ArtisansUi
         # Note: This requires the Emoji Picker component
         tag.button(
           type: "button",
-          class: "outline-hidden size-8 text-xl shrink-0 flex items-center justify-center rounded-md text-neutral-700 hover:bg-neutral-100 hover:text-neutral-800 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:hover:text-neutral-200"
+          class: "outline-hidden size-8 text-xl shrink-0 flex items-center justify-center rounded-md text-neutral-700 hover:bg-neutral-100 hover:text-neutral-800 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50"
         ) do
           tag.svg(
             xmlns: "http://www.w3.org/2000/svg",
@@ -139,7 +139,7 @@ module ArtisansUi
       def render_attach_button
         tag.button(
           type: "button",
-          class: "outline-hidden size-8 text-xl shrink-0 flex items-center justify-center rounded-md text-neutral-700 hover:bg-neutral-100 hover:text-neutral-800 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:hover:text-neutral-200"
+          class: "outline-hidden size-8 text-xl shrink-0 flex items-center justify-center rounded-md text-neutral-700 hover:bg-neutral-100 hover:text-neutral-800 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50"
         ) do
           tag.svg(
             xmlns: "http://www.w3.org/2000/svg",
@@ -168,7 +168,7 @@ module ArtisansUi
       def render_post_button
         tag.button(
           type: "button",
-          class: "flex items-center justify-center gap-1.5 rounded-lg border border-neutral-400/30 bg-neutral-800 px-3 py-2 text-sm font-medium whitespace-nowrap text-white shadow-sm transition-all duration-100 ease-in-out select-none hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-white dark:text-neutral-800 dark:hover:bg-neutral-100 dark:focus-visible:outline-neutral-200"
+          class: "flex items-center justify-center gap-1.5 rounded-lg border border-neutral-400/30 bg-neutral-800 px-3 py-2 text-sm font-medium whitespace-nowrap text-white shadow-sm transition-all duration-100 ease-in-out select-none hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50"
         ) do
           "Post"
         end

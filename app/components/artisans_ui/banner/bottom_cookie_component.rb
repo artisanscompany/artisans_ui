@@ -33,7 +33,7 @@ module ArtisansUi
             artisans_ui__banner_cookie_name_value: @cookie_name,
             artisans_ui__banner_cookie_days_value: -1
           },
-          class: "hidden fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-neutral-900 border-t border-black/10 dark:border-white/10 shadow-xs transition-all duration-300 ease-in-out opacity-0 translate-y-full",
+          class: "hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-black/10 shadow-xs transition-all duration-300 ease-in-out opacity-0 translate-y-full",
           **@html_options
         ) do
           tag.div(class: "container mx-auto px-4") do
@@ -41,13 +41,13 @@ module ArtisansUi
               safe_join([
                 tag.div(class: "flex items-start gap-3 flex-1") do
                   safe_join([
-                    tag.div(class: "flex size-9 shrink-0 items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-800 mt-0.5", aria: { hidden: "true" }) do
+                    tag.div(class: "flex size-9 shrink-0 items-center justify-center rounded-full bg-neutral-100 mt-0.5", aria: { hidden: "true" }) do
                       tag.svg(
                         xmlns: "http://www.w3.org/2000/svg",
                         width: "18",
                         height: "18",
                         viewBox: "0 0 18 18",
-                        class: "text-neutral-700 dark:text-neutral-50",
+                        class: "text-neutral-700",
                         fill: "none",
                         stroke: "currentColor",
                         stroke_width: "1.5",
@@ -65,9 +65,9 @@ module ArtisansUi
                       end
                     end,
                     tag.div(class: "space-y-1") do
-                      content = [tag.h3(@title, class: "text-sm font-semibold text-neutral-900 dark:text-white")]
+                      content = [tag.h3(@title, class: "text-sm font-semibold text-neutral-900")]
                       if @description
-                        content << tag.p(@description, class: "text-xs text-neutral-600 dark:text-neutral-400 max-w-2xl")
+                        content << tag.p(@description, class: "text-xs text-neutral-600 max-w-2xl")
                       end
                       safe_join(content)
                     end
@@ -78,14 +78,14 @@ module ArtisansUi
                     tag.button(
                       @accept_text,
                       data: { action: "click->artisans-ui--banner#hide" },
-                      class: "flex items-center justify-center gap-1.5 rounded-lg border border-neutral-400/30 bg-neutral-800 px-3.5 py-2 text-sm font-medium whitespace-nowrap text-white shadow-sm transition-all duration-100 ease-in-out select-none hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-white dark:text-neutral-800 dark:hover:bg-neutral-100 dark:focus-visible:outline-neutral-200"
+                      class: "flex items-center justify-center gap-1.5 rounded-lg border border-neutral-400/30 bg-neutral-800 px-3.5 py-2 text-sm font-medium whitespace-nowrap text-white shadow-sm transition-all duration-100 ease-in-out select-none hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50"
                     )
                   ]
                   if @manage_text && @manage_url
                     content << tag.a(
                       @manage_text,
                       href: @manage_url,
-                      class: "flex items-center justify-center gap-1.5 rounded-lg border border-neutral-200 bg-white/90 px-3.5 py-2 text-sm font-medium whitespace-nowrap text-neutral-800 shadow-xs transition-all duration-100 ease-in-out select-none hover:bg-neutral-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-800/50 dark:text-neutral-50 dark:hover:bg-neutral-700/50 dark:focus-visible:outline-neutral-200"
+                      class: "flex items-center justify-center gap-1.5 rounded-lg border border-neutral-200 bg-white/90 px-3.5 py-2 text-sm font-medium whitespace-nowrap text-neutral-800 shadow-xs transition-all duration-100 ease-in-out select-none hover:bg-neutral-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50"
                     )
                   end
                   safe_join(content)

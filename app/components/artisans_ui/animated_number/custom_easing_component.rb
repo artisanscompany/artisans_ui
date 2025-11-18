@@ -55,16 +55,16 @@ module ArtisansUi
           content = []
 
           if @label
-            content << tag.h4(class: "text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-3") { @label }
+            content << tag.h4(class: "text-sm font-medium text-neutral-700 mb-3") { @label }
           end
 
           content << tag.div(
-            class: "bg-neutral-50 dark:bg-neutral-800/50 rounded-lg p-4 text-center group-hover:bg-neutral-100 border border-black/5 dark:border-white/10 dark:group-hover:bg-neutral-700 transition-colors cursor-pointer",
+            class: "bg-neutral-50 rounded-lg p-4 text-center group-hover:bg-neutral-100 border border-black/5 transition-colors cursor-pointer",
             onclick: "this.querySelector('[data-controller]')?.click()"
           ) do
             inner_content = [
               tag.button(
-                class: "text-3xl font-bold text-neutral-900 dark:text-white",
+                class: "text-3xl font-bold text-neutral-900",
                 data: {
                   controller: "animated-number",
                   animated_number_start_value: @start_value,
@@ -79,7 +79,7 @@ module ArtisansUi
             ]
 
             if @description
-              inner_content << tag.p(class: "text-xs text-neutral-500 dark:text-neutral-400 mt-2") { @description }
+              inner_content << tag.p(class: "text-xs text-neutral-500 mt-2") { @description }
             end
 
             safe_join(inner_content)

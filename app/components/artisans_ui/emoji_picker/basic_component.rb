@@ -45,7 +45,7 @@ module ArtisansUi
 
         tag.button(
           type: "button",
-          class: "outline-hidden size-8 text-xl shrink-0 flex items-center justify-center rounded-md text-neutral-700 hover:bg-neutral-100 hover:text-neutral-800 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-neutral-200",
+          class: "outline-hidden size-8 text-xl shrink-0 flex items-center justify-center rounded-md text-neutral-700 hover:bg-neutral-100 hover:text-neutral-800 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50",
           data: {
             action: "click->artisans-ui--emoji-picker#toggle",
             "artisans-ui--emoji-picker-target": "button"

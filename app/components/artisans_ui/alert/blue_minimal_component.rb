@@ -19,7 +19,7 @@ module ArtisansUi
 
       def call
         tag.div(
-          class: "rounded-xl border border-blue-200 bg-blue-50 p-4 dark:border-blue-800 dark:bg-blue-900/20",
+          class: "rounded-xl border border-blue-200 bg-blue-50 p-4",
           **@html_options
         ) do
           tag.div(class: "flex gap-2 items-start") do
@@ -39,7 +39,7 @@ module ArtisansUi
           width: "18",
           height: "18",
           viewBox: "0 0 18 18",
-          class: "text-blue-500 dark:text-blue-400 shrink-0"
+          class: "text-blue-500 shrink-0"
         ) do
           tag.g(fill: "currentColor") do
             safe_join([
@@ -55,7 +55,7 @@ module ArtisansUi
       def render_title
         tag.div(class: "flex-1") do
           tag.h3(
-            class: "text-sm font-medium text-blue-800 dark:text-blue-200"
+            class: "text-sm font-medium text-blue-800"
           ) { @title }
         end
       end

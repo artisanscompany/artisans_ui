@@ -73,7 +73,7 @@ module ArtisansUi
         tag.label(
           @label,
           for: @id,
-          class: "block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+          class: "block text-sm font-medium text-neutral-700 mb-1"
         )
       end
 
@@ -94,7 +94,7 @@ module ArtisansUi
           id: @id,
           list: @datalist_id,
           value: @value,
-          class: "h-12 w-12 rounded-lg outline-1 -outline-offset-1 outline-black/15 dark:outline-white/20 cursor-pointer hover:scale-105 transition-transform",
+          class: "h-12 w-12 rounded-lg outline-1 -outline-offset-1 outline-black/15 cursor-pointer hover:scale-105 transition-transform",
           **@html_options
         )
       end
@@ -112,7 +112,7 @@ module ArtisansUi
       def description_text
         tag.div(class: "text-sm") do
           safe_join([
-            tag.p("Pick from predefined colors or choose custom", class: "text-neutral-600 dark:text-neutral-400"),
+            tag.p("Pick from predefined colors or choose custom", class: "text-neutral-600"),
             tag.p(@value, class: "font-mono text-xs text-neutral-500", id: "#{@id}-value")
           ])
         end
@@ -121,7 +121,7 @@ module ArtisansUi
       def quick_select_section
         tag.div(class: "space-y-2") do
           safe_join([
-            tag.p("Quick select:", class: "text-sm font-medium text-neutral-700 dark:text-neutral-300"),
+            tag.p("Quick select:", class: "text-sm font-medium text-neutral-700"),
             swatch_buttons
           ])
         end
@@ -141,7 +141,7 @@ module ArtisansUi
         tag.button(
           type: "button",
           data: { color: color },
-          class: "swatch-#{@id} h-8 w-8 rounded-md border border-black/15 dark:border-white/20 hover:scale-110 transition-transform focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 dark:focus-visible:outline-neutral-200",
+          class: "swatch-#{@id} h-8 w-8 rounded-md border border-black/15 hover:scale-110 transition-transform focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600",
           style: "background-color: #{color}"
         )
       end
@@ -200,9 +200,9 @@ module ArtisansUi
               function updateSwatchSelection(selectedColor) {
                 swatches.forEach(swatch => {
                   if (swatch.dataset.color.toLowerCase() === selectedColor.toLowerCase()) {
-                    swatch.classList.add('ring-2', 'ring-offset-2', 'ring-neutral-500', 'dark:ring-neutral-400');
+                    swatch.classList.add('ring-2', 'ring-offset-2', 'ring-neutral-500');
                   } else {
-                    swatch.classList.remove('ring-2', 'ring-offset-2', 'ring-neutral-500', 'dark:ring-neutral-400');
+                    swatch.classList.remove('ring-2', 'ring-offset-2', 'ring-neutral-500');
                   }
                 });
               }

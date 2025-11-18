@@ -22,7 +22,7 @@ module ArtisansUi
         data_attrs[:date_picker_initial_date_value] = @initial_date if @initial_date
         data_attrs[:date_picker_range_value] = true if @range
 
-        tag.div(data: data_attrs, class: "border border-neutral-200 dark:border-neutral-700 rounded-lg p-4 w-full max-w-sm flex items-center flex-col justify-center text-center gap-2", **@html_options) do
+        tag.div(data: data_attrs, class: "border border-neutral-200 rounded-lg p-4 w-full max-w-sm flex items-center flex-col justify-center text-center gap-2", **@html_options) do
           tag.input(data: { date_picker_target: "input" }, class: "hidden")
         end
       end

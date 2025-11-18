@@ -10,8 +10,8 @@ module ArtisansUi
       def call
         tag.div(class: "animate-pulse max-w-md w-full", **@html_options) do
           safe_join([
-            tag.div(class: "h-4 bg-neutral-200 dark:bg-neutral-700 rounded w-full mb-2"),
-            tag.div(class: "h-4 bg-neutral-200 dark:bg-neutral-700 rounded w-1/2")
+            tag.div(class: "h-4 bg-neutral-200 rounded w-full mb-2"),
+            tag.div(class: "h-4 bg-neutral-200 rounded w-1/2")
           ])
         end
       end

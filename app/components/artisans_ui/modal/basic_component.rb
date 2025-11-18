@@ -83,7 +83,7 @@ module ArtisansUi
 
       def modal_container
         tag.div(class: "flex min-h-screen items-center justify-center p-4") do
-          tag.div(class: "relative w-full #{size_class} transform overflow-hidden rounded-lg bg-white dark:bg-neutral-900 shadow-xl transition-all") do
+          tag.div(class: "relative w-full #{size_class} transform overflow-hidden rounded-lg bg-white shadow-xl transition-all") do
             safe_join([
               modal_header,
               modal_body,
@@ -94,13 +94,13 @@ module ArtisansUi
       end
 
       def modal_header
-        tag.div(class: "border-b border-gray-200 dark:border-neutral-700 px-6 py-4") do
+        tag.div(class: "border-b border-gray-200 px-6 py-4") do
           tag.div(class: "flex items-center justify-between") do
             safe_join([
               tag.div do
                 safe_join([
-                  tag.h3(@title, class: "text-lg font-semibold text-gray-900 dark:text-white"),
-                  (@subtitle ? tag.p(@subtitle, class: "mt-1 text-sm text-gray-600 dark:text-neutral-400") : nil)
+                  tag.h3(@title, class: "text-lg font-semibold text-gray-900"),
+                  (@subtitle ? tag.p(@subtitle, class: "mt-1 text-sm text-gray-600") : nil)
                 ].compact)
               end,
               close_button
@@ -112,7 +112,7 @@ module ArtisansUi
       def close_button
         tag.button(
           type: "button",
-          class: "rounded-md text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 focus:outline-none transition-colors",
+          class: "rounded-md text-gray-400 hover:text-gray-500 focus:outline-none transition-colors",
           data: { action: "click->modal#close" },
           aria: { label: "Close" }
         ) do
@@ -137,7 +137,7 @@ module ArtisansUi
       end
 
       def modal_footer
-        tag.div(footer, class: "px-6 py-4 border-t border-gray-100 dark:border-neutral-800")
+        tag.div(footer, class: "px-6 py-4 border-t border-gray-100")
       end
 
       def size_class

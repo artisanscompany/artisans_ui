@@ -64,11 +64,11 @@ module ArtisansUi
             ]
 
             if @label
-              content << tag.p(class: "text-sm text-neutral-800 dark:text-neutral-200") { @label }
+              content << tag.p(class: "text-sm text-neutral-800") { @label }
             end
 
             if @hint
-              content << tag.p(class: "text-xs text-neutral-600 dark:text-neutral-400 mt-2") { @hint }
+              content << tag.p(class: "text-xs text-neutral-600 mt-2") { @hint }
             end
 
             safe_join(content)

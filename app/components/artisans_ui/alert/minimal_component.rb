@@ -33,7 +33,7 @@ module ArtisansUi
 
       def call
         tag.div(
-          class: "rounded-xl border #{border_color} #{bg_color} p-4 #{dark_border_color} #{dark_bg_color}",
+          class: "rounded-xl border #{border_color} #{bg_color} p-4",
           **@html_options
         ) do
           tag.div(class: "flex gap-2 items-start") do
@@ -88,7 +88,7 @@ module ArtisansUi
       def render_title
         tag.div(class: "flex-1") do
           tag.h3(
-            class: "text-sm font-medium #{text_color} #{dark_text_color}"
+            class: "text-sm font-medium #{text_color}"
           ) { @title }
         end
       end
@@ -109,27 +109,11 @@ module ArtisansUi
         end
       end
 
-      def dark_border_color
-        case @type
-        when :success then "dark:border-green-800"
-        when :error then "dark:border-red-800"
-        else "dark:border-neutral-700"
-        end
-      end
-
-      def dark_bg_color
-        case @type
-        when :success then "dark:bg-green-900/20"
-        when :error then "dark:bg-red-900/20"
-        else "dark:bg-neutral-800/50"
-        end
-      end
-
       def icon_color
         case @type
-        when :success then "text-green-500 dark:text-green-400"
-        when :error then "text-red-500 dark:text-red-400"
-        else "text-neutral-500 dark:text-neutral-400"
+        when :success then "text-green-500"
+        when :error then "text-red-500"
+        else "text-neutral-500"
         end
       end
 
@@ -138,14 +122,6 @@ module ArtisansUi
         when :success then "text-green-800"
         when :error then "text-red-800"
         else "text-neutral-800"
-        end
-      end
-
-      def dark_text_color
-        case @type
-        when :success then "dark:text-green-200"
-        when :error then "dark:text-red-200"
-        else "dark:text-neutral-200"
         end
       end
     end

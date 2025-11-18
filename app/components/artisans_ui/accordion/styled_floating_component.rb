@@ -44,7 +44,7 @@ module ArtisansUi
             data: { accordion_target: "trigger", action: "click->accordion#toggle", state: "closed" },
             aria: { controls: "accordion-content-#{index}", expanded: "false" },
             id: "accordion-trigger-#{index}",
-            class: "flex flex-1 items-center text-left justify-between py-4 px-6 font-medium transition-all hover:bg-neutral-100 dark:hover:bg-neutral-800 bg-neutral-50 dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-700 [&[data-state=open]>svg]:rotate-180 focus:outline-neutral-700 dark:focus:outline-white focus:outline-offset-2"
+            class: "flex flex-1 items-center text-left justify-between py-4 px-6 font-medium transition-all hover:bg-neutral-100 bg-neutral-50 rounded-xl border border-neutral-200 [&[data-state=open]>svg]:rotate-180 focus:outline-neutral-700 focus:outline-offset-2"
           ) do
             safe_join([
               item[:question],
@@ -64,7 +64,7 @@ module ArtisansUi
           class: "overflow-hidden text-sm transition-all duration-300 ease-in-out mt-2",
           style: "max-height: 0px;"
         ) do
-          tag.div(class: "p-6 bg-white dark:bg-neutral-800 rounded-xl border border-neutral-200 dark:border-neutral-700 shadow-sm") do
+          tag.div(class: "p-6 bg-white rounded-xl border border-neutral-200 shadow-sm") do
             raw item[:answer]
           end
         end

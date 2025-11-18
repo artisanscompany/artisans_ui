@@ -10,7 +10,7 @@ module ArtisansUi
     #   <%= render ArtisansUi::LoadingIndicator::CircularSpinnerComponent.new %>
     #   <%= render ArtisansUi::LoadingIndicator::CircularSpinnerComponent.new(size: "size-12", color: "text-blue-600") %>
     class CircularSpinnerComponent < ApplicationViewComponent
-      def initialize(size: "size-8", color: "text-neutral-800 dark:text-neutral-200", **html_options)
+      def initialize(size: "size-8", color: "text-neutral-800", **html_options)
         @size = size
         @color = color
         @html_options = html_options

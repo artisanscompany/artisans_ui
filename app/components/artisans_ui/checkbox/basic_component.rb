@@ -73,9 +73,9 @@ module ArtisansUi
 
       def label_classes
         if @disabled
-          "text-sm font-medium text-neutral-400 dark:text-neutral-500 cursor-not-allowed opacity-50"
+          "text-sm font-medium text-neutral-400 cursor-not-allowed opacity-50"
         else
-          "text-sm font-medium text-neutral-700 dark:text-neutral-300"
+          "text-sm font-medium text-neutral-700"
         end
       end
 

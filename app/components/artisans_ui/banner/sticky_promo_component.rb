@@ -32,7 +32,7 @@ module ArtisansUi
             artisans_ui__banner_cookie_name_value: @cookie_name,
             artisans_ui__banner_cookie_days_value: 0
           },
-          class: "hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-md mx-4 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white border border-black/10 dark:border-white/10 rounded-xl shadow-2xl transition-all duration-300 ease-in-out opacity-0 translate-y-full",
+          class: "hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-md mx-4 bg-white text-neutral-900 border border-black/10 rounded-xl shadow-2xl transition-all duration-300 ease-in-out opacity-0 translate-y-full",
           **@html_options
         ) do
           tag.div(class: "relative p-4") do
@@ -78,13 +78,13 @@ module ArtisansUi
             tag.h3(@title, class: "text-base font-bold mb-1")
           ]
           if @description
-            content << tag.p(@description, class: "text-sm text-neutral-600 dark:text-neutral-400 mb-3")
+            content << tag.p(@description, class: "text-sm text-neutral-600 mb-3")
           end
           if @button_text && @button_url
             content << tag.a(
               @button_text,
               href: @button_url,
-              class: "inline-flex items-center justify-center gap-1.5 rounded-lg border border-neutral-400/30 bg-neutral-800 px-4 py-2 text-sm font-medium whitespace-nowrap text-white shadow-sm transition-all duration-100 ease-in-out select-none hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-white dark:text-neutral-800 dark:hover:bg-neutral-100 dark:focus-visible:outline-neutral-200"
+              class: "inline-flex items-center justify-center gap-1.5 rounded-lg border border-neutral-400/30 bg-neutral-800 px-4 py-2 text-sm font-medium whitespace-nowrap text-white shadow-sm transition-all duration-100 ease-in-out select-none hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50"
             )
           end
           safe_join(content)

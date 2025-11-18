@@ -33,11 +33,11 @@ module ArtisansUi
       end
 
       def background_element
-        tag.div(class: "w-10 h-6 bg-neutral-200 border border-black/10 rounded-full transition-all duration-150 ease-in-out cursor-pointer group-hover:bg-[#dcdcdb] peer-checked:bg-[#404040] peer-checked:group-hover:bg-neutral-600 peer-checked:border-white/10 dark:bg-neutral-700 dark:border-white/10 dark:group-hover:bg-neutral-600 dark:peer-checked:bg-neutral-50 dark:peer-checked:group-hover:bg-neutral-100 dark:peer-checked:border-black/20 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-neutral-600 dark:peer-focus-visible:outline-neutral-200")
+        tag.div(class: "w-10 h-6 bg-neutral-200 border border-black/10 rounded-full transition-all duration-150 ease-in-out cursor-pointer group-hover:bg-[#dcdcdb] peer-checked:bg-[#404040] peer-checked:group-hover:bg-neutral-600 peer-checked:border-white/10 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-neutral-600")
       end
 
       def toggle_element
-        tag.div(class: "absolute top-[3px] left-[3px] w-[18px] h-[18px] bg-white rounded-full shadow-sm transition-all duration-150 ease-in-out peer-checked:translate-x-4 flex items-center justify-center dark:bg-neutral-200 dark:peer-checked:bg-neutral-800")
+        tag.div(class: "absolute top-[3px] left-[3px] w-[18px] h-[18px] bg-white rounded-full shadow-sm transition-all duration-150 ease-in-out peer-checked:translate-x-4 flex items-center justify-center")
       end
     end
   end

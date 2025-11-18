@@ -19,7 +19,7 @@ module ArtisansUi
 
       def call
         tag.button(
-          class: "flex items-center justify-center gap-1.5 rounded-lg border border-neutral-200 bg-white/90 p-2.5 text-xs font-medium whitespace-nowrap text-neutral-800 shadow-xs transition-all duration-100 ease-in-out select-none hover:bg-neutral-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-800/50 dark:text-neutral-50 dark:hover:bg-neutral-700/50 dark:focus-visible:outline-neutral-200",
+          class: "flex items-center justify-center gap-1.5 rounded-lg border border-neutral-200 bg-white/90 p-2.5 text-xs font-medium whitespace-nowrap text-neutral-800 shadow-xs transition-all duration-100 ease-in-out select-none hover:bg-neutral-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 disabled:cursor-not-allowed disabled:opacity-50",
           data: {
             controller: "clipboard",
             clipboard_text: @text,
@@ -66,7 +66,7 @@ module ArtisansUi
       def check_icon
         tag.svg(
           xmlns: "http://www.w3.org/2000/svg",
-          class: "size-3.5 sm:size-4 text-green-600 dark:text-green-400",
+          class: "size-3.5 sm:size-4 text-green-600",
           width: "18",
           height: "18",
           viewBox: "0 0 18 18"

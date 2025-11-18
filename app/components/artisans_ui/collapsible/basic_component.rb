@@ -48,7 +48,7 @@ module ArtisansUi
       def trigger_button
         tag.button(
           type: "button",
-          class: "flex w-full items-center justify-between py-4 text-left text-sm font-medium text-neutral-900 dark:text-neutral-100",
+          class: "flex w-full items-center justify-between py-4 text-left text-sm font-medium text-neutral-900",
           data: { action: "click->collapsible#toggle" }
         ) do
           safe_join([
@@ -96,7 +96,7 @@ module ArtisansUi
           class: "overflow-hidden transition-all duration-300 ease-in-out",
           style: "max-height: #{@open ? 'none' : '0'}; opacity: #{@open ? '1' : '0'};"
         ) do
-          tag.div(class: "pb-4 text-sm text-neutral-600 dark:text-neutral-400") do
+          tag.div(class: "pb-4 text-sm text-neutral-600") do
             content
           end
         end

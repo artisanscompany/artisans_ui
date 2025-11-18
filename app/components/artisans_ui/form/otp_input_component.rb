@@ -67,7 +67,7 @@ module ArtisansUi
           autocomplete: (index == 0 ? "one-time-code" : "off"),
           required: true,
           autofocus: (@autofocus && index == 0),
-          class: "block w-12 h-12 rounded-lg border border-neutral-200 dark:border-neutral-700 text-center text-lg font-mono bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white placeholder-neutral-500 dark:placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-300 dark:focus:ring-neutral-600 focus:border-transparent transition-colors"
+          class: "block w-12 h-12 rounded-lg border border-neutral-200 text-center text-lg font-mono bg-white text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-neutral-300 focus:border-transparent transition-colors"
         )
       end
     end

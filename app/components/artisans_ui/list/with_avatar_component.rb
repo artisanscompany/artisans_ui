@@ -107,8 +107,8 @@ module ArtisansUi
       end
 
       def list_classes
-        base = "hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
-        "#{base} #{VARIANTS[@variant]} dark:bg-neutral-800"
+        base = "hover:bg-neutral-100 transition-colors"
+        "#{base} #{VARIANTS[@variant]}"
       end
 
       def render_badge
@@ -131,8 +131,8 @@ module ArtisansUi
             class: "w-12 h-12 sm:w-14 sm:h-14 rounded-lg object-cover flex-shrink-0"
           )
         elsif @avatar_fallback
-          tag.div(class: "w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-neutral-100 dark:bg-neutral-700 flex items-center justify-center flex-shrink-0") do
-            tag.span(class: "text-lg font-semibold text-neutral-500 dark:text-neutral-400") do
+          tag.div(class: "w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-neutral-100 flex items-center justify-center flex-shrink-0") do
+            tag.span(class: "text-lg font-semibold text-neutral-500") do
               @avatar_fallback
             end
           end
@@ -158,7 +158,7 @@ module ArtisansUi
       end
 
       def render_title
-        tag.h3(class: "text-sm font-medium text-neutral-900 dark:text-white truncate group-hover:text-yellow-600 dark:group-hover:text-yellow-500 transition-colors") do
+        tag.h3(class: "text-sm font-medium text-neutral-900 truncate group-hover:text-yellow-600 transition-colors") do
           @title
         end
       end
@@ -166,7 +166,7 @@ module ArtisansUi
       def render_subtitle
         return unless @subtitle
 
-        tag.span(class: "text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 flex-shrink-0") do
+        tag.span(class: "text-xs sm:text-sm text-neutral-600 flex-shrink-0") do
           @subtitle
         end
       end

@@ -80,14 +80,14 @@ module ArtisansUi
         tag.label(
           @label,
           for: @id,
-          class: "block text-sm font-medium text-neutral-700 dark:text-neutral-300"
+          class: "block text-sm font-medium text-neutral-700"
         )
       end
 
       def description_tag
         tag.div(
           @description,
-          class: "text-xs text-neutral-500 dark:text-neutral-400 mt-1"
+          class: "text-xs text-neutral-500 mt-1"
         )
       end
 

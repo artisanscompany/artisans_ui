@@ -60,7 +60,7 @@ module ArtisansUi
       def render_home_link(item, is_last)
         tag.a(
           href: item[:href],
-          class: "flex items-center text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors p-1.5 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800"
+          class: "flex items-center text-neutral-500 hover:text-neutral-700 transition-colors p-1.5 rounded hover:bg-neutral-100"
         ) do
           safe_join([
             home_icon,
@@ -72,13 +72,13 @@ module ArtisansUi
       def render_link(item)
         tag.a(
           href: item[:href],
-          class: "ml-1 text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors p-1.5 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800"
+          class: "ml-1 text-neutral-500 hover:text-neutral-700 transition-colors p-1.5 rounded hover:bg-neutral-100"
         ) { item[:label] }
       end
 
       def render_current_page(item)
         tag.span(
-          class: "ml-1 text-neutral-900 dark:text-neutral-100 font-medium p-1.5",
+          class: "ml-1 text-neutral-900 font-medium p-1.5",
           aria: { current: "page" }
         ) { item[:label] }
       end

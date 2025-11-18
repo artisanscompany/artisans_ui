@@ -93,7 +93,7 @@ module ArtisansUi
       def palette_section
         tag.div(class: "space-y-4") do
           safe_join([
-            tag.p("Brand Palette", class: "text-sm font-medium text-neutral-600 dark:text-neutral-400 text-center"),
+            tag.p("Brand Palette", class: "text-sm font-medium text-neutral-600 text-center"),
             color_groups
           ])
         end
@@ -111,7 +111,7 @@ module ArtisansUi
       def color_group(name, colors, titles)
         tag.div(class: "space-y-2") do
           safe_join([
-            tag.p(name, class: "text-xs text-neutral-500 dark:text-neutral-400 uppercase tracking-wide text-center"),
+            tag.p(name, class: "text-xs text-neutral-500 uppercase tracking-wide text-center"),
             swatch_grid(colors, titles)
           ])
         end
@@ -131,14 +131,14 @@ module ArtisansUi
         tag.button(
           type: "button",
           data: { color: color },
-          class: "brand-swatch-#{@id} h-8 w-8 rounded-md border border-black/15 dark:border-white/20 hover:scale-110 transition-transform focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600 dark:focus-visible:outline-neutral-200",
+          class: "brand-swatch-#{@id} h-8 w-8 rounded-md border border-black/15 hover:scale-110 transition-transform focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-600",
           style: "background-color: #{color}",
           title: title
         )
       end
 
       def selected_color_section
-        tag.div(class: "flex flex-col items-center gap-3 p-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg border border-neutral-200 dark:border-neutral-700") do
+        tag.div(class: "flex flex-col items-center gap-3 p-4 bg-neutral-50 rounded-lg border border-neutral-200") do
           safe_join([
             color_display,
             add_button
@@ -149,10 +149,10 @@ module ArtisansUi
       def color_display
         tag.div(class: "text-sm text-center") do
           safe_join([
-            tag.div("Selected Color:", class: "text-xs text-neutral-500 dark:text-neutral-400 mb-1"),
+            tag.div("Selected Color:", class: "text-xs text-neutral-500 mb-1"),
             tag.code(
               @value,
-              class: "px-2 py-1 bg-white dark:bg-neutral-900 rounded font-mono text-xs text-neutral-700 dark:text-neutral-300",
+              class: "px-2 py-1 bg-white rounded font-mono text-xs text-neutral-700",
               id: "#{@id}-value"
             )
           ])
@@ -162,7 +162,7 @@ module ArtisansUi
       def add_button
         tag.button(
           type: "button",
-          class: "px-3 py-1.5 text-xs bg-white dark:bg-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded border border-neutral-300 dark:border-neutral-600 text-neutral-600 dark:text-neutral-400 transition-colors",
+          class: "px-3 py-1.5 text-xs bg-white hover:bg-neutral-50 rounded border border-neutral-300 text-neutral-600 transition-colors",
           id: "#{@id}-add-to-palette"
         ) { "Add to Palette" }
       end

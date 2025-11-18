@@ -36,7 +36,7 @@ module ArtisansUi
 
       def render_desktop_dock
         tag.div(
-          class: "hidden md:flex flex-row gap-1 p-1.5 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-md rounded-full border border-neutral-200/70 dark:border-neutral-600/50 shadow-lg pointer-events-auto",
+          class: "hidden md:flex flex-row gap-1 p-1.5 bg-white/90 backdrop-blur-md rounded-full border border-neutral-200/70 shadow-lg pointer-events-auto",
           data: { controller: "dock" }
         ) do
           safe_join(@desktop_items.map { |item| render_desktop_icon(item) })
@@ -58,7 +58,7 @@ module ArtisansUi
           class: "flex items-center justify-center"
         ) do
           tag.div(
-            class: "size-10 flex items-center justify-center rounded-full text-neutral-500 dark:text-neutral-300 bg-neutral-200 dark:bg-neutral-800 active:bg-neutral-300 dark:active:bg-neutral-700 transition-colors duration-150"
+            class: "size-10 flex items-center justify-center rounded-full text-neutral-500 bg-neutral-200 active:bg-neutral-300 transition-colors duration-150"
           ) do
             raw item[:icon]
           end
@@ -81,11 +81,11 @@ module ArtisansUi
             dock_target: "mobileButton",
             action: "click->dock#toggleMobile"
           },
-          class: "size-10 flex items-center justify-center rounded-full bg-white dark:bg-neutral-800 border border-neutral-200/70 dark:border-neutral-600/50 shadow-lg active:bg-neutral-100 dark:active:bg-neutral-700"
+          class: "size-10 flex items-center justify-center rounded-full bg-white border border-neutral-200/70 shadow-lg active:bg-neutral-100"
         ) do
           tag.svg(
             xmlns: "http://www.w3.org/2000/svg",
-            class: "size-5 text-neutral-700 dark:text-neutral-300",
+            class: "size-5 text-neutral-700",
             width: "24",
             height: "24",
             viewBox: "0 0 24 24",
@@ -105,7 +105,7 @@ module ArtisansUi
       def render_mobile_menu
         tag.div(
           data: { dock_target: "mobileMenu" },
-          class: "absolute bottom-16 left-4 right-4 flex flex-col gap-1 p-1.5 bg-white dark:bg-neutral-800 border border-neutral-200/70 dark:border-neutral-600/50 rounded-2xl shadow-xl hidden"
+          class: "absolute bottom-16 left-4 right-4 flex flex-col gap-1 p-1.5 bg-white border border-neutral-200/70 rounded-2xl shadow-xl hidden"
         ) do
           safe_join(@mobile_items.map { |item| render_mobile_item(item) })
         end
@@ -114,7 +114,7 @@ module ArtisansUi
       def render_mobile_item(item)
         tag.a(
           href: item[:href],
-          class: "flex items-center gap-3 px-4 py-3 rounded-xl text-neutral-500 dark:text-neutral-300 hover:text-neutral-500 dark:hover:text-neutral-300 bg-neutral-50 dark:bg-neutral-800 active:bg-neutral-100 dark:active:bg-neutral-700 transition-colors duration-150"
+          class: "flex items-center gap-3 px-4 py-3 rounded-xl text-neutral-500 hover:text-neutral-500 bg-neutral-50 active:bg-neutral-100 transition-colors duration-150"
         ) do
           safe_join([
             tag.div(class: "size-5 flex-shrink-0") { raw item[:icon] },

@@ -44,15 +44,15 @@ module ArtisansUi
       private
 
       def render_animation_card
-        tag.div(class: "text-center p-6 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg border border-black/5 dark:border-white/10") do
+        tag.div(class: "text-center p-6 bg-neutral-50 rounded-lg border border-black/5") do
           content = []
 
           if @label
-            content << tag.h4(class: "text-sm font-medium text-neutral-600 dark:text-neutral-400 mb-4") { @label }
+            content << tag.h4(class: "text-sm font-medium text-neutral-600 mb-4") { @label }
           end
 
           content << tag.div(
-            class: "text-3xl font-bold text-neutral-900 dark:text-white mb-2",
+            class: "text-3xl font-bold text-neutral-900 mb-2",
             data: {
               controller: "animated-number",
               animated_number_start_value: @start_value,

@@ -78,9 +78,9 @@ module ArtisansUi
         base_classes = "group w-full flex items-center gap-2 rounded-md px-2 py-1.5 text-left text-sm focus:outline-hidden"
 
         if @active
-          active_classes = "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400"
+          active_classes = "bg-yellow-100 text-yellow-700"
         else
-          inactive_classes = "text-neutral-700 hover:bg-neutral-100 focus-visible:bg-neutral-100 dark:text-neutral-100 dark:hover:bg-neutral-700/50 dark:focus-visible:bg-neutral-700/50"
+          inactive_classes = "text-neutral-700 hover:bg-neutral-100 focus-visible:bg-neutral-100"
         end
 
         [base_classes, (@active ? active_classes : inactive_classes), @html_options[:class]].compact.join(" ")

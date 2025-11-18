@@ -28,10 +28,10 @@ module ArtisansUi
       LEVELS = [:h1, :h2, :h3, :h4, :h5, :h6].freeze
 
       VARIANTS = {
-        display: "text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 dark:text-white tracking-tight",
-        title: "text-2xl sm:text-3xl font-semibold text-neutral-900 dark:text-white",
-        subtitle: "text-xl sm:text-2xl font-medium text-neutral-900 dark:text-white",
-        section: "text-lg sm:text-xl font-semibold text-neutral-900 dark:text-white"
+        display: "text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 tracking-tight",
+        title: "text-2xl sm:text-3xl font-semibold text-neutral-900",
+        subtitle: "text-xl sm:text-2xl font-medium text-neutral-900",
+        section: "text-lg sm:text-xl font-semibold text-neutral-900"
       }.freeze
 
       def initialize(level: :h1, variant: :title, **html_options)

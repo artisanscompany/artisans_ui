@@ -80,11 +80,11 @@ module ArtisansUi
       end
 
       def list_classes
-        "flex items-center gap-3 py-3 px-4 rounded-lg bg-neutral-50 dark:bg-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors mb-2"
+        "flex items-center gap-3 py-3 px-4 rounded-lg bg-neutral-50 hover:bg-neutral-100 transition-colors mb-2"
       end
 
       def render_icon
-        tag.div(class: "w-10 h-10 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center flex-shrink-0 text-yellow-600 dark:text-yellow-500") do
+        tag.div(class: "w-10 h-10 rounded-lg bg-yellow-100 flex items-center justify-center flex-shrink-0 text-yellow-600") do
           ICONS[@icon].html_safe
         end
       end
@@ -99,7 +99,7 @@ module ArtisansUi
       end
 
       def render_title
-        tag.h3(class: "text-sm font-medium text-neutral-900 dark:text-white truncate group-hover:text-yellow-600 dark:group-hover:text-yellow-500 transition-colors") do
+        tag.h3(class: "text-sm font-medium text-neutral-900 truncate group-hover:text-yellow-600 transition-colors") do
           @title
         end
       end

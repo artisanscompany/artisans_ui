@@ -26,7 +26,7 @@ module ArtisansUi
 
       def call
         tag.div(
-          class: "rounded-xl border border-neutral-200 bg-neutral-50 p-4 dark:border-neutral-700 dark:bg-neutral-800/50",
+          class: "rounded-xl border border-neutral-200 bg-neutral-50 p-4",
           **@html_options
         ) do
           tag.div(class: "flex gap-2 items-start") do
@@ -37,7 +37,7 @@ module ArtisansUi
                 width: "18",
                 height: "18",
                 viewBox: "0 0 18 18",
-                class: "text-neutral-500 dark:text-neutral-400 shrink-0"
+                class: "text-neutral-500 shrink-0"
               ) do
                 tag.g(
                   fill: "none",
@@ -56,10 +56,10 @@ module ArtisansUi
               # Title and Description container
               tag.div(class: "flex-1") do
                 content = [
-                  tag.h3(class: "text-sm font-medium text-neutral-800 dark:text-neutral-200") { @title }
+                  tag.h3(class: "text-sm font-medium text-neutral-800") { @title }
                 ]
                 if @description
-                  content << tag.div(class: "text-sm text-neutral-600 dark:text-neutral-400 mt-1") { @description }
+                  content << tag.div(class: "text-sm text-neutral-600 mt-1") { @description }
                 end
                 safe_join(content)
               end

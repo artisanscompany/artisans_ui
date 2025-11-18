@@ -49,14 +49,14 @@ module ArtisansUi
         tag.label(
           @label,
           for: @label_for,
-          class: "block text-sm font-medium text-neutral-900 dark:text-white mb-3"
+          class: "block text-sm font-medium text-neutral-900 mb-3"
         )
       end
 
       def render_error
         return unless @error
 
-        tag.p(@error, class: "mt-1.5 text-sm text-red-600 dark:text-red-400")
+        tag.p(@error, class: "mt-1.5 text-sm text-red-600")
       end
     end
   end

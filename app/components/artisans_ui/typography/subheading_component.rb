@@ -25,9 +25,9 @@ module ArtisansUi
     #   <% end %>
     class SubheadingComponent < ApplicationViewComponent
       VARIANTS = {
-        large: "text-lg sm:text-xl text-neutral-600 dark:text-neutral-400",
-        regular: "text-base text-neutral-600 dark:text-neutral-400",
-        small: "text-sm text-neutral-600 dark:text-neutral-400"
+        large: "text-lg sm:text-xl text-neutral-600",
+        regular: "text-base text-neutral-600",
+        small: "text-sm text-neutral-600"
       }.freeze
 
       def initialize(variant: :regular, **html_options)

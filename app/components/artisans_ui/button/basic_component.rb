@@ -69,8 +69,8 @@ module ArtisansUi
           content,
           type: "button",
           disabled: @disabled,
-          class: button_classes,
-          **@html_options
+          class: class_names(button_classes, @html_options[:class]),
+          **@html_options.except(:class)
         )
       end
 

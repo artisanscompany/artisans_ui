@@ -36,7 +36,7 @@ Complete guide for using the ArtisansUi component library across all Artisans ap
 **For local development:**
 
 ```bash
-bundle config local.artisans_ui /Users/Indie/code/artisans_ui
+bundle config local.artisans_ui /Users/Indie/artisans/gems/artisans_ui
 ```
 
 That's it! Changes to components will now reflect immediately.
@@ -49,13 +49,13 @@ That's it! Changes to components will now reflect immediately.
 
 ```ruby
 # Gemfile
-gem 'artisans_ui', git: 'git@gitgar.com:templates/view-components.git', branch: 'main'
+gem 'artisans_ui', git: 'https://github.com/artisanscompany/artisans_ui.git', branch: 'main'
 ```
 
 **Or lock to a specific version:**
 
 ```ruby
-gem 'artisans_ui', git: 'git@gitgar.com:templates/view-components.git', tag: 'v0.1.0'
+gem 'artisans_ui', git: 'https://github.com/artisanscompany/artisans_ui.git', tag: 'v0.1.0'
 ```
 
 ### Step 2: Install
@@ -94,23 +94,23 @@ When you need to work on components while using them in your Rails app:
 
 ```bash
 # 1. Clone the component library (if not already cloned)
-cd ~/code
-git clone git@gitgar.com:templates/view-components.git artisans_ui
+cd /Users/Indie/artisans/gems
+git clone https://github.com/artisanscompany/artisans_ui.git
 cd artisans_ui
 bundle install
 
 # 2. In your Rails application
 cd /path/to/your/rails/app
-bundle config local.artisans_ui /Users/Indie/code/artisans_ui
+bundle config local.artisans_ui /Users/Indie/artisans/gems/artisans_ui
 
 # 3. Verify configuration
 bundle config get local.artisans_ui
-# => /Users/Indie/code/artisans_ui
+# => /Users/Indie/artisans/gems/artisans_ui
 ```
 
 ### How It Works
 
-- **Immediate Feedback**: Changes to components in `/Users/Indie/code/artisans_ui` reflect immediately
+- **Immediate Feedback**: Changes to components in `/Users/Indie/artisans/gems/artisans_ui` reflect immediately
 - **No Bundle Install**: Changes don't require `bundle install`
 - **Server Restart**: May need to restart Rails server for some changes
 - **Spring Cache**: If using Spring, run `spring stop` if changes don't appear
@@ -132,7 +132,7 @@ bundle install
 ### Step 1: Generate Component
 
 ```bash
-cd /Users/Indie/code/artisans_ui
+cd /Users/Indie/artisans/gems/artisans_ui
 bin/rails generate view_component:component ArtisansUi::Ui::Card title
 ```
 
@@ -232,7 +232,7 @@ bundle exec rspec spec/components/artisans_ui/ui/card_component_spec.rb
 ### Running All Tests
 
 ```bash
-cd /Users/Indie/code/artisans_ui
+cd /Users/Indie/artisans/gems/artisans_ui
 bundle exec rspec
 ```
 
@@ -334,7 +334,7 @@ end
 
 ```bash
 # 1. Make sure you have local development configured
-cd /Users/Indie/code/artisans_ui
+cd /Users/Indie/artisans/gems/artisans_ui
 git checkout main
 git pull origin main
 
@@ -355,7 +355,7 @@ cd /path/to/your/rails/app
 # Test manually in browser
 
 # 7. Commit changes
-cd /Users/Indie/code/artisans_ui
+cd /Users/Indie/artisans/gems/artisans_ui
 git add .
 git commit -m "feat: add new button size variants"
 
@@ -368,7 +368,7 @@ git push origin feat/improve-button-component
 For small changes you can commit directly to main:
 
 ```bash
-cd /Users/Indie/code/artisans_ui
+cd /Users/Indie/artisans/gems/artisans_ui
 
 # Make changes
 # Run tests
@@ -387,7 +387,7 @@ git push origin main
 ### For Patch/Minor Updates
 
 ```bash
-cd /Users/Indie/code/artisans_ui
+cd /Users/Indie/artisans/gems/artisans_ui
 
 # 1. Update version in lib/artisans_ui/version.rb
 # Change VERSION = "0.1.0" to VERSION = "0.1.1"
@@ -410,7 +410,7 @@ git push --tags
 ### For Major Updates (Breaking Changes)
 
 ```bash
-cd /Users/Indie/code/artisans_ui
+cd /Users/Indie/artisans/gems/artisans_ui
 
 # 1. Update version
 # Change VERSION = "0.1.0" to VERSION = "1.0.0"
@@ -498,10 +498,10 @@ bundle list | grep artisans_ui
 
 ```ruby
 # Change this:
-gem 'artisans_ui', git: 'git@gitgar.com:templates/view-components.git', branch: 'main'
+gem 'artisans_ui', git: 'https://github.com/artisanscompany/artisans_ui.git', branch: 'main'
 
 # To this:
-gem 'artisans_ui', git: 'git@gitgar.com:templates/view-components.git', tag: 'v0.2.0'
+gem 'artisans_ui', git: 'https://github.com/artisanscompany/artisans_ui.git', tag: 'v0.2.0'
 ```
 
 ```bash
@@ -511,7 +511,7 @@ bundle install
 **Option 2: Use ref (commit SHA)**
 
 ```ruby
-gem 'artisans_ui', git: 'git@gitgar.com:templates/view-components.git', ref: 'abc123'
+gem 'artisans_ui', git: 'https://github.com/artisanscompany/artisans_ui.git', ref: 'abc123'
 ```
 
 ### Verify Components Work
@@ -535,7 +535,7 @@ component.render_in(ApplicationController.renderer) { "Test" }
 
 ```ruby
 # Gemfile - specify previous version
-gem 'artisans_ui', git: 'git@gitgar.com:templates/view-components.git', tag: 'v0.1.0'
+gem 'artisans_ui', git: 'https://github.com/artisanscompany/artisans_ui.git', tag: 'v0.1.0'
 ```
 
 ```bash
@@ -558,7 +558,7 @@ Cannot use local override for view-components because :branch is not specified i
 Ensure your Gemfile specifies a branch:
 
 ```ruby
-gem 'artisans_ui', git: 'git@gitgar.com:templates/view-components.git', branch: 'main'
+gem 'artisans_ui', git: 'https://github.com/artisanscompany/artisans_ui.git', branch: 'main'
 ```
 
 Then run:
@@ -595,7 +595,7 @@ bundle config local.artisans_ui /Users/Indie/code/artisans_ui
 
 4. **Check for syntax errors**
    ```bash
-   cd /Users/Indie/code/artisans_ui
+   cd /Users/Indie/artisans/gems/artisans_ui
    bundle exec rspec  # Run tests
    ```
 
@@ -689,13 +689,13 @@ git push origin main
 
 ### Bundle Install Hangs
 
-**Issue:** `bundle install` hangs when fetching from gitgar.com
+**Issue:** `bundle install` hangs when fetching from github.com
 
 **Solutions:**
 
-1. **Check SSH access**
+1. **Check HTTPS access**
    ```bash
-   ssh -T git@gitgar.com
+   curl -I https://github.com/artisanscompany/artisans_ui.git
    ```
 
 2. **Clear bundler cache**

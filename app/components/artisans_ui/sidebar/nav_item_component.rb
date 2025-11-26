@@ -78,7 +78,7 @@ module ArtisansUi
         base_classes = "group w-full flex items-center gap-2 rounded-md px-2 py-1.5 text-left text-sm focus:outline-hidden"
 
         if @active
-          active_classes = "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+          active_classes = "bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
         else
           inactive_classes = "text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus-visible:bg-neutral-100 dark:focus-visible:bg-neutral-800"
         end

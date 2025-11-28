@@ -93,7 +93,7 @@ module ArtisansUi
       end
 
       def label_and_badge_html
-        tag.span(class: "flex min-w-0 grow items-center") do
+        tag.span(class: "flex min-w-0 grow items-center sidebar-nav-label transition-all duration-300") do
           safe_join([
             tag.span(@label, class: "truncate"),
             badge_html

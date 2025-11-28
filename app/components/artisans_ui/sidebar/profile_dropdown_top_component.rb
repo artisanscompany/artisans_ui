@@ -26,6 +26,8 @@ module ArtisansUi
     class ProfileDropdownTopComponent < ApplicationViewComponent
       renders_one :header
       renders_one :footer
+      renders_one :secondary_sidebar
+      renders_one :mobile_nav
       renders_many :nav_items, lambda { |**args, &block|
         if args[:heading] || args.empty?
           NavSectionComponent.new(**args)
